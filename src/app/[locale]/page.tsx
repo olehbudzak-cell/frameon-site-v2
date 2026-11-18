@@ -5,7 +5,7 @@ import { getContent, serviceLocaleFor, gbp } from "@/lib/content";
 import { pageMeta, businessJsonLd } from "@/lib/seo";
 import { services, CONTACT } from "@/content/services";
 import type { Locale } from "@/i18n/routing";
-import BuildScene from "@/components/BuildScene";
+import HeroBuild from "@/components/HeroBuild";
 import XRay from "@/components/XRay";
 import Calculator from "@/components/Calculator";
 import LaserSteps from "@/components/LaserSteps";
@@ -34,15 +34,14 @@ export default async function Home({ params }: P) {
       <JsonLd data={businessJsonLd(locale)} />
       <JsonLd data={faqJsonLd(t.faq.items)} />
 
-      {/* HERO — static first frame for a fast LCP; the scene below continues from it */}
-      <section className="hero">
-        <div className="hero-media">
-          <picture>
-            <source media="(max-width: 760px)" srcSet="/images/loft-empty-mobile.jpg" />
-            <Image src="/images/loft-empty-london.jpg" alt="" fill priority sizes="100vw" />
-          </picture>
-        </div>
-        <div className="hero-shade" />
+      {/* HERO + BUILD — one pinned scroll-scrubbed video that starts building on the first scroll */}
+      <HeroBuild
+        stages={t.build.stages}
+        label={t.build.label}
+        skip={t.build.skip}
+        cue={t.hero.scroll}
+        extra={<Link href="/services/stud-partitions" locale={svcLocale} className="link-arrow" style={{ fontSize: 15 }}>{t.build.serviceLink} →</Link>}
+      >
         <div className="badge" aria-hidden="true">{t.hero.badge}</div>
         <div className="wrap hero-inner">
           <div>
@@ -60,16 +59,7 @@ export default async function Home({ params }: P) {
             </div>
           </div>
         </div>
-        <div className="scroll-cue" aria-hidden="true"><span className="mono" style={{ fontSize: 11 }}>{t.hero.scroll}</span><i /></div>
-      </section>
-
-      {/* BUILD SCENE — Higgsfield video as a scroll-scrubbed image sequence */}
-      <BuildScene
-        stages={t.build.stages}
-        label={t.build.label}
-        skip={t.build.skip}
-        extra={<Link href="/services/stud-partitions" locale={svcLocale} className="link-arrow" style={{ fontSize: 15 }}>{t.build.serviceLink} →</Link>}
-      />
+      </HeroBuild>
 
       {/* DONE + STATS */}
       <section className="done" aria-labelledby="done-title">
