@@ -1,0 +1,138 @@
+import type { SiteText } from "./types";
+import en, { boroughsEn } from "./en";
+
+const pl: SiteText = {
+  ...en,
+  langName: "Polski",
+  meta: {
+    homeTitle: "Suche zabudowy w Londynie — ścianki działowe i sufity MF | Frameon",
+    homeDescription: "Ścianki działowe, okładziny ścian, sufity podwieszane MF i pełne wykończenia we wszystkich dzielnicach Londynu. Robocizna od £30/m², materiały osobno. Odpowiadamy tego samego dnia.",
+  },
+  nav: { services: "Usługi", contractors: "Dla wykonawców", how: "Jak pracujemy", areas: "Dzielnice", faq: "Pytania", getPrice: "Wycena", menu: "Otwórz menu", close: "Zamknij menu", language: "Język" },
+  hero: {
+    eyebrow: "Suche zabudowy i wykończenia · Cały Londyn",
+    h1: "Suche zabudowy z płyt g-k w Londynie",
+    slogan: ["Stelaż.", "Płyta.", "Gotowe."],
+    lead: "Ścianki działowe, okładziny ścian, sufity MF i pełne wykończenia. Robocizna od £30/m², materiały wyceniane osobno. Wyślij zdjęcia — odpowiemy tego samego dnia.",
+    ctaWhatsapp: "Darmowa wycena na WhatsApp",
+    ctaPrice: "Wyceń pracę",
+    badge: "−15% dla nowych klientów",
+    scroll: "Przewiń, aby zbudować",
+  },
+  build: {
+    label: "Jak powstaje pokój",
+    skip: "Pomiń animację",
+    serviceLink: "Więcej o ściankach działowych",
+    stages: [
+      { tag: "01 / TRASOWANIE", title: "Jedna linia lasera wyznacza ścianę", text: "Wyznaczamy ściany, otwory i poziom sufitu laserem, zanim położymy pierwszy profil.", spec: "TRASOWANIE LASEROWE · PODŁOGA I SUFIT" },
+      { tag: "02 / STELAŻ", title: "Profile UW na linii, CW co 600 mm", text: "Profile mocujemy na linii, każdy słupek sprawdzamy w pionie, otwory drzwiowe od razu.", spec: "PROFIL C 70 MM · ROZSTAW 600 MM · WIESZAKI MF" },
+      { tag: "03 / PŁYTA", title: "Styki na profilach, wkręty co 300 mm", text: "Płyty na jedną stronę: każdy styk na profilu, łby wkrętów lekko zagłębione.", spec: "12.5 MM TYPE D · WKRĘTY @ 300 MM" },
+      { tag: "04 / IZOLACJA", title: "Bez szczelin i pustego dźwięku", text: "Wełnę mineralną docinamy ciasno, potem druga strona zamyka ścianę — płyta ogniochronna lub akustyczna.", spec: "50 MM WEŁNA · 15 MM TYPE F" },
+      { tag: "05 / WYKOŃCZENIE", title: "Od płyt do pokoju do życia", text: "Spoinowanie, gładź, malowanie, podłogi i płytki — jedna ekipa od cegły do gotowego pokoju.", spec: "SPOINY · GŁADŹ · FARBA · PODŁOGA" },
+    ],
+  },
+  done: {
+    title: "Od gołej cegły do gotowego pokoju.",
+    stats: [
+      { value: "5+", label: "lat na londyńskich budowach" },
+      { value: "£/m²", label: "stała cena za m² — bez stawek godzinowych" },
+      { value: "33", label: "dzielnice Londynu, w tym City" },
+      { value: "£350", label: "minimalne zlecenie (robocizna)" },
+    ],
+  },
+  services: { eyebrow: "Usługi · 10", title: "Wszystko między gołą cegłą a pierwszą warstwą farby.", more: "Szczegóły", all: "Wszystkie usługi" },
+  xray: { eyebrow: "Jakość, której nie widać", title: "Zobacz, co jest w środku ściany.", text: "Każdy styk na profilu, wkręty co 300 mm, izolacja bez szczelin. To, co zakryte płytą, robimy tak samo starannie jak powierzchnię.", cta: "Wyślij zdjęcie swojej ściany", hint: "Przesuń kursor po ścianie", before: "Stelaż", after: "Gotowe" },
+  contractors: {
+    ...en.contractors,
+    eyebrow: "Dla generalnych wykonawców i deweloperów",
+    title: "Ekipa suchej zabudowy, która wycenia za m² i pracuje według rysunków.",
+    text: "Bierzemy pakiety ścianek, okładzin, sufitów MF i płyt OSB w akordzie — bez dniówek i niespodzianek w rozliczeniu.",
+    points: [
+      { title: "Wycena z rysunków", text: "Wyślij rysunki lub specyfikację — podamy stawkę za m² lub metr bieżący, sama robocizna." },
+      { title: "Systemy wg specyfikacji", text: "Stelaż metalowy i drewniany, sufity MF, SFS, OSB i sklejka, zabudowy ogniochronne i akustyczne." },
+      { title: "Uzgodnione terminy", text: "Startujemy w uzgodnionym terminie i oddajemy płyty gotowe do spoinowania." },
+    ],
+    cta: "Wyślij rysunki e-mailem",
+    ctaSecondary: "Dla wykonawców",
+  },
+  how: {
+    eyebrow: "Jak pracujemy",
+    title: "Trzy kroki. Bez niespodzianek.",
+    steps: [
+      { title: "Wyślij zdjęcia", text: "Zdjęcia, wymiary i kod pocztowy na WhatsApp. Odpowiadamy tego samego dnia." },
+      { title: "Uzgadniamy zakres", text: "Stelaż, płyty, warstwy, otwory i kto dostarcza materiały — na piśmie, przed startem." },
+      { title: "Budujemy", text: "W uzgodnionych terminach. Płyty gotowe do spoinowania — albo wykańczamy cały pokój." },
+    ],
+  },
+  calc: {
+    ...en.calc,
+    eyebrow: "Szybka wycena",
+    title: "Ile będzie kosztować Twoja ściana?",
+    kinds: [
+      { id: "partition", label: "Ścianka działowa", unit: "m2", rate: 30 },
+      { id: "lining", label: "Okładzina ściany", unit: "m2", rate: 19 },
+      { id: "ceiling", label: "Sufit MF", unit: "m2", rate: 28, dim2: "width" },
+      { id: "boxing", label: "Zabudowa rur", unit: "m", rate: 32 },
+    ],
+    length: "Długość, m", height: "Wysokość, m", width: "Szerokość, m", labourOnly: "sama robocizna", from: "od",
+    discount: "Nowi klienci −15%: od", send: "Wyślij na WhatsApp",
+    note: "Sama robocizna — materiały opłaca klient. Minimalne zlecenie £350. Stałą cenę podajemy po zdjęciach lub oględzinach.",
+    whatsappIntro: "Dzień dobry, Frameon! Proszę o wycenę:", noRate: "Wycena po zdjęciach lub oględzinach",
+  },
+  areas: { eyebrow: "Dzielnice", title: "Każda dzielnica Londynu.", text: "Pracujemy we wszystkich 32 dzielnicach Londynu i w City — domy, mieszkania, lofty i lokale komercyjne.", boroughs: boroughsEn },
+  faq: {
+    eyebrow: "Pytania", title: "Częste pytania",
+    pageTitle: "Pytania o suche zabudowy — ceny, materiały, terminy | Frameon",
+    pageDescription: "Odpowiedzi o cenach suchych zabudów, materiałach, stelażach, wykończeniach i o tym, czego potrzebujemy do wyceny w Londynie.",
+    items: [
+      { q: "Czy robicie też wykończenia?", a: "Tak. Spoinowanie, gładź, malowanie, podłogi i płytki — aż po remont pod klucz. Wykończenia wyceniamy osobno po zdjęciach lub oględzinach." },
+      { q: "Kto płaci za materiały?", a: "Klient. Nasze ceny to sama robocizna, materiały wyceniane osobno." },
+      { q: "Stelaż metalowy czy drewniany?", a: "Oba — do wewnętrznych ścian nienośnych. Metal jest prosty i szybki, drewno wygodne pod ciężkie elementy. Sufity MF zawsze na metalu." },
+      { q: "Czy cena z kalkulatora jest ostateczna?", a: "Nie, to orientacyjna kwota wg naszych stawek z minimum £350. Stałą cenę podajemy po zdjęciach lub oględzinach." },
+      { q: "Czego potrzebujecie do wyceny?", a: "Kodu pocztowego, opisu prac, wymiarów i kilku zdjęć. Rysunki pomagają, ale nie są konieczne." },
+      { q: "Jak szybko odpowiadacie?", a: "Na WhatsApp i e-maile odpowiadamy tego samego dnia." },
+    ],
+  },
+  final: { title: "Masz ścianę w planach?", cta: "Napisz na WhatsApp" },
+  quote: {
+    ...en.quote,
+    metaTitle: "Wycena suchej zabudowy w Londynie — odpowiedź tego samego dnia | Frameon",
+    metaDescription: "Wyślij opis prac i zdjęcia — wycena robocizny suchej zabudowy i wykończeń w Londynie tego samego dnia.",
+    h1: "Wycena Twojej pracy", lead: "Napisz, czego potrzebujesz. Odpowiemy tego samego dnia z wyceną robocizny.",
+    name: "Imię", contact: "Telefon lub e-mail", postcode: "Kod pocztowy", service: "Czego potrzebujesz?", message: "Szczegóły",
+    messagePlaceholder: "Wymiary, liczba pokoi, termin…", sendWhatsapp: "Wyślij na WhatsApp", sendEmail: "Wyślij e-mailem",
+    photosHint: "Zdjęcia przyspieszają wycenę — dodaj je w czacie WhatsApp lub w e-mailu.", or: "lub zadzwoń", required: "wymagane",
+  },
+  servicePage: { ...en.servicePage, breadcrumbHome: "Start", breadcrumbServices: "Usługi", related: "Często zamawiane razem" },
+  servicesHub: {
+    metaTitle: "Usługi suchej zabudowy i wykończeń w Londynie | Frameon",
+    metaDescription: "Ścianki działowe, SFS, okładziny, sufity MF, zabudowy rur, izolacje, gładzie, malowanie, podłogi, płytki i remonty pod klucz w Londynie.",
+    h1: "Suche zabudowy i wykończenia w Londynie",
+    lead: "Ceny za robociznę. Szczegółowe strony usług — po angielsku i ukraińsku.",
+    groups: [
+      { title: "Suche zabudowy", slugs: en.servicesHub.groups[0].slugs },
+      { title: "Izolacje", slugs: en.servicesHub.groups[1].slugs },
+      { title: "Wykończenia", slugs: en.servicesHub.groups[2].slugs },
+    ],
+  },
+  footer: { services: "Suche zabudowy", finishing: "Wykończenia", company: "Firma", contact: "Kontakt", language: "Język", rights: "© 2026 Frameon Drylining · Londyn", privacy: "Prywatność", top: "Do góry", noCookies: "Bez cookies i śledzenia." },
+  privacy: {
+    metaTitle: "Prywatność | Frameon Drylining", h1: "Prywatność",
+    body: ["Ta strona nie używa cookies, analityki ani śledzenia.", "Wybór języka jest zapisywany tylko w Twojej przeglądarce.", "Dane z WhatsApp, telefonów i e-maili wykorzystujemy tylko do odpowiedzi i wyceny i nie przekazujemy ich innym.", "Aby poprosić o usunięcie danych, napisz na frameondrylining@gmail.com."],
+  },
+  notFound: { title: "Tej ściany jeszcze nie zbudowano.", text: "Taka strona nie istnieje.", cta: "Strona główna" },
+  servicesText: {
+    "stud-partitions": { title: "Ścianki działowe", short: "Nowe pokoje na stelażu metalowym lub drewnianym, akustyczne i ogniochronne." },
+    "sfs-framing": { title: "Stelaż SFS i płyty OSB", short: "Stalowy stelaż między stropami, poszycie OSB lub sklejką." },
+    "wall-linings": { title: "Okładziny ścian", short: "Nowa równa powierzchnia na cegle — na klej lub na profilach." },
+    "mf-ceilings": { title: "Sufity MF", short: "Sufity podwieszane na profilach metalowych." },
+    "boxing-bulkheads-reveals": { title: "Zabudowy rur, obniżenia i ościeża", short: "Chowamy rury, robimy wnęki i obniżenia, wykańczamy ościeża." },
+    insulation: { title: "Izolacje", short: "Celotex, wełna mineralna, paroizolacja i hydroizolacja." },
+    "taping-plastering-painting": { title: "Spoinowanie, gładź i malowanie", short: "Spoiny, gładź i farba." },
+    flooring: { title: "Podłogi", short: "Deska warstwowa, panele i LVT." },
+    tiling: { title: "Płytki", short: "Ściany i podłogi w łazienkach i kuchniach." },
+    "turnkey-refurbishment": { title: "Remont pod klucz", short: "Od stelaża do farby, wycena po oględzinach." },
+  },
+};
+
+export default pl;

@@ -1,0 +1,138 @@
+import type { SiteText } from "./types";
+import en, { boroughsEn } from "./en";
+
+const it: SiteText = {
+  ...en,
+  langName: "Italiano",
+  meta: {
+    homeTitle: "Cartongesso a Londra — Pareti divisorie e controsoffitti MF | Frameon",
+    homeDescription: "Pareti divisorie, contropareti, controsoffitti MF e finiture complete in tutti i quartieri di Londra. Manodopera da £30/m², materiali a parte. Rispondiamo in giornata.",
+  },
+  nav: { services: "Servizi", contractors: "Per imprese", how: "Come lavoriamo", areas: "Zone", faq: "Domande", getPrice: "Chiedi un prezzo", menu: "Apri menu", close: "Chiudi menu", language: "Lingua" },
+  hero: {
+    eyebrow: "Cartongesso e finiture · Tutta Londra",
+    h1: "Posatori di cartongesso a Londra",
+    slogan: ["Struttura.", "Lastra.", "Fatto."],
+    lead: "Pareti divisorie, contropareti, controsoffitti MF e finiture complete. Manodopera da £30/m², materiali a parte. Mandaci le foto: rispondiamo in giornata.",
+    ctaWhatsapp: "Preventivo gratuito su WhatsApp",
+    ctaPrice: "Calcola il lavoro",
+    badge: "−15% nuovi clienti",
+    scroll: "Scorri per costruire",
+  },
+  build: {
+    label: "Come nasce una stanza",
+    skip: "Salta animazione",
+    serviceLink: "Di più sulle pareti divisorie",
+    stages: [
+      { tag: "01 / TRACCIAMENTO", title: "Una linea laser decide la parete", text: "Tracciamo pareti, vani e quota del soffitto con il laser prima di posare il primo profilo.", spec: "TRACCIAMENTO LASER · PAVIMENTO E SOFFITTO" },
+      { tag: "02 / STRUTTURA", title: "Guide sulla linea, montanti ogni 600 mm", text: "Fissiamo le guide sulla linea e controlliamo ogni montante a piombo. I vani porta si fanno subito.", spec: "MONTANTE C 70 MM · 600 MM · PENDINI MF" },
+      { tag: "03 / LASTRE", title: "Giunti sui montanti, viti ogni 300 mm", text: "Lastre su un lato: ogni giunto su un montante, teste delle viti leggermente incassate.", spec: "12.5 MM TYPE D · VITI @ 300 MM" },
+      { tag: "04 / ISOLAMENTO", title: "Niente vuoti né suono sordo", text: "Lana minerale ben aderente, poi il secondo lato chiude la parete, con lastre ignifughe o acustiche dove serve.", spec: "50 MM LANA MINERALE · 15 MM TYPE F" },
+      { tag: "05 / FINITURA", title: "Dalle lastre a una stanza vivibile", text: "Stuccatura, rasatura, pittura, pavimenti e piastrelle: un'unica squadra dal mattone alla stanza finita.", spec: "STUCCO · RASATURA · PITTURA · PAVIMENTO" },
+    ],
+  },
+  done: {
+    title: "Dal mattone nudo alla stanza finita.",
+    stats: [
+      { value: "5+", label: "anni nei cantieri di Londra" },
+      { value: "£/m²", label: "prezzo fisso al m², niente tariffe orarie" },
+      { value: "33", label: "quartieri di Londra, City compresa" },
+      { value: "£350", label: "ordine minimo di manodopera" },
+    ],
+  },
+  services: { eyebrow: "Servizi · 10", title: "Tutto tra il mattone nudo e la prima mano di pittura.", more: "Dettagli", all: "Tutti i servizi" },
+  xray: { eyebrow: "Qualità che non si vede", title: "Guarda cosa c'è dentro la parete.", text: "Ogni giunto su un montante, viti ogni 300 mm, isolamento senza vuoti. Ciò che resta dietro la lastra è fatto con la stessa cura di ciò che vedi.", cta: "Mandaci una foto della tua parete", hint: "Muovi il cursore sulla parete", before: "Struttura", after: "Finito" },
+  contractors: {
+    ...en.contractors,
+    eyebrow: "Per imprese e sviluppatori",
+    title: "Una squadra di cartongesso che quota al m² e lavora sui tuoi disegni.",
+    text: "Prendiamo pacchetti di pareti, contropareti, controsoffitti MF e OSB a misura, senza giornate a ore né sorprese a consuntivo.",
+    points: [
+      { title: "Prezzo dai disegni", text: "Invia disegni o capitolato e ti diamo il prezzo al m² o al metro lineare, solo manodopera." },
+      { title: "Sistemi da capitolato", text: "Struttura metallica e in legno, controsoffitti MF, SFS, OSB e compensato, soluzioni REI e acustiche." },
+      { title: "Date concordate", text: "Iniziamo alla data concordata e consegniamo lastre pronte per stuccatura o rasatura." },
+    ],
+    cta: "Invia i disegni via email",
+    ctaSecondary: "Per imprese",
+  },
+  how: {
+    eyebrow: "Come lavoriamo",
+    title: "Tre passi. Nessuna sorpresa.",
+    steps: [
+      { title: "Invia le foto", text: "Foto, misure indicative e CAP su WhatsApp. Rispondiamo in giornata." },
+      { title: "Concordiamo il lavoro", text: "Struttura, lastre, strati, vani e chi fornisce i materiali, per iscritto prima di iniziare." },
+      { title: "Montiamo e chiudiamo", text: "Nelle date concordate. Lastre pronte per la stuccatura, oppure finiamo l'intera stanza." },
+    ],
+  },
+  calc: {
+    ...en.calc,
+    eyebrow: "Calcolo rapido",
+    title: "Quanto costerà la tua parete?",
+    kinds: [
+      { id: "partition", label: "Parete divisoria", unit: "m2", rate: 30 },
+      { id: "lining", label: "Controparete", unit: "m2", rate: 19 },
+      { id: "ceiling", label: "Controsoffitto MF", unit: "m2", rate: 28, dim2: "width" },
+      { id: "boxing", label: "Cassonetto tubi", unit: "m", rate: 32 },
+    ],
+    length: "Lunghezza, m", height: "Altezza, m", width: "Larghezza, m", labourOnly: "solo manodopera", from: "da",
+    discount: "Nuovi clienti −15%: da", send: "Invia su WhatsApp",
+    note: "Solo manodopera: i materiali li paga il cliente. Ordine minimo £350. Il prezzo fisso arriva dopo foto o sopralluogo.",
+    whatsappIntro: "Salve Frameon, vorrei un preventivo:", noRate: "Prezzo dopo foto o sopralluogo",
+  },
+  areas: { eyebrow: "Zone", title: "Ogni quartiere di Londra.", text: "Lavoriamo in tutti i 32 quartieri di Londra e nella City: case, appartamenti, loft e locali commerciali.", boroughs: boroughsEn },
+  faq: {
+    eyebrow: "Domande", title: "Domande frequenti",
+    pageTitle: "Domande sul cartongesso — prezzi, materiali e tempi | Frameon",
+    pageDescription: "Risposte su prezzi del cartongesso, materiali, strutture, finiture e cosa ci serve per un preventivo a Londra.",
+    items: [
+      { q: "Fate anche le finiture?", a: "Sì. Stuccatura, rasatura, pittura, pavimenti e piastrelle, fino alla ristrutturazione chiavi in mano. Le finiture si quotano a parte dopo foto o sopralluogo." },
+      { q: "Chi paga i materiali?", a: "Il cliente. I nostri prezzi sono solo manodopera." },
+      { q: "Struttura metallica o in legno?", a: "Entrambe, per pareti interne non portanti. Il metallo è dritto e veloce; il legno è utile per appendere oggetti pesanti. I controsoffitti MF sempre su metallo." },
+      { q: "Il prezzo del calcolatore è definitivo?", a: "No, è indicativo, con minimo £350. Il prezzo fisso arriva dopo foto o sopralluogo." },
+      { q: "Cosa vi serve per il preventivo?", a: "CAP, descrizione del lavoro, misure indicative e qualche foto. I disegni aiutano ma non sono obbligatori." },
+      { q: "Quando rispondete?", a: "Rispondiamo a WhatsApp ed email in giornata." },
+    ],
+  },
+  final: { title: "Hai una parete in mente?", cta: "Scrivici su WhatsApp" },
+  quote: {
+    ...en.quote,
+    metaTitle: "Preventivo cartongesso a Londra — risposta in giornata | Frameon",
+    metaDescription: "Invia descrizione e foto e ricevi in giornata un preventivo di manodopera per cartongesso e finiture a Londra.",
+    h1: "Chiedi il prezzo del tuo lavoro", lead: "Raccontaci cosa ti serve. Rispondiamo in giornata con un preventivo di manodopera.",
+    name: "Il tuo nome", contact: "Telefono o email", postcode: "CAP", service: "Di cosa hai bisogno?", message: "Dettagli",
+    messagePlaceholder: "Misure, numero di stanze, tempistiche…", sendWhatsapp: "Invia su WhatsApp", sendEmail: "Invia via email",
+    photosHint: "Le foto velocizzano il preventivo: allegale su WhatsApp o nell'email che si apre.", or: "oppure chiama", required: "obbligatorio",
+  },
+  servicePage: { ...en.servicePage, breadcrumbHome: "Home", breadcrumbServices: "Servizi", related: "Spesso richiesti insieme" },
+  servicesHub: {
+    metaTitle: "Servizi di cartongesso e finiture a Londra | Frameon",
+    metaDescription: "Pareti divisorie, SFS, contropareti, controsoffitti MF, cassonetti, isolamento, rasature, pittura, pavimenti, piastrelle e ristrutturazioni chiavi in mano a Londra.",
+    h1: "Cartongesso e finiture a Londra",
+    lead: "Prezzi solo manodopera. Le pagine dettagliate sono in inglese e ucraino.",
+    groups: [
+      { title: "Cartongesso", slugs: en.servicesHub.groups[0].slugs },
+      { title: "Isolamento", slugs: en.servicesHub.groups[1].slugs },
+      { title: "Finiture", slugs: en.servicesHub.groups[2].slugs },
+    ],
+  },
+  footer: { services: "Cartongesso", finishing: "Finiture", company: "Azienda", contact: "Contatti", language: "Lingua", rights: "© 2026 Frameon Drylining · Londra", privacy: "Privacy", top: "Su", noCookies: "Niente cookie né tracciamento." },
+  privacy: {
+    metaTitle: "Privacy | Frameon Drylining", h1: "Privacy",
+    body: ["Questo sito non usa cookie, analisi o tracciamento.", "La lingua scelta resta salvata solo nel tuo browser.", "Usiamo i dati da WhatsApp, telefonate ed email solo per rispondere e fare preventivi, e non li condividiamo.", "Per chiedere la cancellazione dei tuoi dati, scrivi a frameondrylining@gmail.com."],
+  },
+  notFound: { title: "Questa parete non è ancora stata costruita.", text: "La pagina non esiste.", cta: "Torna alla home" },
+  servicesText: {
+    "stud-partitions": { title: "Pareti divisorie", short: "Nuove stanze su struttura metallica o in legno, acustiche e ignifughe." },
+    "sfs-framing": { title: "Struttura SFS e OSB", short: "Struttura in acciaio tra i solai, rivestita in OSB o compensato." },
+    "wall-linings": { title: "Contropareti", short: "Una superficie nuova e dritta sul mattone, incollata o su profili." },
+    "mf-ceilings": { title: "Controsoffitti MF", short: "Controsoffitti su orditura metallica alla quota concordata." },
+    "boxing-bulkheads-reveals": { title: "Cassonetti, ribassi e spallette", short: "Nascondiamo i tubi, creiamo nicchie e ribassi, rivestiamo le spallette." },
+    insulation: { title: "Isolamento", short: "Celotex, lana minerale, barriera al vapore e impermeabilizzazione." },
+    "taping-plastering-painting": { title: "Stuccatura, rasatura e pittura", short: "Giunti, rasatura e pittura." },
+    flooring: { title: "Pavimenti", short: "Parquet prefinito, laminato e LVT." },
+    tiling: { title: "Piastrelle", short: "Pareti e pavimenti di bagni e cucine." },
+    "turnkey-refurbishment": { title: "Ristrutturazione chiavi in mano", short: "Dalla struttura alla pittura, prezzo dopo sopralluogo." },
+  },
+};
+
+export default it;

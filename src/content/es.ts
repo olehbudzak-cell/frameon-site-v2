@@ -1,0 +1,138 @@
+import type { SiteText } from "./types";
+import en, { boroughsEn } from "./en";
+
+const es: SiteText = {
+  ...en,
+  langName: "Español",
+  meta: {
+    homeTitle: "Pladur en Londres — Tabiques y techos MF | Frameon",
+    homeDescription: "Tabiques, trasdosados, techos MF y acabados completos en todos los distritos de Londres. Mano de obra desde £30/m², materiales aparte. Respondemos el mismo día.",
+  },
+  nav: { services: "Servicios", contractors: "Para constructoras", how: "Cómo trabajamos", areas: "Zonas", faq: "Preguntas", getPrice: "Pedir precio", menu: "Abrir menú", close: "Cerrar menú", language: "Idioma" },
+  hero: {
+    eyebrow: "Pladur y acabados · Todo Londres",
+    h1: "Instaladores de pladur en Londres",
+    slogan: ["Estructura.", "Placa.", "Listo."],
+    lead: "Tabiques, trasdosados, techos MF y acabados completos. Mano de obra desde £30/m², materiales aparte. Envíanos fotos y te respondemos el mismo día.",
+    ctaWhatsapp: "Presupuesto gratis por WhatsApp",
+    ctaPrice: "Calcular el trabajo",
+    badge: "−15% nuevos clientes",
+    scroll: "Desliza para construir",
+  },
+  build: {
+    label: "Cómo se construye una habitación",
+    skip: "Saltar animación",
+    serviceLink: "Más sobre tabiques",
+    stages: [
+      { tag: "01 / REPLANTEO", title: "Una línea láser decide la pared", text: "Replanteamos paredes, huecos y nivel del techo con láser antes de colocar el primer perfil.", spec: "REPLANTEO LÁSER · SUELO Y TECHO" },
+      { tag: "02 / ESTRUCTURA", title: "Canales en la línea, montantes cada 600 mm", text: "Fijamos los canales sobre la línea y comprobamos cada montante a plomo. Los huecos de puerta se hacen al momento.", spec: "MONTANTE C 70 MM · 600 MM · CUELGUES MF" },
+      { tag: "03 / PLACA", title: "Juntas sobre montantes, tornillos cada 300 mm", text: "Placas en una cara: cada junta sobre un montante, cabezas de tornillo ligeramente hundidas.", spec: "12.5 MM TYPE D · TORNILLOS @ 300 MM" },
+      { tag: "04 / AISLAMIENTO", title: "Sin huecos ni sonido hueco", text: "Lana mineral bien ajustada y la segunda cara cierra la pared, con placa ignífuga o acústica donde se requiera.", spec: "50 MM LANA MINERAL · 15 MM TYPE F" },
+      { tag: "05 / ACABADO", title: "De placas a una habitación habitable", text: "Juntas, enlucido, pintura, suelos y alicatado: un solo equipo del ladrillo a la habitación terminada.", spec: "JUNTAS · ENLUCIDO · PINTURA · SUELO" },
+    ],
+  },
+  done: {
+    title: "Del ladrillo desnudo a la habitación terminada.",
+    stats: [
+      { value: "5+", label: "años en obras de Londres" },
+      { value: "£/m²", label: "precio fijo por m², sin tarifa por horas" },
+      { value: "33", label: "distritos de Londres, incluida la City" },
+      { value: "£350", label: "pedido mínimo de mano de obra" },
+    ],
+  },
+  services: { eyebrow: "Servicios · 10", title: "Todo entre el ladrillo desnudo y la primera mano de pintura.", more: "Detalles", all: "Todos los servicios" },
+  xray: { eyebrow: "Calidad que no se ve", title: "Mira lo que hay dentro de la pared.", text: "Cada junta sobre un montante, tornillos cada 300 mm, aislamiento sin huecos. Lo que queda detrás de la placa se hace con el mismo cuidado que lo que ves.", cta: "Envíanos una foto de tu pared", hint: "Pasa el cursor por la pared", before: "Estructura", after: "Terminado" },
+  contractors: {
+    ...en.contractors,
+    eyebrow: "Para constructoras y promotores",
+    title: "Un equipo de pladur que presupuesta por m² y trabaja con tus planos.",
+    text: "Asumimos paquetes de tabiques, trasdosados, techos MF y OSB a destajo, sin jornales ni sorpresas en la liquidación.",
+    points: [
+      { title: "Precio desde planos", text: "Envía planos o especificación y te damos tarifa por m² o metro lineal, solo mano de obra." },
+      { title: "Sistemas según especificación", text: "Estructura metálica y de madera, techos MF, SFS, OSB y contrachapado, soluciones ignífugas y acústicas." },
+      { title: "Fechas acordadas", text: "Empezamos en la fecha acordada y entregamos las placas listas para juntas o enlucido." },
+    ],
+    cta: "Enviar planos por email",
+    ctaSecondary: "Para constructoras",
+  },
+  how: {
+    eyebrow: "Cómo trabajamos",
+    title: "Tres pasos. Sin sorpresas.",
+    steps: [
+      { title: "Envía fotos", text: "Fotos, medidas aproximadas y código postal por WhatsApp. Respondemos el mismo día." },
+      { title: "Acordamos el alcance", text: "Estructura, placas, capas, huecos y quién aporta materiales, por escrito antes de empezar." },
+      { title: "Montamos y forramos", text: "En las fechas acordadas. Placas listas para juntas, o terminamos la habitación entera." },
+    ],
+  },
+  calc: {
+    ...en.calc,
+    eyebrow: "Cálculo rápido",
+    title: "¿Cuánto costará tu pared?",
+    kinds: [
+      { id: "partition", label: "Tabique", unit: "m2", rate: 30 },
+      { id: "lining", label: "Trasdosado", unit: "m2", rate: 19 },
+      { id: "ceiling", label: "Techo MF", unit: "m2", rate: 28, dim2: "width" },
+      { id: "boxing", label: "Cajeado de tuberías", unit: "m", rate: 32 },
+    ],
+    length: "Largo, m", height: "Alto, m", width: "Ancho, m", labourOnly: "solo mano de obra", from: "desde",
+    discount: "Nuevos clientes −15%: desde", send: "Enviar por WhatsApp",
+    note: "Solo mano de obra: los materiales los paga el cliente. Pedido mínimo £350. El precio fijo se da tras fotos o visita.",
+    whatsappIntro: "Hola Frameon, quiero un presupuesto:", noRate: "Precio tras fotos o visita",
+  },
+  areas: { eyebrow: "Zonas", title: "Todos los distritos de Londres.", text: "Trabajamos en los 32 distritos de Londres y en la City: casas, pisos, lofts y locales comerciales.", boroughs: boroughsEn },
+  faq: {
+    eyebrow: "Preguntas", title: "Preguntas frecuentes",
+    pageTitle: "Preguntas sobre pladur — precios, materiales y plazos | Frameon",
+    pageDescription: "Respuestas sobre precios de pladur, materiales, estructuras, acabados y qué necesitamos para presupuestar en Londres.",
+    items: [
+      { q: "¿También hacéis acabados?", a: "Sí. Juntas, enlucido, pintura, suelos y alicatado, hasta la reforma llave en mano. Los acabados se presupuestan aparte tras fotos o visita." },
+      { q: "¿Quién paga los materiales?", a: "El cliente. Nuestros precios son solo de mano de obra." },
+      { q: "¿Estructura metálica o de madera?", a: "Ambas, para paredes interiores no portantes. El metal es recto y rápido; la madera va bien para colgar cosas pesadas. Los techos MF siempre en metal." },
+      { q: "¿El precio de la calculadora es definitivo?", a: "No, es orientativo, con un mínimo de £350. El precio fijo se da tras fotos o visita." },
+      { q: "¿Qué necesitáis para presupuestar?", a: "Código postal, descripción del trabajo, medidas aproximadas y algunas fotos. Los planos ayudan, pero no son imprescindibles." },
+      { q: "¿Cuándo respondéis?", a: "Respondemos a WhatsApp y emails el mismo día." },
+    ],
+  },
+  final: { title: "¿Tienes una pared en mente?", cta: "Escríbenos por WhatsApp" },
+  quote: {
+    ...en.quote,
+    metaTitle: "Presupuesto de pladur en Londres — respuesta el mismo día | Frameon",
+    metaDescription: "Envía la descripción y fotos y recibe un presupuesto de mano de obra para pladur y acabados en Londres el mismo día.",
+    h1: "Pide precio para tu trabajo", lead: "Cuéntanos qué necesitas. Respondemos el mismo día con un presupuesto de mano de obra.",
+    name: "Tu nombre", contact: "Teléfono o email", postcode: "Código postal", service: "¿Qué necesitas?", message: "Detalles",
+    messagePlaceholder: "Medidas, número de habitaciones, plazo…", sendWhatsapp: "Enviar por WhatsApp", sendEmail: "Enviar por email",
+    photosHint: "Las fotos aceleran el presupuesto: adjúntalas en WhatsApp o en el email que se abre.", or: "o llama", required: "obligatorio",
+  },
+  servicePage: { ...en.servicePage, breadcrumbHome: "Inicio", breadcrumbServices: "Servicios", related: "Se contratan juntos" },
+  servicesHub: {
+    metaTitle: "Servicios de pladur y acabados en Londres | Frameon",
+    metaDescription: "Tabiques, SFS, trasdosados, techos MF, cajeados, aislamiento, enlucido, pintura, suelos, alicatado y reformas llave en mano en Londres.",
+    h1: "Pladur y acabados en Londres",
+    lead: "Precios solo de mano de obra. Las páginas detalladas están en inglés y ucraniano.",
+    groups: [
+      { title: "Pladur", slugs: en.servicesHub.groups[0].slugs },
+      { title: "Aislamiento", slugs: en.servicesHub.groups[1].slugs },
+      { title: "Acabados", slugs: en.servicesHub.groups[2].slugs },
+    ],
+  },
+  footer: { services: "Pladur", finishing: "Acabados", company: "Empresa", contact: "Contacto", language: "Idioma", rights: "© 2026 Frameon Drylining · Londres", privacy: "Privacidad", top: "Arriba", noCookies: "Sin cookies ni seguimiento." },
+  privacy: {
+    metaTitle: "Privacidad | Frameon Drylining", h1: "Privacidad",
+    body: ["Este sitio no usa cookies, analítica ni seguimiento.", "Tu idioma se guarda solo en tu navegador.", "Usamos los datos de WhatsApp, llamadas y emails solo para responder y presupuestar, y no los compartimos.", "Para pedir que borremos tus datos, escribe a frameondrylining@gmail.com."],
+  },
+  notFound: { title: "Esta pared aún no está construida.", text: "La página no existe.", cta: "Volver al inicio" },
+  servicesText: {
+    "stud-partitions": { title: "Tabiques", short: "Nuevas habitaciones con estructura metálica o de madera, acústicos e ignífugos." },
+    "sfs-framing": { title: "Estructura SFS y OSB", short: "Estructura de acero entre forjados, forrada con OSB o contrachapado." },
+    "wall-linings": { title: "Trasdosados", short: "Una superficie nueva y recta sobre ladrillo, pegada o sobre perfiles." },
+    "mf-ceilings": { title: "Techos MF", short: "Falsos techos sobre perfilería metálica al nivel acordado." },
+    "boxing-bulkheads-reveals": { title: "Cajeados, foseados y mochetas", short: "Ocultamos tuberías, hacemos nichos y foseados, forramos mochetas." },
+    insulation: { title: "Aislamiento", short: "Celotex, lana mineral, barrera de vapor e impermeabilización." },
+    "taping-plastering-painting": { title: "Juntas, enlucido y pintura", short: "Juntas, enlucido fino y pintura." },
+    flooring: { title: "Suelos", short: "Tarima de ingeniería, laminado y LVT." },
+    tiling: { title: "Alicatado", short: "Paredes y suelos de baños y cocinas." },
+    "turnkey-refurbishment": { title: "Reforma llave en mano", short: "De la estructura a la pintura, precio tras visita." },
+  },
+};
+
+export default es;

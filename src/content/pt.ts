@@ -1,0 +1,138 @@
+import type { SiteText } from "./types";
+import en, { boroughsEn } from "./en";
+
+const pt: SiteText = {
+  ...en,
+  langName: "Português",
+  meta: {
+    homeTitle: "Pladur em Londres — Paredes divisórias e tetos MF | Frameon",
+    homeDescription: "Paredes divisórias, revestimentos, tetos MF e acabamentos completos em todos os bairros de Londres. Mão de obra desde £30/m², materiais à parte. Respondemos no mesmo dia.",
+  },
+  nav: { services: "Serviços", contractors: "Para empreiteiros", how: "Como trabalhamos", areas: "Zonas", faq: "Perguntas", getPrice: "Pedir preço", menu: "Abrir menu", close: "Fechar menu", language: "Idioma" },
+  hero: {
+    eyebrow: "Pladur e acabamentos · Toda Londres",
+    h1: "Instaladores de pladur em Londres",
+    slogan: ["Estrutura.", "Placa.", "Pronto."],
+    lead: "Paredes divisórias, revestimentos, tetos MF e acabamentos completos. Mão de obra desde £30/m², materiais à parte. Envie fotos e respondemos no mesmo dia.",
+    ctaWhatsapp: "Orçamento grátis no WhatsApp",
+    ctaPrice: "Calcular o trabalho",
+    badge: "−15% novos clientes",
+    scroll: "Deslize para construir",
+  },
+  build: {
+    label: "Como se constrói uma divisão",
+    skip: "Saltar animação",
+    serviceLink: "Mais sobre paredes divisórias",
+    stages: [
+      { tag: "01 / MARCAÇÃO", title: "Uma linha laser decide a parede", text: "Marcamos paredes, vãos e nível do teto com laser antes do primeiro perfil.", spec: "MARCAÇÃO LASER · CHÃO E TETO" },
+      { tag: "02 / ESTRUTURA", title: "Calhas na linha, montantes a cada 600 mm", text: "Fixamos as calhas na linha e verificamos cada montante a prumo. Os vãos de porta ficam logo feitos.", spec: "MONTANTE C 70 MM · 600 MM · SUSPENSÕES MF" },
+      { tag: "03 / PLACA", title: "Juntas nos montantes, parafusos a cada 300 mm", text: "Placas numa face: cada junta sobre um montante, cabeças dos parafusos ligeiramente embutidas.", spec: "12.5 MM TYPE D · PARAFUSOS @ 300 MM" },
+      { tag: "04 / ISOLAMENTO", title: "Sem folgas nem som oco", text: "Lã mineral bem ajustada e a segunda face fecha a parede, com placa corta-fogo ou acústica quando necessário.", spec: "50 MM LÃ MINERAL · 15 MM TYPE F" },
+      { tag: "05 / ACABAMENTO", title: "De placas a uma divisão habitável", text: "Juntas, estuque, pintura, pavimentos e azulejos: uma só equipa do tijolo à divisão pronta.", spec: "JUNTAS · ESTUQUE · PINTURA · PAVIMENTO" },
+    ],
+  },
+  done: {
+    title: "Do tijolo nu à divisão pronta.",
+    stats: [
+      { value: "5+", label: "anos em obras de Londres" },
+      { value: "£/m²", label: "preço fixo por m², sem preço à hora" },
+      { value: "33", label: "bairros de Londres, incluindo a City" },
+      { value: "£350", label: "encomenda mínima de mão de obra" },
+    ],
+  },
+  services: { eyebrow: "Serviços · 10", title: "Tudo entre o tijolo nu e a primeira demão de tinta.", more: "Detalhes", all: "Todos os serviços" },
+  xray: { eyebrow: "Qualidade que não se vê", title: "Veja o que há dentro da parede.", text: "Cada junta num montante, parafusos a cada 300 mm, isolamento sem folgas. O que fica atrás da placa é feito com o mesmo cuidado do que se vê.", cta: "Envie uma foto da sua parede", hint: "Passe o cursor pela parede", before: "Estrutura", after: "Pronto" },
+  contractors: {
+    ...en.contractors,
+    eyebrow: "Para empreiteiros e promotores",
+    title: "Uma equipa de pladur que orça por m² e trabalha com os seus desenhos.",
+    text: "Assumimos pacotes de divisórias, revestimentos, tetos MF e OSB à empreitada, sem jornas nem surpresas na conta final.",
+    points: [
+      { title: "Preço a partir de desenhos", text: "Envie desenhos ou especificação e damos o preço por m² ou metro linear, só mão de obra." },
+      { title: "Sistemas conforme especificação", text: "Estrutura metálica e de madeira, tetos MF, SFS, OSB e contraplacado, soluções corta-fogo e acústicas." },
+      { title: "Datas acordadas", text: "Começamos na data acordada e entregamos placas prontas para juntas ou estuque." },
+    ],
+    cta: "Enviar desenhos por email",
+    ctaSecondary: "Para empreiteiros",
+  },
+  how: {
+    eyebrow: "Como trabalhamos",
+    title: "Três passos. Sem surpresas.",
+    steps: [
+      { title: "Envie fotos", text: "Fotos, medidas aproximadas e código postal no WhatsApp. Respondemos no mesmo dia." },
+      { title: "Acordamos o âmbito", text: "Estrutura, placas, camadas, vãos e quem fornece materiais, por escrito antes de começar." },
+      { title: "Montamos e forramos", text: "Nas datas acordadas. Placas prontas para juntas, ou terminamos a divisão toda." },
+    ],
+  },
+  calc: {
+    ...en.calc,
+    eyebrow: "Cálculo rápido",
+    title: "Quanto vai custar a sua parede?",
+    kinds: [
+      { id: "partition", label: "Parede divisória", unit: "m2", rate: 30 },
+      { id: "lining", label: "Revestimento", unit: "m2", rate: 19 },
+      { id: "ceiling", label: "Teto MF", unit: "m2", rate: 28, dim2: "width" },
+      { id: "boxing", label: "Caixa para tubos", unit: "m", rate: 32 },
+    ],
+    length: "Comprimento, m", height: "Altura, m", width: "Largura, m", labourOnly: "só mão de obra", from: "desde",
+    discount: "Novos clientes −15%: desde", send: "Enviar no WhatsApp",
+    note: "Só mão de obra: os materiais são pagos pelo cliente. Mínimo £350. O preço fixo é dado após fotos ou visita.",
+    whatsappIntro: "Olá Frameon, gostaria de um orçamento:", noRate: "Preço após fotos ou visita",
+  },
+  areas: { eyebrow: "Zonas", title: "Todos os bairros de Londres.", text: "Trabalhamos nos 32 bairros de Londres e na City: casas, apartamentos, lofts e espaços comerciais.", boroughs: boroughsEn },
+  faq: {
+    eyebrow: "Perguntas", title: "Perguntas frequentes",
+    pageTitle: "Perguntas sobre pladur — preços, materiais e prazos | Frameon",
+    pageDescription: "Respostas sobre preços de pladur, materiais, estruturas, acabamentos e o que precisamos para orçamentar em Londres.",
+    items: [
+      { q: "Também fazem acabamentos?", a: "Sim. Juntas, estuque, pintura, pavimentos e azulejos, até à remodelação chave na mão. Os acabamentos são orçados à parte após fotos ou visita." },
+      { q: "Quem paga os materiais?", a: "O cliente. Os nossos preços são só de mão de obra." },
+      { q: "Estrutura metálica ou de madeira?", a: "Ambas, para paredes interiores não estruturais. O metal é direito e rápido; a madeira é útil para pendurar objetos pesados. Tetos MF sempre em metal." },
+      { q: "O preço da calculadora é final?", a: "Não, é indicativo, com mínimo de £350. O preço fixo é dado após fotos ou visita." },
+      { q: "O que precisam para orçamentar?", a: "Código postal, descrição do trabalho, medidas aproximadas e algumas fotos. Desenhos ajudam, mas não são obrigatórios." },
+      { q: "Quando respondem?", a: "Respondemos a WhatsApp e emails no mesmo dia." },
+    ],
+  },
+  final: { title: "Tem uma parede em mente?", cta: "Fale connosco no WhatsApp" },
+  quote: {
+    ...en.quote,
+    metaTitle: "Orçamento de pladur em Londres — resposta no mesmo dia | Frameon",
+    metaDescription: "Envie a descrição e fotos e receba um orçamento de mão de obra para pladur e acabamentos em Londres no mesmo dia.",
+    h1: "Peça o preço do seu trabalho", lead: "Diga-nos o que precisa. Respondemos no mesmo dia com um orçamento de mão de obra.",
+    name: "O seu nome", contact: "Telefone ou email", postcode: "Código postal", service: "O que precisa?", message: "Detalhes",
+    messagePlaceholder: "Medidas, número de divisões, prazo…", sendWhatsapp: "Enviar no WhatsApp", sendEmail: "Enviar por email",
+    photosHint: "As fotos aceleram o orçamento: anexe-as no WhatsApp ou no email que se abre.", or: "ou ligue", required: "obrigatório",
+  },
+  servicePage: { ...en.servicePage, breadcrumbHome: "Início", breadcrumbServices: "Serviços", related: "Pedidos em conjunto" },
+  servicesHub: {
+    metaTitle: "Serviços de pladur e acabamentos em Londres | Frameon",
+    metaDescription: "Divisórias, SFS, revestimentos, tetos MF, caixas, isolamento, estuque, pintura, pavimentos, azulejos e remodelações chave na mão em Londres.",
+    h1: "Pladur e acabamentos em Londres",
+    lead: "Preços só de mão de obra. As páginas detalhadas estão em inglês e ucraniano.",
+    groups: [
+      { title: "Pladur", slugs: en.servicesHub.groups[0].slugs },
+      { title: "Isolamento", slugs: en.servicesHub.groups[1].slugs },
+      { title: "Acabamentos", slugs: en.servicesHub.groups[2].slugs },
+    ],
+  },
+  footer: { services: "Pladur", finishing: "Acabamentos", company: "Empresa", contact: "Contacto", language: "Idioma", rights: "© 2026 Frameon Drylining · Londres", privacy: "Privacidade", top: "Topo", noCookies: "Sem cookies nem rastreamento." },
+  privacy: {
+    metaTitle: "Privacidade | Frameon Drylining", h1: "Privacidade",
+    body: ["Este site não usa cookies, análises nem rastreamento.", "O idioma escolhido fica guardado apenas no seu navegador.", "Usamos os dados de WhatsApp, chamadas e emails só para responder e orçamentar, e não os partilhamos.", "Para pedir a eliminação dos seus dados, escreva para frameondrylining@gmail.com."],
+  },
+  notFound: { title: "Esta parede ainda não foi construída.", text: "A página não existe.", cta: "Voltar ao início" },
+  servicesText: {
+    "stud-partitions": { title: "Paredes divisórias", short: "Novas divisões em estrutura metálica ou de madeira, acústicas e corta-fogo." },
+    "sfs-framing": { title: "Estrutura SFS e OSB", short: "Estrutura de aço entre lajes, revestida com OSB ou contraplacado." },
+    "wall-linings": { title: "Revestimento de paredes", short: "Uma superfície nova e direita sobre tijolo, colada ou em perfis." },
+    "mf-ceilings": { title: "Tetos MF", short: "Tetos falsos em perfis metálicos ao nível acordado." },
+    "boxing-bulkheads-reveals": { title: "Caixas, sancas e ombreiras", short: "Escondemos tubos, fazemos nichos e sancas, forramos ombreiras." },
+    insulation: { title: "Isolamento", short: "Celotex, lã mineral, barreira de vapor e impermeabilização." },
+    "taping-plastering-painting": { title: "Juntas, estuque e pintura", short: "Juntas, estuque e tinta." },
+    flooring: { title: "Pavimentos", short: "Soalho de engenharia, flutuante e LVT." },
+    tiling: { title: "Azulejos", short: "Paredes e pavimentos de casas de banho e cozinhas." },
+    "turnkey-refurbishment": { title: "Remodelação chave na mão", short: "Da estrutura à pintura, preço após visita." },
+  },
+};
+
+export default pt;
