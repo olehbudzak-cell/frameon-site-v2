@@ -44,4 +44,3 @@ export const CONTACT = {
   facebook: "https://www.facebook.com/frameondrylining",
 };
 
-export const SCENE = { desktopFrames: 96, mobileFrames: 72 };
