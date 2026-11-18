@@ -120,6 +120,20 @@ img { display: block; max-width: 100%; }
 @media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; gap: 28px; } .badge { width: 104px; height: 104px; top: 96px; font-size: 10px; } .scroll-cue { display: none; } }
 
 /* Build scene */
+/* Hero + build: one pinned, scroll-scrubbed video */
+.hb { position: relative; }
+.hb-pin { position: relative; height: 100svh; overflow: hidden; background: var(--color-ink, #0d0c0b); }
+.hb-media { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hb-video { opacity: 0; transition: opacity .5s var(--ease); }
+.hb-video.is-ready { opacity: 1; }
+.hb-hero { position: absolute; inset: 0; display: flex; align-items: flex-end; will-change: opacity, transform; }
+.hb .hero-shade { pointer-events: none; }
+.hb-hero .eyebrow, .hb-hero h1 { text-shadow: 0 1px 14px rgba(0,0,0,.85), 0 0 2px rgba(0,0,0,.6); }
+.hb-hero h1 { margin: 0 0 18px; font-family: var(--font-display); font-weight: 500; font-size: clamp(16px, 1.5vw, 20px); letter-spacing: 0.01em; color: var(--color-brass-light); }
+.hb .scroll-cue { z-index: 2; transition: opacity .3s; }
+.hb .build-ui { z-index: 2; }
+@media (max-width: 760px) { .hb-hero .eyebrow { display: none; } }
+@media (max-width: 900px) { .hb-hero .hero-inner { padding-bottom: calc(92px + env(safe-area-inset-bottom)); } }
 .build { position: relative; }
 .build-pin { position: relative; height: 100svh; overflow: hidden; }
 .build-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
