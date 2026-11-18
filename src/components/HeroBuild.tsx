@@ -3,22 +3,19 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { scrollToTarget } from "./SmoothScroll";
+import { SCENE } from "@/content/services";
 
 type Stage = { tag: string; title: string; text: string; spec: string };
 
-export const HERO_VIDEO = {
-  desktop: "/video/build-desktop.mp4",
-  mobile: "/video/build-mobile.mp4",
-  poster: "/video/poster-desktop.jpg",
-  posterMobile: "/video/poster-mobile.jpg",
-};
-
+const POSTER = { desktop: "/scene/desktop/f001.webp", mobile: "/scene/mobile/f001.webp" };
+const pad = (n: number) => String(n).padStart(3, "0");
 const clamp = (v: number, a = 0, b = 1) => Math.min(b, Math.max(a, v));
 
 /**
- * First screen = pinned build video. The video is scrubbed by scroll from the very
- * first pixel: the hero copy fades out while the room starts building, then the
- * stage cards take over. Reduced motion → static poster + copy, no pin.
+ * First screen = pinned build sequence (Higgsfield frames drawn on a canvas).
+ * Scroll scrubs the frames from the very first pixel: the hero copy fades out while
+ * the room starts building, then the stage cards take over.
+ * Reduced motion → static first frame + copy, no pin.
  */
 export default function HeroBuild({
   stages, label, skip, cue, extra, children,
@@ -27,7 +24,7 @@ export default function HeroBuild({
 }) {
   const sectionRef = useRef<HTMLElement>(null);
   const pinRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
   const uiRef = useRef<HTMLDivElement>(null);
   const shadeRef = useRef<HTMLDivElement>(null);
@@ -53,30 +50,54 @@ export default function HeroBuild({
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setReduced(true); return; }
     gsap.registerPlugin(ScrollTrigger);
-    const video = videoRef.current!;
-    const mobile = window.matchMedia("(max-width: 760px), (orientation: portrait) and (max-width: 1024px)").matches;
-    const src = mobile ? HERO_VIDEO.mobile : HERO_VIDEO.desktop;
-    let objectUrl = "";
+    const canvas = canvasRef.current!;
+    const ctx = canvas.getContext("2d")!;
+    const mobile = window.matchMedia("(max-width: 900px)").matches;
+    const count = mobile ? SCENE.mobileFrames : SCENE.desktopFrames;
+    const dir = mobile ? "mobile" : "desktop";
+    const imgs: HTMLImageElement[] = new Array(count);
     let cancelled = false;
+    let drawn = -1;
 
-    // Download the whole file first so every scrub position is already buffered.
-    fetch(src)
-      .then((r) => (r.ok ? r.blob() : Promise.reject()))
-      .then((b) => { if (cancelled) return; objectUrl = URL.createObjectURL(b); video.src = objectUrl; video.load(); })
-      .catch(() => { if (!cancelled) { video.src = src; video.load(); } });
+    const draw = (i: number) => {
+      // nearest already-loaded frame at or before i
+      let k = i;
+      while (k > 0 && !(imgs[k]?.complete && imgs[k].naturalWidth)) k--;
+      const img = imgs[k];
+      if (!img?.naturalWidth) return;
+      const w = canvas.clientWidth, h = canvas.clientHeight, dpr = Math.min(window.devicePixelRatio || 1, 2);
+      if (canvas.width !== Math.round(w * dpr) || canvas.height !== Math.round(h * dpr)) { canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr); drawn = -1; }
+      if (k === drawn) return;
+      const s = Math.max(canvas.width / img.naturalWidth, canvas.height / img.naturalHeight);
+      const dw = img.naturalWidth * s, dh = img.naturalHeight * s;
+      ctx.drawImage(img, (canvas.width - dw) / 2, (canvas.height - dh) / 2, dw, dh);
+      drawn = k;
+    };
 
-    const onReady = () => { setReady(true); video.pause(); };
-    video.addEventListener("loadeddata", onReady, { once: true });
+    const load = (i: number) =>
+      new Promise<void>((res) => {
+        const im = new Image();
+        im.decoding = "async";
+        im.onload = im.onerror = () => res();
+        im.src = `/scene/${dir}/f${pad(i + 1)}.webp`;
+        imgs[i] = im;
+      });
 
+    // First frame now, then the rest progressively (every 4th first for a coarse preview).
+    load(0).then(async () => {
+      if (cancelled) return;
+      draw(0); setReady(true);
+      const order = [...Array(count).keys()].sort((a, b) => (a % 4) - (b % 4) || a - b).filter((i) => i > 0);
+      for (let j = 0; j < order.length && !cancelled; j += 6) await Promise.all(order.slice(j, j + 6).map(load));
+    });
+
+    // Smoothly follow the scroll position.
     let target = 0, cur = 0, raf = 0;
     const tick = () => {
       raf = requestAnimationFrame(tick);
-      const d = video.duration;
-      if (!d || !isFinite(d) || video.readyState < 1) return;
-      cur += (target - cur) * 0.12;
+      cur += (target - cur) * 0.18;
       if (Math.abs(target - cur) < 0.0005) cur = target;
-      const t = clamp(cur, 0, 0.999) * d;
-      if (!video.seeking && Math.abs(video.currentTime - t) > 1 / 60) video.currentTime = t;
+      draw(Math.min(count - 1, Math.round(clamp(cur) * (count - 1))));
     };
     raf = requestAnimationFrame(tick);
 
@@ -110,11 +131,13 @@ export default function HeroBuild({
     stRef.current = st;
     apply(st.progress);
 
+    const onResize = () => { drawn = -1; };
+    window.addEventListener("resize", onResize);
     return () => {
       cancelled = true;
       cancelAnimationFrame(raf);
+      window.removeEventListener("resize", onResize);
       st.kill();
-      if (objectUrl) URL.revokeObjectURL(objectUrl);
     };
   }, [stages.length, heroShare]);
 
@@ -128,8 +151,8 @@ export default function HeroBuild({
 
   const poster = (
     <picture>
-      <source media="(max-width: 760px)" srcSet={HERO_VIDEO.posterMobile} />
-      <img src={HERO_VIDEO.poster} alt="" className="hb-media" fetchPriority="high" decoding="async" />
+      <source media="(max-width: 900px)" srcSet={POSTER.mobile} />
+      <img src={POSTER.desktop} alt="" className="hb-media" fetchPriority="high" decoding="async" />
     </picture>
   );
 
@@ -150,15 +173,7 @@ export default function HeroBuild({
     <section ref={sectionRef} className="hb" aria-label={label}>
       <div ref={pinRef} className="hb-pin">
         {poster}
-        <video
-          ref={videoRef}
-          className={`hb-media hb-video${ready ? " is-ready" : ""}`}
-          muted
-          playsInline
-          preload="auto"
-          disablePictureInPicture
-          aria-hidden="true"
-        />
+        <canvas ref={canvasRef} className={`hb-media hb-video${ready ? " is-ready" : ""}`} aria-hidden="true" />
         <div className="hero-shade" />
         <div ref={shadeRef} className="build-shade" style={{ opacity: 0 }} />
         <div ref={heroRef} className="hb-hero">{children}</div>
