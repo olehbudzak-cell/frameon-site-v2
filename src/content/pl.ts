@@ -6,14 +6,14 @@ const pl: SiteText = {
   langName: "Polski",
   meta: {
     homeTitle: "Suche zabudowy w Londynie — ścianki działowe i sufity MF | Frameon",
-    homeDescription: "Ścianki działowe, okładziny ścian, sufity podwieszane MF i pełne wykończenia we wszystkich dzielnicach Londynu. Robocizna od £30/m², materiały osobno. Odpowiadamy tego samego dnia.",
+    homeDescription: "Ścianki działowe, okładziny ścian, sufity podwieszane MF, zabudowy rur i izolacje we wszystkich dzielnicach Londynu. Robocizna od £30/m², materiały osobno. Odpowiadamy tego samego dnia.",
   },
   nav: { services: "Usługi", contractors: "Dla wykonawców", how: "Jak pracujemy", areas: "Dzielnice", faq: "Pytania", getPrice: "Wycena", menu: "Otwórz menu", close: "Zamknij menu", language: "Język" },
   hero: {
-    eyebrow: "Suche zabudowy i wykończenia · Cały Londyn",
+    eyebrow: "Suche zabudowy · Cały Londyn",
     h1: "Suche zabudowy z płyt g-k w Londynie",
     slogan: ["Stelaż.", "Płyta.", "Gotowe."],
-    lead: "Ścianki działowe, okładziny ścian, sufity MF i pełne wykończenia. Robocizna od £30/m², materiały wyceniane osobno. Wyślij zdjęcia — odpowiemy tego samego dnia.",
+    lead: "Ścianki działowe, okładziny ścian, sufity MF, zabudowy rur i izolacje. Robocizna od £30/m², materiały wyceniane osobno. Wyślij zdjęcia — odpowiemy tego samego dnia.",
     ctaWhatsapp: "Darmowa wycena na WhatsApp",
     ctaPrice: "Wyceń pracę",
     badge: "−15% dla nowych klientów",
@@ -28,11 +28,11 @@ const pl: SiteText = {
       { tag: "02 / STELAŻ", title: "Profile UW na linii, CW co 600 mm", text: "Profile mocujemy na linii, każdy słupek sprawdzamy w pionie, otwory drzwiowe od razu.", spec: "PROFIL C 70 MM · ROZSTAW 600 MM · WIESZAKI MF" },
       { tag: "03 / PŁYTA", title: "Styki na profilach, wkręty co 300 mm", text: "Płyty na jedną stronę: każdy styk na profilu, łby wkrętów lekko zagłębione.", spec: "12.5 MM TYPE D · WKRĘTY @ 300 MM" },
       { tag: "04 / IZOLACJA", title: "Bez szczelin i pustego dźwięku", text: "Wełnę mineralną docinamy ciasno, potem druga strona zamyka ścianę — płyta ogniochronna lub akustyczna.", spec: "50 MM WEŁNA · 15 MM TYPE F" },
-      { tag: "05 / WYKOŃCZENIE", title: "Od płyt do pokoju do życia", text: "Spoinowanie, gładź, malowanie i podłogi — wyceniane osobno, gdy płyty są już na miejscu.", spec: "SPOINY · GŁADŹ · FARBA · PODŁOGA" },
+      { tag: "05 / ODBIÓR", title: "Równe płyty, gotowe dla kolejnej ekipy", text: "Ciasne spoiny, wkręty zagłębione, narożniki z profilem — gotowe dla tynkarza lub malarza.", spec: "RÓWNO · CZYSTO · GOTOWE" },
     ],
   },
   done: {
-    title: "Od gołej cegły do gotowego pokoju.",
+    title: "Od gołej cegły do równych, gotowych ścian.",
     stats: [
       { value: "5+", label: "lat na londyńskich budowach" },
       { value: "£/m²", label: "stała cena za m² — bez stawek godzinowych" },
@@ -40,7 +40,7 @@ const pl: SiteText = {
       { value: "£350", label: "minimalne zlecenie (robocizna)" },
     ],
   },
-  services: { eyebrow: "Usługi · 8", title: "Wszystko między gołą cegłą a pierwszą warstwą farby.", more: "Szczegóły", all: "Wszystkie usługi" },
+  services: { eyebrow: "Usługi · 6", title: "Wszystko między gołą cegłą a pierwszą warstwą farby.", more: "Szczegóły", all: "Wszystkie usługi" },
   work: { eyebrow: "Nasze realizacje", title: "Prawdziwe budowy w Londynie, nasze zdjęcia.", text: "Stelaże, płyty i sufity prosto z naszych budów — zanim wejdą wykończeniowcy.", close: "Zamknij", prev: "Poprzednie", next: "Następne", all: "Wszystkie", sitePhoto: "Zdjęcie z naszej budowy", illustration: "Ilustracja", real: "Prawdziwe zdjęcia z naszych londyńskich budów — nie wizualizacje." },
   xray: { eyebrow: "Jakość, której nie widać", title: "Zobacz, co jest w środku ściany.", text: "Każdy styk na profilu, wkręty co 300 mm, izolacja bez szczelin. To, co zakryte płytą, robimy tak samo starannie jak powierzchnię.", cta: "Wyślij zdjęcie swojej ściany", hint: "Przesuń kursor po ścianie", before: "Stelaż", after: "Gotowe" },
   contractors: {
@@ -62,7 +62,7 @@ const pl: SiteText = {
     steps: [
       { title: "Wyślij zdjęcia", text: "Zdjęcia, wymiary i kod pocztowy na WhatsApp. Odpowiadamy tego samego dnia." },
       { title: "Uzgadniamy zakres", text: "Stelaż, płyty, warstwy, otwory i kto dostarcza materiały — na piśmie, przed startem." },
-      { title: "Budujemy", text: "W uzgodnionych terminach. Płyty gotowe do spoinowania — albo wykańczamy cały pokój." },
+      { title: "Budujemy", text: "W uzgodnionych terminach. Płyty gotowe do spoinowania." },
     ],
   },
   calc: {
@@ -84,9 +84,9 @@ const pl: SiteText = {
   faq: {
     eyebrow: "Pytania", title: "Częste pytania",
     pageTitle: "Pytania o suche zabudowy — ceny, materiały, terminy | Frameon",
-    pageDescription: "Odpowiedzi o cenach suchych zabudów, materiałach, stelażach, wykończeniach i o tym, czego potrzebujemy do wyceny w Londynie.",
+    pageDescription: "Odpowiedzi o cenach suchych zabudów, materiałach, stelażach, rodzajach płyt i o tym, czego potrzebujemy do wyceny w Londynie.",
     items: [
-      { q: "Czy robicie też wykończenia?", a: "Tak — spoinowanie, gładź, malowanie i podłogi. Wykończenia wyceniamy osobno po zdjęciach lub oględzinach. Nie kładziemy płytek i nie robimy remontów pod klucz." },
+      { q: "Czy robicie gładzie lub malowanie?", a: "Nie — specjalizujemy się w suchej zabudowie: stelaże, płyty, sufity MF, zabudowy rur i izolacje. Oddajemy równe płyty gotowe dla Twojego tynkarza lub malarza." },
       { q: "Kto płaci za materiały?", a: "Klient. Nasze ceny to sama robocizna, materiały wyceniane osobno." },
       { q: "Stelaż metalowy czy drewniany?", a: "Oba — do wewnętrznych ścian nienośnych. Metal jest prosty i szybki, drewno wygodne pod ciężkie elementy. Sufity MF zawsze na metalu." },
       { q: "Czy cena z kalkulatora jest ostateczna?", a: "Nie, to orientacyjna kwota wg naszych stawek z minimum £350. Stałą cenę podajemy po zdjęciach lub oględzinach." },
@@ -98,7 +98,7 @@ const pl: SiteText = {
   quote: {
     ...en.quote,
     metaTitle: "Wycena suchej zabudowy w Londynie — odpowiedź tego samego dnia | Frameon",
-    metaDescription: "Wyślij opis prac i zdjęcia — wycena robocizny suchej zabudowy i wykończeń w Londynie tego samego dnia.",
+    metaDescription: "Wyślij opis prac i zdjęcia — wycena robocizny suchej zabudowy w Londynie tego samego dnia.",
     h1: "Wycena Twojej pracy", lead: "Napisz, czego potrzebujesz. Odpowiemy tego samego dnia z wyceną robocizny.",
     name: "Imię", contact: "Telefon lub e-mail", postcode: "Kod pocztowy", service: "Czego potrzebujesz?", message: "Szczegóły",
     messagePlaceholder: "Wymiary, liczba pokoi, termin…", sendWhatsapp: "Wyślij na WhatsApp", sendEmail: "Wyślij e-mailem", sendForm: "Wyślij zapytanie", sending: "Wysyłanie…", sent: "Dziękujemy — zapytanie dotarło. Odpowiemy tego samego dnia.", sendFail: "Nie udało się wysłać. Napisz do nas na WhatsApp lub na frameondrylining@gmail.com.",
@@ -106,14 +106,13 @@ const pl: SiteText = {
   },
   servicePage: { ...en.servicePage, breadcrumbHome: "Start", breadcrumbServices: "Usługi", related: "Często zamawiane razem" },
   servicesHub: {
-    metaTitle: "Usługi suchej zabudowy i wykończeń w Londynie | Frameon",
-    metaDescription: "Ścianki działowe, SFS, okładziny, sufity MF, zabudowy rur, izolacje, gładzie, malowanie i podłogi w Londynie.",
-    h1: "Suche zabudowy i wykończenia w Londynie",
+    metaTitle: "Usługi suchej zabudowy w Londynie | Frameon",
+    metaDescription: "Ścianki działowe, SFS, okładziny, sufity MF, zabudowy rur i izolacje w Londynie.",
+    h1: "Suche zabudowy w Londynie",
     lead: "Ceny za robociznę. Szczegółowe strony usług — po angielsku i ukraińsku.",
     groups: [
       { title: "Suche zabudowy", slugs: en.servicesHub.groups[0].slugs },
       { title: "Izolacje", slugs: en.servicesHub.groups[1].slugs },
-      { title: "Wykończenia", slugs: en.servicesHub.groups[2].slugs },
     ],
   },
   footer: { services: "Suche zabudowy", finishing: "Wykończenia", company: "Firma", contact: "Kontakt", language: "Język", rights: "© 2026 Frameon Drylining · Londyn", privacy: "Prywatność", top: "Do góry", noCookies: "Bez cookies." },

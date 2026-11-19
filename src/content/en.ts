@@ -12,14 +12,14 @@ const en: SiteText = {
   meta: {
     homeTitle: "Drylining Contractors London — Partitions & Ceilings | Frameon",
     homeDescription:
-      "Stud partitions, wall linings, MF ceilings and full interior finishing across all London boroughs. Labour from £30/m², materials separate. Same-day reply on WhatsApp.",
+      "Stud partitions, wall linings, MF ceilings, boxing and insulation across all London boroughs. Labour from £30/m², materials separate. Same-day reply on WhatsApp.",
   },
   nav: { services: "Services", contractors: "For contractors", how: "How we work", areas: "Areas", faq: "FAQ", getPrice: "Get a price", menu: "Open menu", close: "Close menu", language: "Language" },
   hero: {
-    eyebrow: "Drylining & finishing · All London boroughs",
+    eyebrow: "Drylining · All London boroughs",
     h1: "Drylining contractors in London",
     slogan: ["Frame.", "Board.", "Done."],
-    lead: "Stud partitions, wall linings, MF ceilings and full finishing. Labour from £30/m², materials quoted separately. Send photos — we reply the same day.",
+    lead: "Stud partitions, wall linings, MF ceilings, boxing and insulation. Labour from £30/m², materials quoted separately. Send photos — we reply the same day.",
     ctaWhatsapp: "Free quote on WhatsApp",
     ctaPrice: "Price your job",
     badge: "−15% for new clients",
@@ -34,11 +34,11 @@ const en: SiteText = {
       { tag: "02 / FRAME", title: "Tracks on the line, studs every 600 mm", text: "Floor and ceiling tracks are fixed to the set-out line. Every stud is checked for plumb; door openings are framed as we go.", spec: "70 MM C-STUD · 600 MM CENTRES · MF HANGERS" },
       { tag: "03 / BOARD", title: "Joints on studs, screws at 300 mm", text: "Boards go on one face with every joint landing on a stud and screw heads set just below the surface.", spec: "12.5 MM TYPE D · SCREWS @ 300 MM" },
       { tag: "04 / INSULATE & CLOSE", title: "No gaps, no hollow sound", text: "Mineral wool is cut tight between studs, then the second face closes the wall — fire or acoustic board where specified.", spec: "50 MM MINERAL WOOL · 15 MM TYPE F" },
-      { tag: "05 / FINISH", title: "From boards to a room you can live in", text: "Taping, skim, paint and flooring — priced separately once the boards are up.", spec: "TAPE · SKIM · PAINT · FLOOR" },
+      { tag: "05 / HAND OVER", title: "Flush boards, ready for the next trade", text: "Joints tight, screw heads set, edges beaded — ready for your plasterer or decorator.", spec: "FLUSH · CLEAN · READY" },
     ],
   },
   done: {
-    title: "From bare brick to a finished room.",
+    title: "From bare brick to straight, flush walls.",
     stats: [
       { value: "5+", label: "years on London sites" },
       { value: "£/m²", label: "fixed price per m² — no hourly or day rates" },
@@ -46,7 +46,7 @@ const en: SiteText = {
       { value: "£350", label: "minimum labour per job" },
     ],
   },
-  services: { eyebrow: "Services · 8", title: "Everything between bare brick and the first coat of paint.", more: "Details", all: "All services" },
+  services: { eyebrow: "Services · 6", title: "Everything between bare brick and the first coat of paint.", more: "Details", all: "All services" },
   work: { eyebrow: "Our work", title: "Real London sites, photographed by us.", text: "Frames, boards and ceilings straight from our jobs — before the finishing trades arrive.", close: "Close", prev: "Previous", next: "Next", all: "All", sitePhoto: "Our site photo", illustration: "Illustration", real: "Real photos from our own London sites — not renders." },
   xray: {
     eyebrow: "Quality you don’t see",
@@ -93,7 +93,7 @@ const en: SiteText = {
     steps: [
       { title: "Send photos", text: "Photos, rough sizes and your postcode on WhatsApp. Drawings are optional. We reply the same day." },
       { title: "Agree the scope", text: "Frame, boards, layers, openings and who supplies materials — agreed in writing before work starts." },
-      { title: "We frame & board", text: "On agreed dates. Boards ready for taping or plaster — or we finish the room for you." },
+      { title: "We frame & board", text: "On agreed dates. Boards ready for taping or plaster." },
     ],
   },
   calc: {
@@ -128,9 +128,9 @@ const en: SiteText = {
     eyebrow: "FAQ",
     title: "Questions we get asked",
     pageTitle: "Drylining FAQ — Prices, Materials & Timings | Frameon London",
-    pageDescription: "Answers about drylining prices, who supplies materials, metal vs timber stud, finishing and what we need to quote your job in London.",
+    pageDescription: "Answers about drylining prices, who supplies materials, metal vs timber stud, board types and what we need to quote your job in London.",
     items: [
-      { q: "Do you do the finishing too?", a: "Yes — taping, skim plaster, painting and flooring. Finishing is priced separately after photos or a site visit. We don't do tiling or full turnkey refurbishments." },
+      { q: "Do you do plastering or painting?", a: "No — we're drylining specialists: framing, boarding, MF ceilings, boxing and insulation. We hand over flush boards ready for your plasterer or decorator." },
       { q: "Who pays for materials?", a: "The client. Our prices are labour only; materials are quoted separately and paid for by you or your main contractor." },
       { q: "Metal or timber stud?", a: "Both, for internal non-loadbearing walls. Metal stays straight and is quick to install; timber is handy where you need to fix heavy items. MF ceilings are always on metal furring." },
       { q: "Is the calculator price fixed?", a: "No — it’s a guide based on our labour rates, with a £350 minimum per job. We confirm a fixed price after photos or a site visit." },
@@ -141,7 +141,7 @@ const en: SiteText = {
   final: { title: "Have a wall in mind?", cta: "Message us on WhatsApp" },
   quote: {
     metaTitle: "Get a Drylining Quote in London — Same-Day Reply | Frameon",
-    metaDescription: "Send your job details and photos for a labour-only drylining or finishing quote anywhere in London. We reply the same day.",
+    metaDescription: "Send your job details and photos for a labour-only drylining quote anywhere in London. We reply the same day.",
     h1: "Get a price for your job",
     lead: "Tell us what you need. We reply the same day with a labour-only estimate.",
     name: "Your name",
@@ -171,14 +171,13 @@ const en: SiteText = {
     optionsChosen: "Options",
   },
   servicesHub: {
-    metaTitle: "Drylining & Finishing Services in London | Frameon",
-    metaDescription: "Stud partitions, SFS, wall linings, MF ceilings, boxing, insulation, plastering, painting and flooring across London.",
-    h1: "Drylining and finishing services in London",
+    metaTitle: "Drylining Services in London | Frameon",
+    metaDescription: "Stud partitions, SFS, wall linings, MF ceilings, boxing and insulation across London.",
+    h1: "Drylining services in London",
     lead: "Labour-only prices. Materials are quoted separately and paid by the client.",
     groups: [
       { title: "Drylining", slugs: ["stud-partitions", "sfs-framing", "wall-linings", "mf-ceilings", "boxing-bulkheads-reveals"] },
       { title: "Insulation", slugs: ["insulation"] },
-      { title: "Finishing", slugs: ["taping-plastering-painting", "flooring"] },
     ],
   },
   footer: { services: "Drylining", finishing: "Finishing", company: "Company", contact: "Contact", language: "Language", rights: "© 2026 Frameon Drylining · London", privacy: "Privacy", top: "Back to top", noCookies: "No cookies." },
@@ -230,7 +229,7 @@ const en: SiteText = {
           { q: "Metal or timber stud — which is better?", a: "Metal stud stays straight and is quick to install, so it’s our default for most partitions. Timber is useful where you need to fix heavy items anywhere on the wall." },
           { q: "How long does a partition take?", a: "A typical room partition with a door is usually framed and boarded in one to two days, depending on size and build-up." },
           { q: "Can you make the wall soundproof?", a: "We build acoustic partitions with mineral wool and acoustic board, and double layers where needed. Tell us how quiet the room needs to be and we’ll suggest a build-up." },
-          { q: "Do you plaster the wall afterwards?", a: "Yes — taping, skim and painting are priced separately, or we can finish the whole room." },
+          { q: "Do you plaster the wall afterwards?", a: "No — we hand over flush boards ready for your plasterer or decorator." },
         ],
       },
     },
@@ -312,7 +311,7 @@ const en: SiteText = {
         faq: [
           { q: "Dot and dab or furring — which do I need?", a: "Dot and dab suits sound, fairly flat walls. Furring is better on uneven or damp-prone walls, or when you want insulation behind the board." },
           { q: "Can you line a wall with exposed brick left as a feature?", a: "Yes — we can line some walls and leave a cleaned brick wall exposed as a feature." },
-          { q: "Do you skim after lining?", a: "Yes, skim and painting are priced separately." },
+          { q: "Do you skim after lining?", a: "No — the lining is left flat and ready for your plasterer." },
         ],
       },
     },

@@ -6,14 +6,14 @@ const pt: SiteText = {
   langName: "Português",
   meta: {
     homeTitle: "Pladur em Londres — Paredes divisórias e tetos MF | Frameon",
-    homeDescription: "Paredes divisórias, revestimentos, tetos MF e acabamentos completos em todos os bairros de Londres. Mão de obra desde £30/m², materiais à parte. Respondemos no mesmo dia.",
+    homeDescription: "Paredes divisórias, revestimentos, tetos MF, caixas e isolamento em todos os bairros de Londres. Mão de obra desde £30/m², materiais à parte. Respondemos no mesmo dia.",
   },
   nav: { services: "Serviços", contractors: "Para empreiteiros", how: "Como trabalhamos", areas: "Zonas", faq: "Perguntas", getPrice: "Pedir preço", menu: "Abrir menu", close: "Fechar menu", language: "Idioma" },
   hero: {
-    eyebrow: "Pladur e acabamentos · Toda Londres",
+    eyebrow: "Pladur · Toda Londres",
     h1: "Instaladores de pladur em Londres",
     slogan: ["Estrutura.", "Placa.", "Pronto."],
-    lead: "Paredes divisórias, revestimentos, tetos MF e acabamentos completos. Mão de obra desde £30/m², materiais à parte. Envie fotos e respondemos no mesmo dia.",
+    lead: "Paredes divisórias, revestimentos, tetos MF, caixas e isolamento. Mão de obra desde £30/m², materiais à parte. Envie fotos e respondemos no mesmo dia.",
     ctaWhatsapp: "Orçamento grátis no WhatsApp",
     ctaPrice: "Calcular o trabalho",
     badge: "−15% novos clientes",
@@ -28,11 +28,11 @@ const pt: SiteText = {
       { tag: "02 / ESTRUTURA", title: "Calhas na linha, montantes a cada 600 mm", text: "Fixamos as calhas na linha e verificamos cada montante a prumo. Os vãos de porta ficam logo feitos.", spec: "MONTANTE C 70 MM · 600 MM · SUSPENSÕES MF" },
       { tag: "03 / PLACA", title: "Juntas nos montantes, parafusos a cada 300 mm", text: "Placas numa face: cada junta sobre um montante, cabeças dos parafusos ligeiramente embutidas.", spec: "12.5 MM TYPE D · PARAFUSOS @ 300 MM" },
       { tag: "04 / ISOLAMENTO", title: "Sem folgas nem som oco", text: "Lã mineral bem ajustada e a segunda face fecha a parede, com placa corta-fogo ou acústica quando necessário.", spec: "50 MM LÃ MINERAL · 15 MM TYPE F" },
-      { tag: "05 / ACABAMENTO", title: "De placas a uma divisão habitável", text: "Juntas, estuque, pintura e pavimentos: orçados à parte depois de as placas estarem montadas.", spec: "JUNTAS · ESTUQUE · PINTURA · PAVIMENTO" },
+      { tag: "05 / ENTREGA", title: "Placas planas, prontas para o próximo ofício", text: "Juntas apertadas, parafusos embutidos, cantos com perfil: pronto para o seu estucador ou pintor.", spec: "PLANO · LIMPO · PRONTO" },
     ],
   },
   done: {
-    title: "Do tijolo nu à divisão pronta.",
+    title: "Do tijolo nu a paredes direitas e prontas.",
     stats: [
       { value: "5+", label: "anos em obras de Londres" },
       { value: "£/m²", label: "preço fixo por m², sem preço à hora" },
@@ -40,7 +40,7 @@ const pt: SiteText = {
       { value: "£350", label: "encomenda mínima de mão de obra" },
     ],
   },
-  services: { eyebrow: "Serviços · 8", title: "Tudo entre o tijolo nu e a primeira demão de tinta.", more: "Detalhes", all: "Todos os serviços" },
+  services: { eyebrow: "Serviços · 6", title: "Tudo entre o tijolo nu e a primeira demão de tinta.", more: "Detalhes", all: "Todos os serviços" },
   work: { eyebrow: "O nosso trabalho", title: "Obras reais em Londres, fotografadas por nós.", text: "Estruturas, placas e tetos diretamente das nossas obras, antes dos acabamentos.", close: "Fechar", prev: "Anterior", next: "Seguinte", all: "Todos", sitePhoto: "Foto da nossa obra", illustration: "Ilustração", real: "Fotos reais das nossas obras em Londres, não renders." },
   xray: { eyebrow: "Qualidade que não se vê", title: "Veja o que há dentro da parede.", text: "Cada junta num montante, parafusos a cada 300 mm, isolamento sem folgas. O que fica atrás da placa é feito com o mesmo cuidado do que se vê.", cta: "Envie uma foto da sua parede", hint: "Passe o cursor pela parede", before: "Estrutura", after: "Pronto" },
   contractors: {
@@ -62,7 +62,7 @@ const pt: SiteText = {
     steps: [
       { title: "Envie fotos", text: "Fotos, medidas aproximadas e código postal no WhatsApp. Respondemos no mesmo dia." },
       { title: "Acordamos o âmbito", text: "Estrutura, placas, camadas, vãos e quem fornece materiais, por escrito antes de começar." },
-      { title: "Montamos e forramos", text: "Nas datas acordadas. Placas prontas para juntas, ou terminamos a divisão toda." },
+      { title: "Montamos e forramos", text: "Nas datas acordadas. Placas prontas para juntas." },
     ],
   },
   calc: {
@@ -84,9 +84,9 @@ const pt: SiteText = {
   faq: {
     eyebrow: "Perguntas", title: "Perguntas frequentes",
     pageTitle: "Perguntas sobre pladur — preços, materiais e prazos | Frameon",
-    pageDescription: "Respostas sobre preços de pladur, materiais, estruturas, acabamentos e o que precisamos para orçamentar em Londres.",
+    pageDescription: "Respostas sobre preços de pladur, materiais, estruturas, tipos de placa e o que precisamos para orçamentar em Londres.",
     items: [
-      { q: "Também fazem acabamentos?", a: "Sim: juntas, estuque, pintura e pavimentos. Os acabamentos são orçados à parte após fotos ou visita. Não fazemos azulejos nem remodelações chave na mão." },
+      { q: "Fazem estuque ou pintura?", a: "Não. Somos especialistas em pladur: estruturas, placas, tetos MF, caixas e isolamento. Entregamos placas planas, prontas para o seu estucador ou pintor." },
       { q: "Quem paga os materiais?", a: "O cliente. Os nossos preços são só de mão de obra." },
       { q: "Estrutura metálica ou de madeira?", a: "Ambas, para paredes interiores não estruturais. O metal é direito e rápido; a madeira é útil para pendurar objetos pesados. Tetos MF sempre em metal." },
       { q: "O preço da calculadora é final?", a: "Não, é indicativo, com mínimo de £350. O preço fixo é dado após fotos ou visita." },
@@ -98,7 +98,7 @@ const pt: SiteText = {
   quote: {
     ...en.quote,
     metaTitle: "Orçamento de pladur em Londres — resposta no mesmo dia | Frameon",
-    metaDescription: "Envie a descrição e fotos e receba um orçamento de mão de obra para pladur e acabamentos em Londres no mesmo dia.",
+    metaDescription: "Envie a descrição e fotos e receba um orçamento de mão de obra para pladur em Londres no mesmo dia.",
     h1: "Peça o preço do seu trabalho", lead: "Diga-nos o que precisa. Respondemos no mesmo dia com um orçamento de mão de obra.",
     name: "O seu nome", contact: "Telefone ou email", postcode: "Código postal", service: "O que precisa?", message: "Detalhes",
     messagePlaceholder: "Medidas, número de divisões, prazo…", sendWhatsapp: "Enviar no WhatsApp", sendEmail: "Enviar por email", sendForm: "Enviar pedido", sending: "A enviar…", sent: "Obrigado — recebemos o seu pedido. Respondemos no mesmo dia.", sendFail: "Não foi possível enviar. Fale connosco no WhatsApp ou escreva para frameondrylining@gmail.com.",
@@ -106,14 +106,13 @@ const pt: SiteText = {
   },
   servicePage: { ...en.servicePage, breadcrumbHome: "Início", breadcrumbServices: "Serviços", related: "Pedidos em conjunto" },
   servicesHub: {
-    metaTitle: "Serviços de pladur e acabamentos em Londres | Frameon",
-    metaDescription: "Divisórias, SFS, revestimentos, tetos MF, caixas, isolamento, estuque, pintura e pavimentos em Londres.",
-    h1: "Pladur e acabamentos em Londres",
+    metaTitle: "Serviços de pladur em Londres | Frameon",
+    metaDescription: "Divisórias, SFS, revestimentos, tetos MF, caixas e isolamento em Londres.",
+    h1: "Pladur em Londres",
     lead: "Preços só de mão de obra. As páginas detalhadas estão em inglês e ucraniano.",
     groups: [
       { title: "Pladur", slugs: en.servicesHub.groups[0].slugs },
       { title: "Isolamento", slugs: en.servicesHub.groups[1].slugs },
-      { title: "Acabamentos", slugs: en.servicesHub.groups[2].slugs },
     ],
   },
   footer: { services: "Pladur", finishing: "Acabamentos", company: "Empresa", contact: "Contacto", language: "Idioma", rights: "© 2026 Frameon Drylining · Londres", privacy: "Privacidade", top: "Topo", noCookies: "Sem cookies." },

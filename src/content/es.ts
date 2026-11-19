@@ -6,14 +6,14 @@ const es: SiteText = {
   langName: "Español",
   meta: {
     homeTitle: "Pladur en Londres — Tabiques y techos MF | Frameon",
-    homeDescription: "Tabiques, trasdosados, techos MF y acabados completos en todos los distritos de Londres. Mano de obra desde £30/m², materiales aparte. Respondemos el mismo día.",
+    homeDescription: "Tabiques, trasdosados, techos MF, cajeados y aislamiento en todos los distritos de Londres. Mano de obra desde £30/m², materiales aparte. Respondemos el mismo día.",
   },
   nav: { services: "Servicios", contractors: "Para constructoras", how: "Cómo trabajamos", areas: "Zonas", faq: "Preguntas", getPrice: "Pedir precio", menu: "Abrir menú", close: "Cerrar menú", language: "Idioma" },
   hero: {
-    eyebrow: "Pladur y acabados · Todo Londres",
+    eyebrow: "Pladur · Todo Londres",
     h1: "Instaladores de pladur en Londres",
     slogan: ["Estructura.", "Placa.", "Listo."],
-    lead: "Tabiques, trasdosados, techos MF y acabados completos. Mano de obra desde £30/m², materiales aparte. Envíanos fotos y te respondemos el mismo día.",
+    lead: "Tabiques, trasdosados, techos MF, cajeados y aislamiento. Mano de obra desde £30/m², materiales aparte. Envíanos fotos y te respondemos el mismo día.",
     ctaWhatsapp: "Presupuesto gratis por WhatsApp",
     ctaPrice: "Calcular el trabajo",
     badge: "−15% nuevos clientes",
@@ -28,11 +28,11 @@ const es: SiteText = {
       { tag: "02 / ESTRUCTURA", title: "Canales en la línea, montantes cada 600 mm", text: "Fijamos los canales sobre la línea y comprobamos cada montante a plomo. Los huecos de puerta se hacen al momento.", spec: "MONTANTE C 70 MM · 600 MM · CUELGUES MF" },
       { tag: "03 / PLACA", title: "Juntas sobre montantes, tornillos cada 300 mm", text: "Placas en una cara: cada junta sobre un montante, cabezas de tornillo ligeramente hundidas.", spec: "12.5 MM TYPE D · TORNILLOS @ 300 MM" },
       { tag: "04 / AISLAMIENTO", title: "Sin huecos ni sonido hueco", text: "Lana mineral bien ajustada y la segunda cara cierra la pared, con placa ignífuga o acústica donde se requiera.", spec: "50 MM LANA MINERAL · 15 MM TYPE F" },
-      { tag: "05 / ACABADO", title: "De placas a una habitación habitable", text: "Juntas, enlucido, pintura y suelos: se presupuestan aparte una vez montadas las placas.", spec: "JUNTAS · ENLUCIDO · PINTURA · SUELO" },
+      { tag: "05 / ENTREGA", title: "Placas planas, listas para el siguiente oficio", text: "Juntas ajustadas, tornillos rehundidos, esquinas con perfil: listo para tu yesero o pintor.", spec: "PLANO · LIMPIO · LISTO" },
     ],
   },
   done: {
-    title: "Del ladrillo desnudo a la habitación terminada.",
+    title: "Del ladrillo desnudo a paredes rectas y listas.",
     stats: [
       { value: "5+", label: "años en obras de Londres" },
       { value: "£/m²", label: "precio fijo por m², sin tarifa por horas" },
@@ -40,7 +40,7 @@ const es: SiteText = {
       { value: "£350", label: "pedido mínimo de mano de obra" },
     ],
   },
-  services: { eyebrow: "Servicios · 8", title: "Todo entre el ladrillo desnudo y la primera mano de pintura.", more: "Detalles", all: "Todos los servicios" },
+  services: { eyebrow: "Servicios · 6", title: "Todo entre el ladrillo desnudo y la primera mano de pintura.", more: "Detalles", all: "Todos los servicios" },
   work: { eyebrow: "Nuestro trabajo", title: "Obras reales en Londres, fotografiadas por nosotros.", text: "Estructuras, placas y techos directamente de nuestras obras, antes de los acabados.", close: "Cerrar", prev: "Anterior", next: "Siguiente", all: "Todos", sitePhoto: "Foto de nuestra obra", illustration: "Ilustración", real: "Fotos reales de nuestras obras en Londres, no renders." },
   xray: { eyebrow: "Calidad que no se ve", title: "Mira lo que hay dentro de la pared.", text: "Cada junta sobre un montante, tornillos cada 300 mm, aislamiento sin huecos. Lo que queda detrás de la placa se hace con el mismo cuidado que lo que ves.", cta: "Envíanos una foto de tu pared", hint: "Pasa el cursor por la pared", before: "Estructura", after: "Terminado" },
   contractors: {
@@ -62,7 +62,7 @@ const es: SiteText = {
     steps: [
       { title: "Envía fotos", text: "Fotos, medidas aproximadas y código postal por WhatsApp. Respondemos el mismo día." },
       { title: "Acordamos el alcance", text: "Estructura, placas, capas, huecos y quién aporta materiales, por escrito antes de empezar." },
-      { title: "Montamos y forramos", text: "En las fechas acordadas. Placas listas para juntas, o terminamos la habitación entera." },
+      { title: "Montamos y forramos", text: "En las fechas acordadas. Placas listas para juntas." },
     ],
   },
   calc: {
@@ -84,9 +84,9 @@ const es: SiteText = {
   faq: {
     eyebrow: "Preguntas", title: "Preguntas frecuentes",
     pageTitle: "Preguntas sobre pladur — precios, materiales y plazos | Frameon",
-    pageDescription: "Respuestas sobre precios de pladur, materiales, estructuras, acabados y qué necesitamos para presupuestar en Londres.",
+    pageDescription: "Respuestas sobre precios de pladur, materiales, estructuras, tipos de placa y qué necesitamos para presupuestar en Londres.",
     items: [
-      { q: "¿También hacéis acabados?", a: "Sí: juntas, enlucido, pintura y suelos. Los acabados se presupuestan aparte tras fotos o visita. No hacemos alicatado ni reformas llave en mano." },
+      { q: "¿Hacéis enlucido o pintura?", a: "No. Somos especialistas en pladur: estructuras, placas, techos MF, cajeados y aislamiento. Entregamos placas planas, listas para tu yesero o pintor." },
       { q: "¿Quién paga los materiales?", a: "El cliente. Nuestros precios son solo de mano de obra." },
       { q: "¿Estructura metálica o de madera?", a: "Ambas, para paredes interiores no portantes. El metal es recto y rápido; la madera va bien para colgar cosas pesadas. Los techos MF siempre en metal." },
       { q: "¿El precio de la calculadora es definitivo?", a: "No, es orientativo, con un mínimo de £350. El precio fijo se da tras fotos o visita." },
@@ -98,7 +98,7 @@ const es: SiteText = {
   quote: {
     ...en.quote,
     metaTitle: "Presupuesto de pladur en Londres — respuesta el mismo día | Frameon",
-    metaDescription: "Envía la descripción y fotos y recibe un presupuesto de mano de obra para pladur y acabados en Londres el mismo día.",
+    metaDescription: "Envía la descripción y fotos y recibe un presupuesto de mano de obra para pladur en Londres el mismo día.",
     h1: "Pide precio para tu trabajo", lead: "Cuéntanos qué necesitas. Respondemos el mismo día con un presupuesto de mano de obra.",
     name: "Tu nombre", contact: "Teléfono o email", postcode: "Código postal", service: "¿Qué necesitas?", message: "Detalles",
     messagePlaceholder: "Medidas, número de habitaciones, plazo…", sendWhatsapp: "Enviar por WhatsApp", sendEmail: "Enviar por email", sendForm: "Enviar solicitud", sending: "Enviando…", sent: "Gracias — hemos recibido tu solicitud. Respondemos el mismo día.", sendFail: "No se pudo enviar. Escríbenos por WhatsApp o a frameondrylining@gmail.com.",
@@ -106,14 +106,13 @@ const es: SiteText = {
   },
   servicePage: { ...en.servicePage, breadcrumbHome: "Inicio", breadcrumbServices: "Servicios", related: "Se contratan juntos" },
   servicesHub: {
-    metaTitle: "Servicios de pladur y acabados en Londres | Frameon",
-    metaDescription: "Tabiques, SFS, trasdosados, techos MF, cajeados, aislamiento, enlucido, pintura y suelos en Londres.",
-    h1: "Pladur y acabados en Londres",
+    metaTitle: "Servicios de pladur en Londres | Frameon",
+    metaDescription: "Tabiques, SFS, trasdosados, techos MF, cajeados y aislamiento en Londres.",
+    h1: "Pladur en Londres",
     lead: "Precios solo de mano de obra. Las páginas detalladas están en inglés y ucraniano.",
     groups: [
       { title: "Pladur", slugs: en.servicesHub.groups[0].slugs },
       { title: "Aislamiento", slugs: en.servicesHub.groups[1].slugs },
-      { title: "Acabados", slugs: en.servicesHub.groups[2].slugs },
     ],
   },
   footer: { services: "Pladur", finishing: "Acabados", company: "Empresa", contact: "Contacto", language: "Idioma", rights: "© 2026 Frameon Drylining · Londres", privacy: "Privacidad", top: "Arriba", noCookies: "Sin cookies." },

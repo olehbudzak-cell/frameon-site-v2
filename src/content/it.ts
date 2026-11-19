@@ -6,14 +6,14 @@ const it: SiteText = {
   langName: "Italiano",
   meta: {
     homeTitle: "Cartongesso a Londra — Pareti divisorie e controsoffitti MF | Frameon",
-    homeDescription: "Pareti divisorie, contropareti, controsoffitti MF e finiture complete in tutti i quartieri di Londra. Manodopera da £30/m², materiali a parte. Rispondiamo in giornata.",
+    homeDescription: "Pareti divisorie, contropareti, controsoffitti MF, cassonetti e isolamento in tutti i quartieri di Londra. Manodopera da £30/m², materiali a parte. Rispondiamo in giornata.",
   },
   nav: { services: "Servizi", contractors: "Per imprese", how: "Come lavoriamo", areas: "Zone", faq: "Domande", getPrice: "Chiedi un prezzo", menu: "Apri menu", close: "Chiudi menu", language: "Lingua" },
   hero: {
-    eyebrow: "Cartongesso e finiture · Tutta Londra",
+    eyebrow: "Cartongesso · Tutta Londra",
     h1: "Posatori di cartongesso a Londra",
     slogan: ["Struttura.", "Lastra.", "Fatto."],
-    lead: "Pareti divisorie, contropareti, controsoffitti MF e finiture complete. Manodopera da £30/m², materiali a parte. Mandaci le foto: rispondiamo in giornata.",
+    lead: "Pareti divisorie, contropareti, controsoffitti MF, cassonetti e isolamento. Manodopera da £30/m², materiali a parte. Mandaci le foto: rispondiamo in giornata.",
     ctaWhatsapp: "Preventivo gratuito su WhatsApp",
     ctaPrice: "Calcola il lavoro",
     badge: "−15% nuovi clienti",
@@ -28,11 +28,11 @@ const it: SiteText = {
       { tag: "02 / STRUTTURA", title: "Guide sulla linea, montanti ogni 600 mm", text: "Fissiamo le guide sulla linea e controlliamo ogni montante a piombo. I vani porta si fanno subito.", spec: "MONTANTE C 70 MM · 600 MM · PENDINI MF" },
       { tag: "03 / LASTRE", title: "Giunti sui montanti, viti ogni 300 mm", text: "Lastre su un lato: ogni giunto su un montante, teste delle viti leggermente incassate.", spec: "12.5 MM TYPE D · VITI @ 300 MM" },
       { tag: "04 / ISOLAMENTO", title: "Niente vuoti né suono sordo", text: "Lana minerale ben aderente, poi il secondo lato chiude la parete, con lastre ignifughe o acustiche dove serve.", spec: "50 MM LANA MINERALE · 15 MM TYPE F" },
-      { tag: "05 / FINITURA", title: "Dalle lastre a una stanza vivibile", text: "Stuccatura, rasatura, pittura e pavimenti: quotati a parte, una volta montate le lastre.", spec: "STUCCO · RASATURA · PITTURA · PAVIMENTO" },
+      { tag: "05 / CONSEGNA", title: "Lastre a filo, pronte per il prossimo mestiere", text: "Giunti stretti, viti incassate, spigoli protetti: pronto per il tuo stuccatore o imbianchino.", spec: "A FILO · PULITO · PRONTO" },
     ],
   },
   done: {
-    title: "Dal mattone nudo alla stanza finita.",
+    title: "Dal mattone nudo a pareti dritte e pronte.",
     stats: [
       { value: "5+", label: "anni nei cantieri di Londra" },
       { value: "£/m²", label: "prezzo fisso al m², niente tariffe orarie" },
@@ -40,7 +40,7 @@ const it: SiteText = {
       { value: "£350", label: "ordine minimo di manodopera" },
     ],
   },
-  services: { eyebrow: "Servizi · 8", title: "Tutto tra il mattone nudo e la prima mano di pittura.", more: "Dettagli", all: "Tutti i servizi" },
+  services: { eyebrow: "Servizi · 6", title: "Tutto tra il mattone nudo e la prima mano di pittura.", more: "Dettagli", all: "Tutti i servizi" },
   work: { eyebrow: "I nostri lavori", title: "Cantieri reali a Londra, fotografati da noi.", text: "Orditure, lastre e controsoffitti dai nostri cantieri, prima delle finiture.", close: "Chiudi", prev: "Precedente", next: "Successiva", all: "Tutti", sitePhoto: "Foto dal nostro cantiere", illustration: "Illustrazione", real: "Foto reali dai nostri cantieri di Londra, non render." },
   xray: { eyebrow: "Qualità che non si vede", title: "Guarda cosa c'è dentro la parete.", text: "Ogni giunto su un montante, viti ogni 300 mm, isolamento senza vuoti. Ciò che resta dietro la lastra è fatto con la stessa cura di ciò che vedi.", cta: "Mandaci una foto della tua parete", hint: "Muovi il cursore sulla parete", before: "Struttura", after: "Finito" },
   contractors: {
@@ -62,7 +62,7 @@ const it: SiteText = {
     steps: [
       { title: "Invia le foto", text: "Foto, misure indicative e CAP su WhatsApp. Rispondiamo in giornata." },
       { title: "Concordiamo il lavoro", text: "Struttura, lastre, strati, vani e chi fornisce i materiali, per iscritto prima di iniziare." },
-      { title: "Montiamo e chiudiamo", text: "Nelle date concordate. Lastre pronte per la stuccatura, oppure finiamo l'intera stanza." },
+      { title: "Montiamo e chiudiamo", text: "Nelle date concordate. Lastre pronte per la stuccatura." },
     ],
   },
   calc: {
@@ -84,9 +84,9 @@ const it: SiteText = {
   faq: {
     eyebrow: "Domande", title: "Domande frequenti",
     pageTitle: "Domande sul cartongesso — prezzi, materiali e tempi | Frameon",
-    pageDescription: "Risposte su prezzi del cartongesso, materiali, strutture, finiture e cosa ci serve per un preventivo a Londra.",
+    pageDescription: "Risposte su prezzi del cartongesso, materiali, strutture, tipi di lastra e cosa ci serve per un preventivo a Londra.",
     items: [
-      { q: "Fate anche le finiture?", a: "Sì: stuccatura, rasatura, pittura e pavimenti. Le finiture si quotano a parte dopo foto o sopralluogo. Non facciamo piastrelle né ristrutturazioni chiavi in mano." },
+      { q: "Fate rasatura o pittura?", a: "No. Siamo specialisti del cartongesso: orditure, lastre, controsoffitti MF, cassonetti e isolamento. Consegniamo lastre a filo, pronte per il tuo stuccatore o imbianchino." },
       { q: "Chi paga i materiali?", a: "Il cliente. I nostri prezzi sono solo manodopera." },
       { q: "Struttura metallica o in legno?", a: "Entrambe, per pareti interne non portanti. Il metallo è dritto e veloce; il legno è utile per appendere oggetti pesanti. I controsoffitti MF sempre su metallo." },
       { q: "Il prezzo del calcolatore è definitivo?", a: "No, è indicativo, con minimo £350. Il prezzo fisso arriva dopo foto o sopralluogo." },
@@ -98,7 +98,7 @@ const it: SiteText = {
   quote: {
     ...en.quote,
     metaTitle: "Preventivo cartongesso a Londra — risposta in giornata | Frameon",
-    metaDescription: "Invia descrizione e foto e ricevi in giornata un preventivo di manodopera per cartongesso e finiture a Londra.",
+    metaDescription: "Invia descrizione e foto e ricevi in giornata un preventivo di manodopera per cartongesso a Londra.",
     h1: "Chiedi il prezzo del tuo lavoro", lead: "Raccontaci cosa ti serve. Rispondiamo in giornata con un preventivo di manodopera.",
     name: "Il tuo nome", contact: "Telefono o email", postcode: "CAP", service: "Di cosa hai bisogno?", message: "Dettagli",
     messagePlaceholder: "Misure, numero di stanze, tempistiche…", sendWhatsapp: "Invia su WhatsApp", sendEmail: "Invia via email", sendForm: "Invia richiesta", sending: "Invio…", sent: "Grazie — abbiamo ricevuto la richiesta. Rispondiamo in giornata.", sendFail: "Invio non riuscito. Scrivici su WhatsApp o a frameondrylining@gmail.com.",
@@ -106,14 +106,13 @@ const it: SiteText = {
   },
   servicePage: { ...en.servicePage, breadcrumbHome: "Home", breadcrumbServices: "Servizi", related: "Spesso richiesti insieme" },
   servicesHub: {
-    metaTitle: "Servizi di cartongesso e finiture a Londra | Frameon",
-    metaDescription: "Pareti divisorie, SFS, contropareti, controsoffitti MF, cassonetti, isolamento, rasature, pittura e pavimenti a Londra.",
-    h1: "Cartongesso e finiture a Londra",
+    metaTitle: "Servizi di cartongesso a Londra | Frameon",
+    metaDescription: "Pareti divisorie, SFS, contropareti, controsoffitti MF, cassonetti e isolamento a Londra.",
+    h1: "Cartongesso a Londra",
     lead: "Prezzi solo manodopera. Le pagine dettagliate sono in inglese e ucraino.",
     groups: [
       { title: "Cartongesso", slugs: en.servicesHub.groups[0].slugs },
       { title: "Isolamento", slugs: en.servicesHub.groups[1].slugs },
-      { title: "Finiture", slugs: en.servicesHub.groups[2].slugs },
     ],
   },
   footer: { services: "Cartongesso", finishing: "Finiture", company: "Azienda", contact: "Contatti", language: "Lingua", rights: "© 2026 Frameon Drylining · Londra", privacy: "Privacy", top: "Su", noCookies: "Niente cookie." },
