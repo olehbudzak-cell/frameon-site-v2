@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { locales, routing, type Locale } from "@/i18n/routing";
-import { CONTACT } from "@/content/services";
+import { CONTACT, services } from "@/content/services";
+import { BOROUGHS } from "@/content/areas";
+import { getContent, serviceLocaleFor } from "@/lib/content";
 
 const prefix = (locale: string) => (locale === routing.defaultLocale ? "" : `/${locale}`);
 
@@ -46,12 +48,38 @@ export const businessJsonLd = (locale: string) => ({
   "@type": "HomeAndConstructionBusiness",
   "@id": `${CONTACT.site}/#business`,
   name: "Frameon Drylining",
+  alternateName: "Frameon",
+  description: "Labour-only drylining contractors in London: stud partitions, SFS framing, wall linings, MF suspended ceilings, pipe boxing, bulkheads and insulation.",
+  slogan: "Frame. Board. Done.",
   url: urlFor(locale, "/"),
-  image: `${CONTACT.site}/images/finished-loft-conversion.jpg`,
+  logo: `${CONTACT.site}/favicon.svg`,
+  image: [`${CONTACT.site}/portfolio/mf-ceilings/01-b31.webp`, `${CONTACT.site}/portfolio/stud-partitions/01-b43.webp`, `${CONTACT.site}/portfolio/sfs-framing/01-b48.webp`],
   telephone: "+447771119552",
   email: CONTACT.email,
   priceRange: "££",
-  areaServed: { "@type": "City", name: "London" },
-  address: { "@type": "PostalAddress", addressLocality: "London", addressCountry: "GB" },
+  currenciesAccepted: "GBP",
+  address: { "@type": "PostalAddress", addressLocality: "London", addressRegion: "Greater London", addressCountry: "GB" },
+  areaServed: [{ "@type": "City", name: "London" }, ...BOROUGHS.map((b) => ({ "@type": "AdministrativeArea", name: b }))],
+  knowsAbout: ["Drylining", "Stud partitions", "Metal stud framing", "Timber stud walls", "SFS infill framing", "Plasterboard wall linings", "MF suspended ceilings", "Pipe boxing", "Bulkheads", "Acoustic partitions", "Fire-rated partitions", "Celotex insulation", "Mineral wool insulation", "Vapour control layers"],
+  contactPoint: { "@type": "ContactPoint", telephone: "+447771119552", email: CONTACT.email, contactType: "sales", areaServed: "GB", availableLanguage: ["English", "Ukrainian", "Russian", "Polish"] },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Drylining services",
+    itemListElement: services.map((s) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", "@id": `${urlFor(serviceLocaleFor(locale), `/services/${s.slug}`)}#service`, name: getContent(serviceLocaleFor(locale)).servicesText[s.slug].title, url: urlFor(serviceLocaleFor(locale), `/services/${s.slug}`) },
+      ...(s.rate ? { priceSpecification: { "@type": "UnitPriceSpecification", price: s.rate, priceCurrency: "GBP", unitText: s.unit === "m" ? "linear metre" : "square metre", valueAddedTaxIncluded: false } } : {}),
+    })),
+  },
   sameAs: [CONTACT.facebook],
+});
+
+export const websiteJsonLd = (locale: string) => ({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${CONTACT.site}/#website`,
+  url: CONTACT.site,
+  name: "Frameon Drylining",
+  inLanguage: locale,
+  publisher: { "@id": `${CONTACT.site}/#business` },
 });
