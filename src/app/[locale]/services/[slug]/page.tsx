@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { serviceLocales, type Locale } from "@/i18n/routing";
@@ -27,7 +27,8 @@ export async function generateMetadata({ params }: P) {
 
 export default async function ServicePage({ params }: P) {
   const { locale, slug } = await params;
-  if (!hasFullPages(locale)) notFound();
+  // Languages without full service pages get the English page instead of a 404.
+  if (!hasFullPages(locale)) { if (serviceBySlug(slug)) permanentRedirect(`/services/${slug}`); notFound(); }
   setRequestLocale(locale);
   const t = getContent(locale);
   const meta = serviceBySlug(slug);
