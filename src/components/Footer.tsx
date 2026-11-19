@@ -8,13 +8,11 @@ const names: Record<string, string> = { en: "English", ro: "Română", es: "Espa
 
 export default function Footer({ t, svcLocale, locale }: { t: SiteText; svcLocale: Locale; locale: Locale }) {
   const svcText = t.servicesText;
-  const first = services.slice(0, 5), second = services.slice(5);
   return (
     <footer className="footer">
       <div className="wrap">
         <div className="footer-cols">
-          <div><span className="mono muted">{t.footer.services}</span>{first.map((s) => <Link key={s.slug} href={`/services/${s.slug}`} locale={svcLocale}>{svcText[s.slug].title}</Link>)}</div>
-          <div><span className="mono muted">{t.footer.finishing}</span>{second.map((s) => <Link key={s.slug} href={`/services/${s.slug}`} locale={svcLocale}>{svcText[s.slug].title}</Link>)}</div>
+          <div><span className="mono muted">{t.footer.services}</span>{services.map((s) => <Link key={s.slug} href={`/services/${s.slug}`} locale={svcLocale}>{svcText[s.slug].title}</Link>)}</div>
           <div><span className="mono muted">{t.footer.company}</span>
             <Link href="/services">{t.nav.services}</Link>
             <Link href="/contractors" locale={svcLocale}>{t.nav.contractors}</Link>
