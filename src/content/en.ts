@@ -47,6 +47,7 @@ const en: SiteText = {
     ],
   },
   services: { eyebrow: "Services · 10", title: "Everything between bare brick and the first coat of paint.", more: "Details", all: "All services" },
+  work: { eyebrow: "Our work", title: "Real London sites, photographed by us.", text: "Frames, boards and ceilings straight from our jobs — before the finishing trades arrive.", close: "Close", prev: "Previous", next: "Next" },
   xray: {
     eyebrow: "Quality you don’t see",
     title: "See what’s inside the wall.",

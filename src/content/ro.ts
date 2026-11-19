@@ -41,6 +41,7 @@ const ro: SiteText = {
     ],
   },
   services: { eyebrow: "Servicii · 10", title: "Tot ce e între cărămida goală și primul strat de vopsea.", more: "Detalii", all: "Toate serviciile" },
+  work: { eyebrow: "Lucrările noastre", title: "Șantiere reale din Londra, fotografiate de noi.", text: "Structuri, plăci și tavane direct de pe lucrările noastre — înainte de finisaje.", close: "Închide", prev: "Înapoi", next: "Înainte" },
   xray: { eyebrow: "Calitate care nu se vede", title: "Vezi ce e în interiorul peretelui.", text: "Fiecare îmbinare pe montant, șuruburi la 300 mm, izolație fără goluri. Ce rămâne sub placă e făcut la fel de atent ca suprafața.", cta: "Trimite o poză cu peretele tău", hint: "Mișcă cursorul pe perete", before: "Structură", after: "Gata" },
   contractors: {
     ...en.contractors,

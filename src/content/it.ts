@@ -41,6 +41,7 @@ const it: SiteText = {
     ],
   },
   services: { eyebrow: "Servizi · 10", title: "Tutto tra il mattone nudo e la prima mano di pittura.", more: "Dettagli", all: "Tutti i servizi" },
+  work: { eyebrow: "I nostri lavori", title: "Cantieri reali a Londra, fotografati da noi.", text: "Orditure, lastre e controsoffitti dai nostri cantieri, prima delle finiture.", close: "Chiudi", prev: "Precedente", next: "Successiva" },
   xray: { eyebrow: "Qualità che non si vede", title: "Guarda cosa c'è dentro la parete.", text: "Ogni giunto su un montante, viti ogni 300 mm, isolamento senza vuoti. Ciò che resta dietro la lastra è fatto con la stessa cura di ciò che vedi.", cta: "Mandaci una foto della tua parete", hint: "Muovi il cursore sulla parete", before: "Struttura", after: "Finito" },
   contractors: {
     ...en.contractors,

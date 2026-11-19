@@ -41,6 +41,7 @@ const es: SiteText = {
     ],
   },
   services: { eyebrow: "Servicios · 10", title: "Todo entre el ladrillo desnudo y la primera mano de pintura.", more: "Detalles", all: "Todos los servicios" },
+  work: { eyebrow: "Nuestro trabajo", title: "Obras reales en Londres, fotografiadas por nosotros.", text: "Estructuras, placas y techos directamente de nuestras obras, antes de los acabados.", close: "Cerrar", prev: "Anterior", next: "Siguiente" },
   xray: { eyebrow: "Calidad que no se ve", title: "Mira lo que hay dentro de la pared.", text: "Cada junta sobre un montante, tornillos cada 300 mm, aislamiento sin huecos. Lo que queda detrás de la placa se hace con el mismo cuidado que lo que ves.", cta: "Envíanos una foto de tu pared", hint: "Pasa el cursor por la pared", before: "Estructura", after: "Terminado" },
   contractors: {
     ...en.contractors,
