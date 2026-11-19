@@ -100,8 +100,8 @@ const it: SiteText = {
     metaDescription: "Invia descrizione e foto e ricevi in giornata un preventivo di manodopera per cartongesso e finiture a Londra.",
     h1: "Chiedi il prezzo del tuo lavoro", lead: "Raccontaci cosa ti serve. Rispondiamo in giornata con un preventivo di manodopera.",
     name: "Il tuo nome", contact: "Telefono o email", postcode: "CAP", service: "Di cosa hai bisogno?", message: "Dettagli",
-    messagePlaceholder: "Misure, numero di stanze, tempistiche…", sendWhatsapp: "Invia su WhatsApp", sendEmail: "Invia via email",
-    photosHint: "Le foto velocizzano il preventivo: allegale su WhatsApp o nell'email che si apre.", or: "oppure chiama", required: "obbligatorio",
+    messagePlaceholder: "Misure, numero di stanze, tempistiche…", sendWhatsapp: "Invia su WhatsApp", sendEmail: "Invia via email", sendForm: "Invia richiesta", sending: "Invio…", sent: "Grazie — abbiamo ricevuto la richiesta. Rispondiamo in giornata.", sendFail: "Invio non riuscito. Scrivici su WhatsApp o a frameondrylining@gmail.com.",
+    photosHint: "Le foto velocizzano il preventivo — mandacele su WhatsApp dopo la richiesta.", or: "oppure chiama", required: "obbligatorio",
   },
   servicePage: { ...en.servicePage, breadcrumbHome: "Home", breadcrumbServices: "Servizi", related: "Spesso richiesti insieme" },
   servicesHub: {
@@ -115,10 +115,10 @@ const it: SiteText = {
       { title: "Finiture", slugs: en.servicesHub.groups[2].slugs },
     ],
   },
-  footer: { services: "Cartongesso", finishing: "Finiture", company: "Azienda", contact: "Contatti", language: "Lingua", rights: "© 2026 Frameon Drylining · Londra", privacy: "Privacy", top: "Su", noCookies: "Niente cookie né tracciamento." },
+  footer: { services: "Cartongesso", finishing: "Finiture", company: "Azienda", contact: "Contatti", language: "Lingua", rights: "© 2026 Frameon Drylining · Londra", privacy: "Privacy", top: "Su", noCookies: "Niente cookie." },
   privacy: {
     metaTitle: "Privacy | Frameon Drylining", h1: "Privacy",
-    body: ["Questo sito non usa cookie, analisi o tracciamento.", "La lingua scelta resta salvata solo nel tuo browser.", "Usiamo i dati da WhatsApp, telefonate ed email solo per rispondere e fare preventivi, e non li condividiamo.", "Per chiedere la cancellazione dei tuoi dati, scrivi a frameondrylining@gmail.com."],
+    body: ["Questo sito non usa cookie né tracciamenti pubblicitari.", "Contiamo le visite con Vercel Web Analytics. È anonimo e senza cookie: non ti identifica e non ti segue su altri siti.", "Quando invii il modulo, i tuoi dati arrivano alla nostra email tramite FormSubmit (formsubmit.co). Li usiamo solo per rispondere e fare il preventivo.", "I dati di WhatsApp, chiamate ed email li usiamo solo per rispondere e fare il preventivo e non li condividiamo con nessuno.", "Per chiedere la cancellazione dei dati, scrivi a frameondrylining@gmail.com."],
   },
   notFound: { title: "Questa parete non è ancora stata costruita.", text: "La pagina non esiste.", cta: "Torna alla home" },
   servicesText: {

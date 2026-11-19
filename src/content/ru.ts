@@ -103,8 +103,8 @@ const ru: SiteText = {
     metaDescription: "Пришлите описание работ и фото — получите расчёт стоимости работ по гипсокартону и отделке в Лондоне в тот же день.",
     h1: "Узнайте цену вашей работы", lead: "Расскажите, что нужно. Ответим в тот же день с расчётом за работу.",
     name: "Ваше имя", contact: "Телефон или email", postcode: "Почтовый индекс", service: "Что нужно?", message: "Подробности",
-    messagePlaceholder: "Примерные размеры, количество комнат, сроки…", sendWhatsapp: "Отправить в WhatsApp", sendEmail: "Отправить на email",
-    photosHint: "Фото ускоряют расчёт — добавьте их в чат WhatsApp или в письмо.", or: "или позвоните", required: "обязательно",
+    messagePlaceholder: "Примерные размеры, количество комнат, сроки…", sendWhatsapp: "Отправить в WhatsApp", sendEmail: "Отправить на email", sendForm: "Отправить заявку", sending: "Отправляем…", sent: "Спасибо — заявка получена. Ответим в тот же день.", sendFail: "Не удалось отправить. Напишите нам в WhatsApp или на frameondrylining@gmail.com.",
+    photosHint: "Фото ускоряют расчёт — пришлите их в WhatsApp после заявки.", or: "или позвоните", required: "обязательно",
   },
   servicePage: { ...en.servicePage, breadcrumbHome: "Главная", breadcrumbServices: "Услуги", related: "Часто заказывают вместе" },
   servicesHub: {
@@ -118,10 +118,10 @@ const ru: SiteText = {
       { title: "Отделка", slugs: en.servicesHub.groups[2].slugs },
     ],
   },
-  footer: { services: "Гипсокартон", finishing: "Отделка", company: "Компания", contact: "Контакты", language: "Язык", rights: "© 2026 Frameon Drylining · Лондон", privacy: "Конфиденциальность", top: "Наверх", noCookies: "Без cookies и слежения." },
+  footer: { services: "Гипсокартон", finishing: "Отделка", company: "Компания", contact: "Контакты", language: "Язык", rights: "© 2026 Frameon Drylining · Лондон", privacy: "Конфиденциальность", top: "Наверх", noCookies: "Без cookies." },
   privacy: {
     metaTitle: "Конфиденциальность | Frameon Drylining", h1: "Конфиденциальность",
-    body: ["Этот сайт не использует cookies, аналитику или слежение.", "Выбор языка хранится только в вашем браузере.", "Ваши данные из WhatsApp, звонков и писем используем только для ответа и расчёта и не передаём третьим лицам.", "Чтобы попросить удалить ваши данные, напишите на frameondrylining@gmail.com."],
+    body: ["Этот сайт не использует cookies и рекламные трекеры.", "Посещения мы считаем через Vercel Web Analytics. Это анонимно и без cookies: сервис не определяет, кто вы, и не следит за вами на других сайтах.", "Когда вы отправляете форму заявки, ваши данные приходят нам на почту через FormSubmit (formsubmit.co). Мы используем их только для ответа и расчёта.", "Когда вы пишете нам в WhatsApp, звоните или отправляете email, мы используем ваши данные только для ответа и расчёта. Мы никому их не передаём.", "Чтобы попросить удалить ваши сообщения или данные, напишите на frameondrylining@gmail.com."],
   },
   notFound: { title: "Эту стену ещё не построили.", text: "Такой страницы не существует.", cta: "На главную" },
   servicesText: {

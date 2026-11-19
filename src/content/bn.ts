@@ -100,8 +100,8 @@ const bn: SiteText = {
     metaDescription: "কাজের বিবরণ ও ছবি পাঠান — লন্ডনে ড্রাইলাইনিং ও ফিনিশিংয়ের শ্রমের কোটেশন একই দিনে পান।",
     h1: "আপনার কাজের দাম জানুন", lead: "কী দরকার জানান। একই দিনে শ্রমের হিসাবসহ উত্তর দেব।",
     name: "আপনার নাম", contact: "ফোন বা ইমেইল", postcode: "পোস্টকোড", service: "কী দরকার?", message: "বিস্তারিত",
-    messagePlaceholder: "মাপ, ঘরের সংখ্যা, সময়সীমা…", sendWhatsapp: "WhatsApp-এ পাঠান", sendEmail: "ইমেইলে পাঠান",
-    photosHint: "ছবি দিলে দ্রুত হিসাব হয় — যে WhatsApp চ্যাট বা ইমেইল খুলবে সেখানে যুক্ত করুন।", or: "অথবা কল করুন", required: "আবশ্যক",
+    messagePlaceholder: "মাপ, ঘরের সংখ্যা, সময়সীমা…", sendWhatsapp: "WhatsApp-এ পাঠান", sendEmail: "ইমেইলে পাঠান", sendForm: "অনুরোধ পাঠান", sending: "পাঠানো হচ্ছে…", sent: "ধন্যবাদ — আপনার অনুরোধ পেয়েছি। আমরা সেদিনই উত্তর দিই।", sendFail: "পাঠানো যায়নি। WhatsApp-এ লিখুন বা frameondrylining@gmail.com এ ইমেইল করুন।",
+    photosHint: "ছবি দিলে দ্রুত হিসাব হয় — অনুরোধ পাঠানোর পর WhatsApp-এ ছবি পাঠান।", or: "অথবা কল করুন", required: "আবশ্যক",
   },
   servicePage: { ...en.servicePage, breadcrumbHome: "হোম", breadcrumbServices: "সেবা", related: "প্রায়ই একসাথে নেওয়া হয়" },
   servicesHub: {
@@ -115,10 +115,10 @@ const bn: SiteText = {
       { title: "ফিনিশিং", slugs: en.servicesHub.groups[2].slugs },
     ],
   },
-  footer: { services: "ড্রাইলাইনিং", finishing: "ফিনিশিং", company: "কোম্পানি", contact: "যোগাযোগ", language: "ভাষা", rights: "© 2026 Frameon Drylining · লন্ডন", privacy: "গোপনীয়তা", top: "উপরে", noCookies: "কোনো কুকি বা ট্র্যাকিং নেই।" },
+  footer: { services: "ড্রাইলাইনিং", finishing: "ফিনিশিং", company: "কোম্পানি", contact: "যোগাযোগ", language: "ভাষা", rights: "© 2026 Frameon Drylining · লন্ডন", privacy: "গোপনীয়তা", top: "উপরে", noCookies: "কোনো কুকি নেই।" },
   privacy: {
     metaTitle: "গোপনীয়তা | Frameon Drylining", h1: "গোপনীয়তা",
-    body: ["এই সাইট কুকি, অ্যানালিটিক্স বা ট্র্যাকিং ব্যবহার করে না।", "আপনার ভাষা শুধু আপনার ব্রাউজারে সংরক্ষিত থাকে।", "WhatsApp, ফোন ও ইমেইলের তথ্য শুধু উত্তর ও কোটেশনের জন্য ব্যবহার করি, কারও সঙ্গে শেয়ার করি না।", "তথ্য মুছে ফেলতে frameondrylining@gmail.com-এ লিখুন।"],
+    body: ["এই ওয়েবসাইট কুকি বা বিজ্ঞাপন ট্র্যাকার ব্যবহার করে না।", "আমরা Vercel Web Analytics দিয়ে ভিজিট গণনা করি। এটি বেনামী এবং কুকি ছাড়া: এটি আপনাকে চিহ্নিত করে না এবং অন্য সাইটে অনুসরণ করে না।", "ফর্ম পাঠালে আপনার তথ্য FormSubmit (formsubmit.co)-এর মাধ্যমে আমাদের ইমেইলে আসে। আমরা শুধু উত্তর ও হিসাবের জন্য তা ব্যবহার করি।", "WhatsApp, ফোন বা ইমেইলের তথ্য আমরা শুধু উত্তর ও হিসাবের জন্য ব্যবহার করি এবং কাউকে দিই না।", "তথ্য মুছে ফেলতে frameondrylining@gmail.com এ লিখুন।"],
   },
   notFound: { title: "এই দেয়াল এখনও তৈরি হয়নি।", text: "পাতাটি নেই।", cta: "হোমে ফিরুন" },
   servicesText: {

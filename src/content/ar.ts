@@ -100,8 +100,8 @@ const ar: SiteText = {
     metaDescription: "أرسل وصف العمل والصور واحصل في اليوم نفسه على عرض سعر لأجرة أعمال الجبس بورد والتشطيبات في لندن.",
     h1: "اطلب سعر عملك", lead: "أخبرنا بما تحتاجه. نرد في اليوم نفسه بتقدير لأجرة العمل.",
     name: "اسمك", contact: "الهاتف أو البريد", postcode: "الرمز البريدي", service: "ماذا تحتاج؟", message: "التفاصيل",
-    messagePlaceholder: "المقاسات، عدد الغرف، الموعد…", sendWhatsapp: "أرسل عبر واتساب", sendEmail: "أرسل بالبريد",
-    photosHint: "الصور تسرّع التسعير — أرفقها في محادثة واتساب أو البريد الذي سيفتح.", or: "أو اتصل", required: "مطلوب",
+    messagePlaceholder: "المقاسات، عدد الغرف، الموعد…", sendWhatsapp: "أرسل عبر واتساب", sendEmail: "أرسل بالبريد", sendForm: "أرسل الطلب", sending: "جارٍ الإرسال…", sent: "شكرًا — وصلنا طلبك. نرد في اليوم نفسه.", sendFail: "تعذّر الإرسال. راسلنا على واتساب أو على frameondrylining@gmail.com.",
+    photosHint: "الصور تسرّع التسعير — أرسلها لنا على واتساب بعد إرسال الطلب.", or: "أو اتصل", required: "مطلوب",
   },
   servicePage: { ...en.servicePage, breadcrumbHome: "الرئيسية", breadcrumbServices: "الخدمات", related: "تُطلب معاً غالباً" },
   servicesHub: {
@@ -115,10 +115,10 @@ const ar: SiteText = {
       { title: "التشطيبات", slugs: en.servicesHub.groups[2].slugs },
     ],
   },
-  footer: { services: "الجبس بورد", finishing: "التشطيبات", company: "الشركة", contact: "تواصل", language: "اللغة", rights: "© 2026 Frameon Drylining · لندن", privacy: "الخصوصية", top: "للأعلى", noCookies: "بلا ملفات تعريف ارتباط ولا تتبع." },
+  footer: { services: "الجبس بورد", finishing: "التشطيبات", company: "الشركة", contact: "تواصل", language: "اللغة", rights: "© 2026 Frameon Drylining · لندن", privacy: "الخصوصية", top: "للأعلى", noCookies: "بلا ملفات تعريف ارتباط." },
   privacy: {
     metaTitle: "الخصوصية | Frameon Drylining", h1: "الخصوصية",
-    body: ["لا يستخدم هذا الموقع ملفات تعريف الارتباط أو التحليلات أو التتبع.", "تُحفظ لغتك المختارة في متصفحك فقط.", "نستخدم بيانات واتساب والمكالمات والبريد فقط للرد والتسعير، ولا نشاركها مع أحد.", "لطلب حذف بياناتك، راسلنا على frameondrylining@gmail.com."],
+    body: ["لا يستخدم هذا الموقع ملفات تعريف الارتباط ولا أدوات تتبع إعلانية.", "نحسب الزيارات باستخدام Vercel Web Analytics، وهي مجهولة الهوية وبلا ملفات تعريف ارتباط: لا تحدد هويتك ولا تتبعك على مواقع أخرى.", "عند إرسال النموذج تصل بياناتك إلى بريدنا عبر FormSubmit ‏(formsubmit.co)، ونستخدمها فقط للرد والتسعير.", "نستخدم بيانات واتساب والهاتف والبريد فقط للرد والتسعير ولا نشاركها مع أحد.", "لطلب حذف بياناتك راسل frameondrylining@gmail.com."],
   },
   notFound: { title: "هذا الجدار لم يُبنَ بعد.", text: "الصفحة غير موجودة.", cta: "العودة للرئيسية" },
   servicesText: {

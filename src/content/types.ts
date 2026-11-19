@@ -99,6 +99,10 @@ export type SiteText = {
     messagePlaceholder: string;
     sendWhatsapp: string;
     sendEmail: string;
+    sendForm: string;
+    sending: string;
+    sent: string;
+    sendFail: string;
     photosHint: string;
     or: string;
     required: string;

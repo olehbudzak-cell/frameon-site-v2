@@ -10,7 +10,7 @@ export const boroughsEn = [
 const en: SiteText = {
   langName: "English",
   meta: {
-    homeTitle: "Drylining Contractors in London — Stud Partitions & MF Ceilings | Frameon",
+    homeTitle: "Drylining Contractors London — Partitions & Ceilings | Frameon",
     homeDescription:
       "Stud partitions, wall linings, MF ceilings and full interior finishing across all London boroughs. Labour from £30/m², materials separate. Same-day reply on WhatsApp.",
   },
@@ -150,8 +150,8 @@ const en: SiteText = {
     message: "Details",
     messagePlaceholder: "Rough sizes, number of rooms, deadline…",
     sendWhatsapp: "Send via WhatsApp",
-    sendEmail: "Send by email",
-    photosHint: "Photos speed things up — attach them in the WhatsApp chat or email that opens.",
+    sendEmail: "Send by email", sendForm: "Send request", sending: "Sending…", sent: "Thanks — your request is in. We reply the same day.", sendFail: "Couldn’t send. Please message us on WhatsApp or email frameondrylining@gmail.com.",
+    photosHint: "Photos speed things up — send them to us on WhatsApp once your request is in.",
     or: "or call",
     required: "required",
   },
@@ -180,16 +180,11 @@ const en: SiteText = {
       { title: "Finishing", slugs: ["taping-plastering-painting", "flooring", "tiling", "turnkey-refurbishment"] },
     ],
   },
-  footer: { services: "Drylining", finishing: "Finishing", company: "Company", contact: "Contact", language: "Language", rights: "© 2026 Frameon Drylining · London", privacy: "Privacy", top: "Back to top", noCookies: "No cookies, no tracking." },
+  footer: { services: "Drylining", finishing: "Finishing", company: "Company", contact: "Contact", language: "Language", rights: "© 2026 Frameon Drylining · London", privacy: "Privacy", top: "Back to top", noCookies: "No cookies." },
   privacy: {
     metaTitle: "Privacy | Frameon Drylining",
     h1: "Privacy",
-    body: [
-      "This website does not use cookies, analytics or tracking.",
-      "Your language choice is stored only in your browser.",
-      "When you contact us by WhatsApp, phone or email, we use your details only to reply and to quote your job. We do not share them with third parties.",
-      "To ask us to delete your messages or details, email frameondrylining@gmail.com.",
-    ],
+    body: ["This website does not use cookies or advertising trackers.", "We count visits with Vercel Web Analytics. It is anonymous and cookie-free: it does not identify you or follow you to other sites.", "When you send the quote form, your details reach our email through FormSubmit (formsubmit.co). We use them only to reply and to quote your job.", "When you contact us by WhatsApp, phone or email, we use your details only to reply and to quote your job. We do not share them with anyone else.", "To ask us to delete your messages or details, email frameondrylining@gmail.com."],
   },
   notFound: { title: "This wall hasn’t been built yet.", text: "The page you’re looking for doesn’t exist.", cta: "Back to home" },
   servicesText: {

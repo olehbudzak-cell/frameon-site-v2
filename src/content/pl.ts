@@ -100,8 +100,8 @@ const pl: SiteText = {
     metaDescription: "Wyślij opis prac i zdjęcia — wycena robocizny suchej zabudowy i wykończeń w Londynie tego samego dnia.",
     h1: "Wycena Twojej pracy", lead: "Napisz, czego potrzebujesz. Odpowiemy tego samego dnia z wyceną robocizny.",
     name: "Imię", contact: "Telefon lub e-mail", postcode: "Kod pocztowy", service: "Czego potrzebujesz?", message: "Szczegóły",
-    messagePlaceholder: "Wymiary, liczba pokoi, termin…", sendWhatsapp: "Wyślij na WhatsApp", sendEmail: "Wyślij e-mailem",
-    photosHint: "Zdjęcia przyspieszają wycenę — dodaj je w czacie WhatsApp lub w e-mailu.", or: "lub zadzwoń", required: "wymagane",
+    messagePlaceholder: "Wymiary, liczba pokoi, termin…", sendWhatsapp: "Wyślij na WhatsApp", sendEmail: "Wyślij e-mailem", sendForm: "Wyślij zapytanie", sending: "Wysyłanie…", sent: "Dziękujemy — zapytanie dotarło. Odpowiemy tego samego dnia.", sendFail: "Nie udało się wysłać. Napisz do nas na WhatsApp lub na frameondrylining@gmail.com.",
+    photosHint: "Zdjęcia przyspieszają wycenę — wyślij je na WhatsApp po wysłaniu zapytania.", or: "lub zadzwoń", required: "wymagane",
   },
   servicePage: { ...en.servicePage, breadcrumbHome: "Start", breadcrumbServices: "Usługi", related: "Często zamawiane razem" },
   servicesHub: {
@@ -115,10 +115,10 @@ const pl: SiteText = {
       { title: "Wykończenia", slugs: en.servicesHub.groups[2].slugs },
     ],
   },
-  footer: { services: "Suche zabudowy", finishing: "Wykończenia", company: "Firma", contact: "Kontakt", language: "Język", rights: "© 2026 Frameon Drylining · Londyn", privacy: "Prywatność", top: "Do góry", noCookies: "Bez cookies i śledzenia." },
+  footer: { services: "Suche zabudowy", finishing: "Wykończenia", company: "Firma", contact: "Kontakt", language: "Język", rights: "© 2026 Frameon Drylining · Londyn", privacy: "Prywatność", top: "Do góry", noCookies: "Bez cookies." },
   privacy: {
     metaTitle: "Prywatność | Frameon Drylining", h1: "Prywatność",
-    body: ["Ta strona nie używa cookies, analityki ani śledzenia.", "Wybór języka jest zapisywany tylko w Twojej przeglądarce.", "Dane z WhatsApp, telefonów i e-maili wykorzystujemy tylko do odpowiedzi i wyceny i nie przekazujemy ich innym.", "Aby poprosić o usunięcie danych, napisz na frameondrylining@gmail.com."],
+    body: ["Ta strona nie używa cookies ani reklamowych narzędzi śledzących.", "Wizyty liczymy za pomocą Vercel Web Analytics. To anonimowe i bez cookies: narzędzie nie ustala, kim jesteś, i nie śledzi Cię na innych stronach.", "Gdy wysyłasz formularz, Twoje dane trafiają na nasz e-mail przez FormSubmit (formsubmit.co). Używamy ich tylko do odpowiedzi i wyceny.", "Dane z WhatsApp, telefonów i e-maili wykorzystujemy tylko do odpowiedzi i wyceny i nikomu ich nie przekazujemy.", "Aby poprosić o usunięcie danych, napisz na frameondrylining@gmail.com."],
   },
   notFound: { title: "Tej ściany jeszcze nie zbudowano.", text: "Taka strona nie istnieje.", cta: "Strona główna" },
   servicesText: {

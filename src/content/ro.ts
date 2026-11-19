@@ -100,8 +100,8 @@ const ro: SiteText = {
     metaDescription: "Trimite descrierea lucrării și poze — ofertă de manoperă pentru rigips și finisaje în Londra în aceeași zi.",
     h1: "Află prețul lucrării tale", lead: "Spune-ne ce îți trebuie. Răspundem în aceeași zi cu oferta de manoperă.",
     name: "Numele tău", contact: "Telefon sau email", postcode: "Cod poștal", service: "Ce îți trebuie?", message: "Detalii",
-    messagePlaceholder: "Dimensiuni, număr de camere, termen…", sendWhatsapp: "Trimite pe WhatsApp", sendEmail: "Trimite pe email",
-    photosHint: "Pozele grăbesc oferta — atașează-le în WhatsApp sau în emailul care se deschide.", or: "sau sună", required: "obligatoriu",
+    messagePlaceholder: "Dimensiuni, număr de camere, termen…", sendWhatsapp: "Trimite pe WhatsApp", sendEmail: "Trimite pe email", sendForm: "Trimite cererea", sending: "Se trimite…", sent: "Mulțumim — cererea a ajuns. Răspundem în aceeași zi.", sendFail: "Nu s-a putut trimite. Scrie-ne pe WhatsApp sau la frameondrylining@gmail.com.",
+    photosHint: "Pozele grăbesc oferta — trimite-ni-le pe WhatsApp după ce trimiți cererea.", or: "sau sună", required: "obligatoriu",
   },
   servicePage: { ...en.servicePage, breadcrumbHome: "Acasă", breadcrumbServices: "Servicii", related: "Comandate des împreună" },
   servicesHub: {
@@ -115,10 +115,10 @@ const ro: SiteText = {
       { title: "Finisaje", slugs: en.servicesHub.groups[2].slugs },
     ],
   },
-  footer: { services: "Rigips", finishing: "Finisaje", company: "Companie", contact: "Contact", language: "Limbă", rights: "© 2026 Frameon Drylining · Londra", privacy: "Confidențialitate", top: "Sus", noCookies: "Fără cookies și urmărire." },
+  footer: { services: "Rigips", finishing: "Finisaje", company: "Companie", contact: "Contact", language: "Limbă", rights: "© 2026 Frameon Drylining · Londra", privacy: "Confidențialitate", top: "Sus", noCookies: "Fără cookies." },
   privacy: {
     metaTitle: "Confidențialitate | Frameon Drylining", h1: "Confidențialitate",
-    body: ["Acest site nu folosește cookies, analiză sau urmărire.", "Alegerea limbii e salvată doar în browserul tău.", "Datele din WhatsApp, apeluri și email le folosim doar pentru răspuns și ofertă și nu le transmitem altora.", "Pentru ștergerea datelor, scrie la frameondrylining@gmail.com."],
+    body: ["Acest site nu folosește cookies sau instrumente de urmărire publicitară.", "Numărăm vizitele cu Vercel Web Analytics. Este anonim și fără cookies: nu te identifică și nu te urmărește pe alte site-uri.", "Când trimiți formularul, datele tale ajung pe e-mailul nostru prin FormSubmit (formsubmit.co). Le folosim doar ca să răspundem și să facem oferta.", "Datele din WhatsApp, apeluri și e-mailuri le folosim doar pentru răspuns și ofertă și nu le dăm nimănui.", "Pentru ștergerea datelor, scrie la frameondrylining@gmail.com."],
   },
   notFound: { title: "Acest perete nu a fost încă construit.", text: "Pagina nu există.", cta: "Acasă" },
   servicesText: {
