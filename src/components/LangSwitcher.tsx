@@ -31,7 +31,7 @@ export default function LangSwitcher({ label }: { label: string }) {
           {locales.map((l) => (
             <li key={l}>
               <Link href={target(l)} locale={l} hrefLang={l} aria-current={l === locale ? "true" : undefined} onClick={() => setOpen(false)}>
-                <span>{names[l]}</span><span className="muted mono">{short[l]}</span>
+                <span className="native">{names[l]}</span><span className="muted mono">{short[l]}</span>
               </Link>
             </li>
           ))}

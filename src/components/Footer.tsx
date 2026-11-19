@@ -28,8 +28,8 @@ export default function Footer({ t, svcLocale, locale }: { t: SiteText; svcLocal
             <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
             <a href={CONTACT.facebook} target="_blank" rel="noopener">Facebook</a>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px 16px", alignContent: "start" }}><span className="mono muted" style={{ gridColumn: "1 / -1" }}>{t.footer.language}</span>
-            {locales.map((l) => <Link key={l} href="/" locale={l} hrefLang={l} style={l === locale ? { color: "var(--color-brass)" } : undefined}>{names[l]}</Link>)}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2px 16px", alignContent: "start" }}><span className="mono muted" style={{ gridColumn: "1 / -1" }}>{t.footer.language}</span>
+            {locales.map((l) => <Link key={l} href="/" locale={l} hrefLang={l} className="native" style={l === locale ? { color: "var(--color-brass)" } : undefined}>{names[l]}</Link>)}
           </div>
         </div>
         <div className="wordmark" aria-hidden="true">FRAMEON</div>

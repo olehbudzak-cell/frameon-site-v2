@@ -84,11 +84,24 @@ export default function HeroBuild({
       });
 
     // First frame now, then the rest progressively (every 4th first for a coarse preview).
-    load(0).then(async () => {
-      if (cancelled) return;
-      draw(0); setReady(true);
+    // The first frame is the same file as the poster (already cached). The rest of the
+    // sequence waits until the page has painted, so it never competes with the first screen;
+    // the first scroll starts it immediately.
+    let started = false;
+    const loadRest = async () => {
+      if (started || cancelled) return;
+      started = true;
+      window.removeEventListener("scroll", loadRest);
       const order = [...Array(count).keys()].sort((a, b) => (a % 4) - (b % 4) || a - b).filter((i) => i > 0);
       for (let j = 0; j < order.length && !cancelled; j += 6) await Promise.all(order.slice(j, j + 6).map(load));
+    };
+    window.addEventListener("scroll", loadRest, { passive: true });
+    const idle = (cb: () => void) => ("requestIdleCallback" in window ? (window as any).requestIdleCallback(cb, { timeout: 2500 }) : setTimeout(cb, 1200));
+    load(0).then(() => {
+      if (cancelled) return;
+      draw(0); setReady(true);
+      if (document.readyState === "complete") idle(loadRest);
+      else window.addEventListener("load", () => idle(loadRest), { once: true });
     });
 
     // Smoothly follow the scroll position.
@@ -124,7 +137,7 @@ export default function HeroBuild({
     const st = ScrollTrigger.create({
       trigger: sectionRef.current,
       start: "top top",
-      end: () => "+=" + window.innerHeight * (stages.length + 1) * 0.9,
+      end: () => "+=" + window.innerHeight * (stages.length + 1) * 0.6,
       pin: pinRef.current,
       onUpdate: (self) => apply(self.progress),
     });
@@ -137,6 +150,7 @@ export default function HeroBuild({
       cancelled = true;
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", onResize);
+      window.removeEventListener("scroll", loadRest);
       st.kill();
     };
   }, [stages.length, heroShare]);
