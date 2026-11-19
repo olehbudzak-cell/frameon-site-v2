@@ -177,7 +177,7 @@ export default async function Home({ params }: P) {
         <div className="inner wrap">
           <h2>{t.final.title}</h2>
           <a className="btn btn-primary" style={{ minHeight: 60, padding: "0 34px", fontSize: 17 }} href={CONTACT.whatsapp} target="_blank" rel="noopener">{t.final.cta}</a>
-          <p style={{ margin: 0 }}><a href={CONTACT.phoneHref}>{CONTACT.phoneDisplay}</a> · <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a> · <a href={CONTACT.facebook} target="_blank" rel="noopener">Facebook</a></p>
+          <p className="tap-links" style={{ margin: 0 }}><a href={CONTACT.phoneHref}>{CONTACT.phoneDisplay}</a><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a><a href={CONTACT.facebook} target="_blank" rel="noopener">Facebook</a></p>
         </div>
       </section>
     </>

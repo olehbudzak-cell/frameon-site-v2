@@ -9,6 +9,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ActionBar from "@/components/ActionBar";
 import SmoothScroll from "@/components/SmoothScroll";
+import { SITE_LIVE } from "@/lib/live";
+import { Analytics } from "@vercel/analytics/next";
+import LeadEvents from "@/components/LeadEvents";
 import "../globals.css";
 
 const call: Record<string, string> = { en: "Call", ro: "Sună", es: "Llamar", pl: "Zadzwoń", bn: "কল", pt: "Ligar", gu: "કૉલ", it: "Chiama", pa: "ਕਾਲ", ar: "اتصل", uk: "Дзвінок", ru: "Звонок" };
@@ -16,7 +19,7 @@ const call: Record<string, string> = { en: "Call", ro: "Sună", es: "Llamar", pl
 export const metadata: Metadata = {
   metadataBase: new URL(CONTACT.site),
   icons: { icon: "/favicon.svg" },
-  robots: { index: true, follow: true },
+  robots: SITE_LIVE ? { index: true, follow: true } : { index: false, follow: false },
 };
 export const viewport: Viewport = { themeColor: "#0D0C0B", width: "device-width", initialScale: 1 };
 
@@ -40,6 +43,8 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           <Footer t={t} svcLocale={svcLocale} locale={locale as Locale} />
           <ActionBar price={t.nav.getPrice} call={call[locale]} />
           <SmoothScroll />
+          <LeadEvents />
+          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>
