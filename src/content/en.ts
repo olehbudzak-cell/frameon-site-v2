@@ -34,7 +34,7 @@ const en: SiteText = {
       { tag: "02 / FRAME", title: "Tracks on the line, studs every 600 mm", text: "Floor and ceiling tracks are fixed to the set-out line. Every stud is checked for plumb; door openings are framed as we go.", spec: "70 MM C-STUD · 600 MM CENTRES · MF HANGERS" },
       { tag: "03 / BOARD", title: "Joints on studs, screws at 300 mm", text: "Boards go on one face with every joint landing on a stud and screw heads set just below the surface.", spec: "12.5 MM TYPE D · SCREWS @ 300 MM" },
       { tag: "04 / INSULATE & CLOSE", title: "No gaps, no hollow sound", text: "Mineral wool is cut tight between studs, then the second face closes the wall — fire or acoustic board where specified.", spec: "50 MM MINERAL WOOL · 15 MM TYPE F" },
-      { tag: "05 / FINISH", title: "From boards to a room you can live in", text: "Taping, skim, paint, flooring and tiling — one team from bare brick to the finished room.", spec: "TAPE · SKIM · PAINT · FLOOR" },
+      { tag: "05 / FINISH", title: "From boards to a room you can live in", text: "Taping, skim, paint and flooring — priced separately once the boards are up.", spec: "TAPE · SKIM · PAINT · FLOOR" },
     ],
   },
   done: {
@@ -46,8 +46,8 @@ const en: SiteText = {
       { value: "£350", label: "minimum labour per job" },
     ],
   },
-  services: { eyebrow: "Services · 10", title: "Everything between bare brick and the first coat of paint.", more: "Details", all: "All services" },
-  work: { eyebrow: "Our work", title: "Real London sites, photographed by us.", text: "Frames, boards and ceilings straight from our jobs — before the finishing trades arrive.", close: "Close", prev: "Previous", next: "Next" },
+  services: { eyebrow: "Services · 8", title: "Everything between bare brick and the first coat of paint.", more: "Details", all: "All services" },
+  work: { eyebrow: "Our work", title: "Real London sites, photographed by us.", text: "Frames, boards and ceilings straight from our jobs — before the finishing trades arrive.", close: "Close", prev: "Previous", next: "Next", all: "All", sitePhoto: "Our site photo", illustration: "Illustration", real: "Real photos from our own London sites — not renders." },
   xray: {
     eyebrow: "Quality you don’t see",
     title: "See what’s inside the wall.",
@@ -130,7 +130,7 @@ const en: SiteText = {
     pageTitle: "Drylining FAQ — Prices, Materials & Timings | Frameon London",
     pageDescription: "Answers about drylining prices, who supplies materials, metal vs timber stud, finishing and what we need to quote your job in London.",
     items: [
-      { q: "Do you do the finishing too?", a: "Yes. Taping, skim plaster, painting, flooring and tiling — up to a full turnkey refurbishment. Finishing is priced separately after photos or a site visit." },
+      { q: "Do you do the finishing too?", a: "Yes — taping, skim plaster, painting and flooring. Finishing is priced separately after photos or a site visit. We don't do tiling or full turnkey refurbishments." },
       { q: "Who pays for materials?", a: "The client. Our prices are labour only; materials are quoted separately and paid for by you or your main contractor." },
       { q: "Metal or timber stud?", a: "Both, for internal non-loadbearing walls. Metal stays straight and is quick to install; timber is handy where you need to fix heavy items. MF ceilings are always on metal furring." },
       { q: "Is the calculator price fixed?", a: "No — it’s a guide based on our labour rates, with a £350 minimum per job. We confirm a fixed price after photos or a site visit." },
@@ -172,13 +172,13 @@ const en: SiteText = {
   },
   servicesHub: {
     metaTitle: "Drylining & Finishing Services in London | Frameon",
-    metaDescription: "Stud partitions, SFS, wall linings, MF ceilings, boxing, insulation, plastering, painting, flooring, tiling and turnkey refurbishment across London.",
+    metaDescription: "Stud partitions, SFS, wall linings, MF ceilings, boxing, insulation, plastering, painting and flooring across London.",
     h1: "Drylining and finishing services in London",
     lead: "Labour-only prices. Materials are quoted separately and paid by the client.",
     groups: [
       { title: "Drylining", slugs: ["stud-partitions", "sfs-framing", "wall-linings", "mf-ceilings", "boxing-bulkheads-reveals"] },
       { title: "Insulation", slugs: ["insulation"] },
-      { title: "Finishing", slugs: ["taping-plastering-painting", "flooring", "tiling", "turnkey-refurbishment"] },
+      { title: "Finishing", slugs: ["taping-plastering-painting", "flooring"] },
     ],
   },
   footer: { services: "Drylining", finishing: "Finishing", company: "Company", contact: "Contact", language: "Language", rights: "© 2026 Frameon Drylining · London", privacy: "Privacy", top: "Back to top", noCookies: "No cookies." },
@@ -393,7 +393,7 @@ const en: SiteText = {
         ],
         faq: [
           { q: "Can you leave access to valves?", a: "Yes — we fit access hatches wherever services need maintenance." },
-          { q: "Do you build niches in shower walls?", a: "We frame and board them; tiling can be done by us as a separate job." },
+          { q: "Do you build niches in shower walls?", a: "We frame and board them, ready for your tiler." },
           { q: "How is boxing priced?", a: "Per linear metre from £32 for pipe boxing; niches and bulkheads from £120 each." },
         ],
       },

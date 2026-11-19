@@ -28,7 +28,7 @@ const pl: SiteText = {
       { tag: "02 / STELAŻ", title: "Profile UW na linii, CW co 600 mm", text: "Profile mocujemy na linii, każdy słupek sprawdzamy w pionie, otwory drzwiowe od razu.", spec: "PROFIL C 70 MM · ROZSTAW 600 MM · WIESZAKI MF" },
       { tag: "03 / PŁYTA", title: "Styki na profilach, wkręty co 300 mm", text: "Płyty na jedną stronę: każdy styk na profilu, łby wkrętów lekko zagłębione.", spec: "12.5 MM TYPE D · WKRĘTY @ 300 MM" },
       { tag: "04 / IZOLACJA", title: "Bez szczelin i pustego dźwięku", text: "Wełnę mineralną docinamy ciasno, potem druga strona zamyka ścianę — płyta ogniochronna lub akustyczna.", spec: "50 MM WEŁNA · 15 MM TYPE F" },
-      { tag: "05 / WYKOŃCZENIE", title: "Od płyt do pokoju do życia", text: "Spoinowanie, gładź, malowanie, podłogi i płytki — jedna ekipa od cegły do gotowego pokoju.", spec: "SPOINY · GŁADŹ · FARBA · PODŁOGA" },
+      { tag: "05 / WYKOŃCZENIE", title: "Od płyt do pokoju do życia", text: "Spoinowanie, gładź, malowanie i podłogi — wyceniane osobno, gdy płyty są już na miejscu.", spec: "SPOINY · GŁADŹ · FARBA · PODŁOGA" },
     ],
   },
   done: {
@@ -40,8 +40,8 @@ const pl: SiteText = {
       { value: "£350", label: "minimalne zlecenie (robocizna)" },
     ],
   },
-  services: { eyebrow: "Usługi · 10", title: "Wszystko między gołą cegłą a pierwszą warstwą farby.", more: "Szczegóły", all: "Wszystkie usługi" },
-  work: { eyebrow: "Nasze realizacje", title: "Prawdziwe budowy w Londynie, nasze zdjęcia.", text: "Stelaże, płyty i sufity prosto z naszych budów — zanim wejdą wykończeniowcy.", close: "Zamknij", prev: "Poprzednie", next: "Następne" },
+  services: { eyebrow: "Usługi · 8", title: "Wszystko między gołą cegłą a pierwszą warstwą farby.", more: "Szczegóły", all: "Wszystkie usługi" },
+  work: { eyebrow: "Nasze realizacje", title: "Prawdziwe budowy w Londynie, nasze zdjęcia.", text: "Stelaże, płyty i sufity prosto z naszych budów — zanim wejdą wykończeniowcy.", close: "Zamknij", prev: "Poprzednie", next: "Następne", all: "Wszystkie", sitePhoto: "Zdjęcie z naszej budowy", illustration: "Ilustracja", real: "Prawdziwe zdjęcia z naszych londyńskich budów — nie wizualizacje." },
   xray: { eyebrow: "Jakość, której nie widać", title: "Zobacz, co jest w środku ściany.", text: "Każdy styk na profilu, wkręty co 300 mm, izolacja bez szczelin. To, co zakryte płytą, robimy tak samo starannie jak powierzchnię.", cta: "Wyślij zdjęcie swojej ściany", hint: "Przesuń kursor po ścianie", before: "Stelaż", after: "Gotowe" },
   contractors: {
     ...en.contractors,
@@ -86,7 +86,7 @@ const pl: SiteText = {
     pageTitle: "Pytania o suche zabudowy — ceny, materiały, terminy | Frameon",
     pageDescription: "Odpowiedzi o cenach suchych zabudów, materiałach, stelażach, wykończeniach i o tym, czego potrzebujemy do wyceny w Londynie.",
     items: [
-      { q: "Czy robicie też wykończenia?", a: "Tak. Spoinowanie, gładź, malowanie, podłogi i płytki — aż po remont pod klucz. Wykończenia wyceniamy osobno po zdjęciach lub oględzinach." },
+      { q: "Czy robicie też wykończenia?", a: "Tak — spoinowanie, gładź, malowanie i podłogi. Wykończenia wyceniamy osobno po zdjęciach lub oględzinach. Nie kładziemy płytek i nie robimy remontów pod klucz." },
       { q: "Kto płaci za materiały?", a: "Klient. Nasze ceny to sama robocizna, materiały wyceniane osobno." },
       { q: "Stelaż metalowy czy drewniany?", a: "Oba — do wewnętrznych ścian nienośnych. Metal jest prosty i szybki, drewno wygodne pod ciężkie elementy. Sufity MF zawsze na metalu." },
       { q: "Czy cena z kalkulatora jest ostateczna?", a: "Nie, to orientacyjna kwota wg naszych stawek z minimum £350. Stałą cenę podajemy po zdjęciach lub oględzinach." },
@@ -107,7 +107,7 @@ const pl: SiteText = {
   servicePage: { ...en.servicePage, breadcrumbHome: "Start", breadcrumbServices: "Usługi", related: "Często zamawiane razem" },
   servicesHub: {
     metaTitle: "Usługi suchej zabudowy i wykończeń w Londynie | Frameon",
-    metaDescription: "Ścianki działowe, SFS, okładziny, sufity MF, zabudowy rur, izolacje, gładzie, malowanie, podłogi, płytki i remonty pod klucz w Londynie.",
+    metaDescription: "Ścianki działowe, SFS, okładziny, sufity MF, zabudowy rur, izolacje, gładzie, malowanie i podłogi w Londynie.",
     h1: "Suche zabudowy i wykończenia w Londynie",
     lead: "Ceny za robociznę. Szczegółowe strony usług — po angielsku i ukraińsku.",
     groups: [

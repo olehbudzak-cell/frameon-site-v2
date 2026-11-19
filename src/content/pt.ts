@@ -28,7 +28,7 @@ const pt: SiteText = {
       { tag: "02 / ESTRUTURA", title: "Calhas na linha, montantes a cada 600 mm", text: "Fixamos as calhas na linha e verificamos cada montante a prumo. Os vãos de porta ficam logo feitos.", spec: "MONTANTE C 70 MM · 600 MM · SUSPENSÕES MF" },
       { tag: "03 / PLACA", title: "Juntas nos montantes, parafusos a cada 300 mm", text: "Placas numa face: cada junta sobre um montante, cabeças dos parafusos ligeiramente embutidas.", spec: "12.5 MM TYPE D · PARAFUSOS @ 300 MM" },
       { tag: "04 / ISOLAMENTO", title: "Sem folgas nem som oco", text: "Lã mineral bem ajustada e a segunda face fecha a parede, com placa corta-fogo ou acústica quando necessário.", spec: "50 MM LÃ MINERAL · 15 MM TYPE F" },
-      { tag: "05 / ACABAMENTO", title: "De placas a uma divisão habitável", text: "Juntas, estuque, pintura, pavimentos e azulejos: uma só equipa do tijolo à divisão pronta.", spec: "JUNTAS · ESTUQUE · PINTURA · PAVIMENTO" },
+      { tag: "05 / ACABAMENTO", title: "De placas a uma divisão habitável", text: "Juntas, estuque, pintura e pavimentos: orçados à parte depois de as placas estarem montadas.", spec: "JUNTAS · ESTUQUE · PINTURA · PAVIMENTO" },
     ],
   },
   done: {
@@ -40,8 +40,8 @@ const pt: SiteText = {
       { value: "£350", label: "encomenda mínima de mão de obra" },
     ],
   },
-  services: { eyebrow: "Serviços · 10", title: "Tudo entre o tijolo nu e a primeira demão de tinta.", more: "Detalhes", all: "Todos os serviços" },
-  work: { eyebrow: "O nosso trabalho", title: "Obras reais em Londres, fotografadas por nós.", text: "Estruturas, placas e tetos diretamente das nossas obras, antes dos acabamentos.", close: "Fechar", prev: "Anterior", next: "Seguinte" },
+  services: { eyebrow: "Serviços · 8", title: "Tudo entre o tijolo nu e a primeira demão de tinta.", more: "Detalhes", all: "Todos os serviços" },
+  work: { eyebrow: "O nosso trabalho", title: "Obras reais em Londres, fotografadas por nós.", text: "Estruturas, placas e tetos diretamente das nossas obras, antes dos acabamentos.", close: "Fechar", prev: "Anterior", next: "Seguinte", all: "Todos", sitePhoto: "Foto da nossa obra", illustration: "Ilustração", real: "Fotos reais das nossas obras em Londres, não renders." },
   xray: { eyebrow: "Qualidade que não se vê", title: "Veja o que há dentro da parede.", text: "Cada junta num montante, parafusos a cada 300 mm, isolamento sem folgas. O que fica atrás da placa é feito com o mesmo cuidado do que se vê.", cta: "Envie uma foto da sua parede", hint: "Passe o cursor pela parede", before: "Estrutura", after: "Pronto" },
   contractors: {
     ...en.contractors,
@@ -86,7 +86,7 @@ const pt: SiteText = {
     pageTitle: "Perguntas sobre pladur — preços, materiais e prazos | Frameon",
     pageDescription: "Respostas sobre preços de pladur, materiais, estruturas, acabamentos e o que precisamos para orçamentar em Londres.",
     items: [
-      { q: "Também fazem acabamentos?", a: "Sim. Juntas, estuque, pintura, pavimentos e azulejos, até à remodelação chave na mão. Os acabamentos são orçados à parte após fotos ou visita." },
+      { q: "Também fazem acabamentos?", a: "Sim: juntas, estuque, pintura e pavimentos. Os acabamentos são orçados à parte após fotos ou visita. Não fazemos azulejos nem remodelações chave na mão." },
       { q: "Quem paga os materiais?", a: "O cliente. Os nossos preços são só de mão de obra." },
       { q: "Estrutura metálica ou de madeira?", a: "Ambas, para paredes interiores não estruturais. O metal é direito e rápido; a madeira é útil para pendurar objetos pesados. Tetos MF sempre em metal." },
       { q: "O preço da calculadora é final?", a: "Não, é indicativo, com mínimo de £350. O preço fixo é dado após fotos ou visita." },
@@ -107,7 +107,7 @@ const pt: SiteText = {
   servicePage: { ...en.servicePage, breadcrumbHome: "Início", breadcrumbServices: "Serviços", related: "Pedidos em conjunto" },
   servicesHub: {
     metaTitle: "Serviços de pladur e acabamentos em Londres | Frameon",
-    metaDescription: "Divisórias, SFS, revestimentos, tetos MF, caixas, isolamento, estuque, pintura, pavimentos, azulejos e remodelações chave na mão em Londres.",
+    metaDescription: "Divisórias, SFS, revestimentos, tetos MF, caixas, isolamento, estuque, pintura e pavimentos em Londres.",
     h1: "Pladur e acabamentos em Londres",
     lead: "Preços só de mão de obra. As páginas detalhadas estão em inglês e ucraniano.",
     groups: [

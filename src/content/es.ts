@@ -28,7 +28,7 @@ const es: SiteText = {
       { tag: "02 / ESTRUCTURA", title: "Canales en la línea, montantes cada 600 mm", text: "Fijamos los canales sobre la línea y comprobamos cada montante a plomo. Los huecos de puerta se hacen al momento.", spec: "MONTANTE C 70 MM · 600 MM · CUELGUES MF" },
       { tag: "03 / PLACA", title: "Juntas sobre montantes, tornillos cada 300 mm", text: "Placas en una cara: cada junta sobre un montante, cabezas de tornillo ligeramente hundidas.", spec: "12.5 MM TYPE D · TORNILLOS @ 300 MM" },
       { tag: "04 / AISLAMIENTO", title: "Sin huecos ni sonido hueco", text: "Lana mineral bien ajustada y la segunda cara cierra la pared, con placa ignífuga o acústica donde se requiera.", spec: "50 MM LANA MINERAL · 15 MM TYPE F" },
-      { tag: "05 / ACABADO", title: "De placas a una habitación habitable", text: "Juntas, enlucido, pintura, suelos y alicatado: un solo equipo del ladrillo a la habitación terminada.", spec: "JUNTAS · ENLUCIDO · PINTURA · SUELO" },
+      { tag: "05 / ACABADO", title: "De placas a una habitación habitable", text: "Juntas, enlucido, pintura y suelos: se presupuestan aparte una vez montadas las placas.", spec: "JUNTAS · ENLUCIDO · PINTURA · SUELO" },
     ],
   },
   done: {
@@ -40,8 +40,8 @@ const es: SiteText = {
       { value: "£350", label: "pedido mínimo de mano de obra" },
     ],
   },
-  services: { eyebrow: "Servicios · 10", title: "Todo entre el ladrillo desnudo y la primera mano de pintura.", more: "Detalles", all: "Todos los servicios" },
-  work: { eyebrow: "Nuestro trabajo", title: "Obras reales en Londres, fotografiadas por nosotros.", text: "Estructuras, placas y techos directamente de nuestras obras, antes de los acabados.", close: "Cerrar", prev: "Anterior", next: "Siguiente" },
+  services: { eyebrow: "Servicios · 8", title: "Todo entre el ladrillo desnudo y la primera mano de pintura.", more: "Detalles", all: "Todos los servicios" },
+  work: { eyebrow: "Nuestro trabajo", title: "Obras reales en Londres, fotografiadas por nosotros.", text: "Estructuras, placas y techos directamente de nuestras obras, antes de los acabados.", close: "Cerrar", prev: "Anterior", next: "Siguiente", all: "Todos", sitePhoto: "Foto de nuestra obra", illustration: "Ilustración", real: "Fotos reales de nuestras obras en Londres, no renders." },
   xray: { eyebrow: "Calidad que no se ve", title: "Mira lo que hay dentro de la pared.", text: "Cada junta sobre un montante, tornillos cada 300 mm, aislamiento sin huecos. Lo que queda detrás de la placa se hace con el mismo cuidado que lo que ves.", cta: "Envíanos una foto de tu pared", hint: "Pasa el cursor por la pared", before: "Estructura", after: "Terminado" },
   contractors: {
     ...en.contractors,
@@ -86,7 +86,7 @@ const es: SiteText = {
     pageTitle: "Preguntas sobre pladur — precios, materiales y plazos | Frameon",
     pageDescription: "Respuestas sobre precios de pladur, materiales, estructuras, acabados y qué necesitamos para presupuestar en Londres.",
     items: [
-      { q: "¿También hacéis acabados?", a: "Sí. Juntas, enlucido, pintura, suelos y alicatado, hasta la reforma llave en mano. Los acabados se presupuestan aparte tras fotos o visita." },
+      { q: "¿También hacéis acabados?", a: "Sí: juntas, enlucido, pintura y suelos. Los acabados se presupuestan aparte tras fotos o visita. No hacemos alicatado ni reformas llave en mano." },
       { q: "¿Quién paga los materiales?", a: "El cliente. Nuestros precios son solo de mano de obra." },
       { q: "¿Estructura metálica o de madera?", a: "Ambas, para paredes interiores no portantes. El metal es recto y rápido; la madera va bien para colgar cosas pesadas. Los techos MF siempre en metal." },
       { q: "¿El precio de la calculadora es definitivo?", a: "No, es orientativo, con un mínimo de £350. El precio fijo se da tras fotos o visita." },
@@ -107,7 +107,7 @@ const es: SiteText = {
   servicePage: { ...en.servicePage, breadcrumbHome: "Inicio", breadcrumbServices: "Servicios", related: "Se contratan juntos" },
   servicesHub: {
     metaTitle: "Servicios de pladur y acabados en Londres | Frameon",
-    metaDescription: "Tabiques, SFS, trasdosados, techos MF, cajeados, aislamiento, enlucido, pintura, suelos, alicatado y reformas llave en mano en Londres.",
+    metaDescription: "Tabiques, SFS, trasdosados, techos MF, cajeados, aislamiento, enlucido, pintura y suelos en Londres.",
     h1: "Pladur y acabados en Londres",
     lead: "Precios solo de mano de obra. Las páginas detalladas están en inglés y ucraniano.",
     groups: [

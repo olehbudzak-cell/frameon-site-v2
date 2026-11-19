@@ -28,7 +28,7 @@ const it: SiteText = {
       { tag: "02 / STRUTTURA", title: "Guide sulla linea, montanti ogni 600 mm", text: "Fissiamo le guide sulla linea e controlliamo ogni montante a piombo. I vani porta si fanno subito.", spec: "MONTANTE C 70 MM · 600 MM · PENDINI MF" },
       { tag: "03 / LASTRE", title: "Giunti sui montanti, viti ogni 300 mm", text: "Lastre su un lato: ogni giunto su un montante, teste delle viti leggermente incassate.", spec: "12.5 MM TYPE D · VITI @ 300 MM" },
       { tag: "04 / ISOLAMENTO", title: "Niente vuoti né suono sordo", text: "Lana minerale ben aderente, poi il secondo lato chiude la parete, con lastre ignifughe o acustiche dove serve.", spec: "50 MM LANA MINERALE · 15 MM TYPE F" },
-      { tag: "05 / FINITURA", title: "Dalle lastre a una stanza vivibile", text: "Stuccatura, rasatura, pittura, pavimenti e piastrelle: un'unica squadra dal mattone alla stanza finita.", spec: "STUCCO · RASATURA · PITTURA · PAVIMENTO" },
+      { tag: "05 / FINITURA", title: "Dalle lastre a una stanza vivibile", text: "Stuccatura, rasatura, pittura e pavimenti: quotati a parte, una volta montate le lastre.", spec: "STUCCO · RASATURA · PITTURA · PAVIMENTO" },
     ],
   },
   done: {
@@ -40,8 +40,8 @@ const it: SiteText = {
       { value: "£350", label: "ordine minimo di manodopera" },
     ],
   },
-  services: { eyebrow: "Servizi · 10", title: "Tutto tra il mattone nudo e la prima mano di pittura.", more: "Dettagli", all: "Tutti i servizi" },
-  work: { eyebrow: "I nostri lavori", title: "Cantieri reali a Londra, fotografati da noi.", text: "Orditure, lastre e controsoffitti dai nostri cantieri, prima delle finiture.", close: "Chiudi", prev: "Precedente", next: "Successiva" },
+  services: { eyebrow: "Servizi · 8", title: "Tutto tra il mattone nudo e la prima mano di pittura.", more: "Dettagli", all: "Tutti i servizi" },
+  work: { eyebrow: "I nostri lavori", title: "Cantieri reali a Londra, fotografati da noi.", text: "Orditure, lastre e controsoffitti dai nostri cantieri, prima delle finiture.", close: "Chiudi", prev: "Precedente", next: "Successiva", all: "Tutti", sitePhoto: "Foto dal nostro cantiere", illustration: "Illustrazione", real: "Foto reali dai nostri cantieri di Londra, non render." },
   xray: { eyebrow: "Qualità che non si vede", title: "Guarda cosa c'è dentro la parete.", text: "Ogni giunto su un montante, viti ogni 300 mm, isolamento senza vuoti. Ciò che resta dietro la lastra è fatto con la stessa cura di ciò che vedi.", cta: "Mandaci una foto della tua parete", hint: "Muovi il cursore sulla parete", before: "Struttura", after: "Finito" },
   contractors: {
     ...en.contractors,
@@ -86,7 +86,7 @@ const it: SiteText = {
     pageTitle: "Domande sul cartongesso — prezzi, materiali e tempi | Frameon",
     pageDescription: "Risposte su prezzi del cartongesso, materiali, strutture, finiture e cosa ci serve per un preventivo a Londra.",
     items: [
-      { q: "Fate anche le finiture?", a: "Sì. Stuccatura, rasatura, pittura, pavimenti e piastrelle, fino alla ristrutturazione chiavi in mano. Le finiture si quotano a parte dopo foto o sopralluogo." },
+      { q: "Fate anche le finiture?", a: "Sì: stuccatura, rasatura, pittura e pavimenti. Le finiture si quotano a parte dopo foto o sopralluogo. Non facciamo piastrelle né ristrutturazioni chiavi in mano." },
       { q: "Chi paga i materiali?", a: "Il cliente. I nostri prezzi sono solo manodopera." },
       { q: "Struttura metallica o in legno?", a: "Entrambe, per pareti interne non portanti. Il metallo è dritto e veloce; il legno è utile per appendere oggetti pesanti. I controsoffitti MF sempre su metallo." },
       { q: "Il prezzo del calcolatore è definitivo?", a: "No, è indicativo, con minimo £350. Il prezzo fisso arriva dopo foto o sopralluogo." },
@@ -107,7 +107,7 @@ const it: SiteText = {
   servicePage: { ...en.servicePage, breadcrumbHome: "Home", breadcrumbServices: "Servizi", related: "Spesso richiesti insieme" },
   servicesHub: {
     metaTitle: "Servizi di cartongesso e finiture a Londra | Frameon",
-    metaDescription: "Pareti divisorie, SFS, contropareti, controsoffitti MF, cassonetti, isolamento, rasature, pittura, pavimenti, piastrelle e ristrutturazioni chiavi in mano a Londra.",
+    metaDescription: "Pareti divisorie, SFS, contropareti, controsoffitti MF, cassonetti, isolamento, rasature, pittura e pavimenti a Londra.",
     h1: "Cartongesso e finiture a Londra",
     lead: "Prezzi solo manodopera. Le pagine dettagliate sono in inglese e ucraino.",
     groups: [

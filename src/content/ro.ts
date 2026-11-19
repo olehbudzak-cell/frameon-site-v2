@@ -28,7 +28,7 @@ const ro: SiteText = {
       { tag: "02 / STRUCTURĂ", title: "Profile pe linie, montanți la 600 mm", text: "Fixăm profilele pe linie, verificăm fiecare montant la verticală, golurile de uși le încadrăm imediat.", spec: "PROFIL C 70 MM · LA 600 MM · SUSPENSORI MF" },
       { tag: "03 / PLACARE", title: "Îmbinări pe montanți, șuruburi la 300 mm", text: "Plăci pe o față: fiecare îmbinare pe montant, capetele șuruburilor ușor îngropate.", spec: "12.5 MM TYPE D · ȘURUBURI @ 300 MM" },
       { tag: "04 / IZOLARE", title: "Fără goluri, fără sunet gol", text: "Vata minerală tăiată strâns, apoi a doua față închide peretele — placă antifoc sau fonică unde e nevoie.", spec: "50 MM VATĂ · 15 MM TYPE F" },
-      { tag: "05 / FINISAJ", title: "De la plăci la o cameră locuibilă", text: "Bandă, glet, vopsea, pardoseli și faianță — o singură echipă de la cărămidă la camera gata.", spec: "BANDĂ · GLET · VOPSEA · PARDOSEALĂ" },
+      { tag: "05 / FINISAJ", title: "De la plăci la o cameră locuibilă", text: "Bandă, glet, vopsea și pardoseli — ofertate separat, după ce plăcile sunt montate.", spec: "BANDĂ · GLET · VOPSEA · PARDOSEALĂ" },
     ],
   },
   done: {
@@ -40,8 +40,8 @@ const ro: SiteText = {
       { value: "£350", label: "comandă minimă (manoperă)" },
     ],
   },
-  services: { eyebrow: "Servicii · 10", title: "Tot ce e între cărămida goală și primul strat de vopsea.", more: "Detalii", all: "Toate serviciile" },
-  work: { eyebrow: "Lucrările noastre", title: "Șantiere reale din Londra, fotografiate de noi.", text: "Structuri, plăci și tavane direct de pe lucrările noastre — înainte de finisaje.", close: "Închide", prev: "Înapoi", next: "Înainte" },
+  services: { eyebrow: "Servicii · 8", title: "Tot ce e între cărămida goală și primul strat de vopsea.", more: "Detalii", all: "Toate serviciile" },
+  work: { eyebrow: "Lucrările noastre", title: "Șantiere reale din Londra, fotografiate de noi.", text: "Structuri, plăci și tavane direct de pe lucrările noastre — înainte de finisaje.", close: "Închide", prev: "Înapoi", next: "Înainte", all: "Toate", sitePhoto: "Foto de pe șantierul nostru", illustration: "Ilustrație", real: "Fotografii reale de pe șantierele noastre din Londra — nu randări." },
   xray: { eyebrow: "Calitate care nu se vede", title: "Vezi ce e în interiorul peretelui.", text: "Fiecare îmbinare pe montant, șuruburi la 300 mm, izolație fără goluri. Ce rămâne sub placă e făcut la fel de atent ca suprafața.", cta: "Trimite o poză cu peretele tău", hint: "Mișcă cursorul pe perete", before: "Structură", after: "Gata" },
   contractors: {
     ...en.contractors,
@@ -86,7 +86,7 @@ const ro: SiteText = {
     pageTitle: "Întrebări despre lucrări de rigips — prețuri, materiale, termene | Frameon",
     pageDescription: "Răspunsuri despre prețurile lucrărilor de rigips, materiale, structuri, finisaje și ce ne trebuie pentru ofertă în Londra.",
     items: [
-      { q: "Faceți și finisaje?", a: "Da. Bandă, glet, vopsitorie, pardoseli și faianță — până la renovare la cheie. Finisajele le ofertăm separat după poze sau vizită." },
+      { q: "Faceți și finisaje?", a: "Da — bandă, glet, vopsitorie și pardoseli. Finisajele le ofertăm separat după poze sau vizită. Nu facem faianță și nici renovări la cheie." },
       { q: "Cine plătește materialele?", a: "Clientul. Prețurile noastre sunt doar manopera." },
       { q: "Structură metalică sau din lemn?", a: "Ambele, pentru pereți interiori neportanți. Metalul e drept și rapid, lemnul e util pentru obiecte grele. Tavanele MF — mereu pe metal." },
       { q: "Prețul din calculator e final?", a: "Nu, e orientativ, cu minimum £350. Prețul fix îl dăm după poze sau vizită." },
@@ -107,7 +107,7 @@ const ro: SiteText = {
   servicePage: { ...en.servicePage, breadcrumbHome: "Acasă", breadcrumbServices: "Servicii", related: "Comandate des împreună" },
   servicesHub: {
     metaTitle: "Servicii de rigips și finisaje în Londra | Frameon",
-    metaDescription: "Pereți despărțitori, SFS, placări, tavane MF, casetări, izolații, glet, vopsitorie, pardoseli, faianță și renovări la cheie în Londra.",
+    metaDescription: "Pereți despărțitori, SFS, placări, tavane MF, casetări, izolații, glet, vopsitorie și pardoseli în Londra.",
     h1: "Lucrări de rigips și finisaje în Londra",
     lead: "Prețuri doar pentru manoperă. Paginile detaliate ale serviciilor — în engleză și ucraineană.",
     groups: [

@@ -55,7 +55,7 @@ export type SiteText = {
   };
   done: { title: string; stats: { value: string; label: string }[] };
   services: { eyebrow: string; title: string; more: string; all: string };
-  work: { eyebrow: string; title: string; text: string; close: string; prev: string; next: string };
+  work: { eyebrow: string; title: string; text: string; close: string; prev: string; next: string; all: string; sitePhoto: string; illustration: string; real: string };
   xray: { eyebrow: string; title: string; text: string; cta: string; hint: string; before: string; after: string };
   contractors: {
     eyebrow: string;
