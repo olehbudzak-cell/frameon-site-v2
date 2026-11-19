@@ -22,8 +22,14 @@ export default function SmoothScroll() {
       (entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }),
       { rootMargin: "0px 0px -10% 0px" },
     );
-    document.querySelectorAll("[data-reveal], .img-reveal").forEach((el) => io.observe(el));
-    return () => { io.disconnect(); if (lenis) { gsap.ticker.remove(tick); lenis.destroy(); } };
+    // Observe reveal targets now and whenever new ones appear (client-side page changes swap <main>),
+    // otherwise elements on pages opened via links stay at opacity 0.
+    const seen = new WeakSet<Element>();
+    const watch = () => document.querySelectorAll("[data-reveal]:not(.in), .img-reveal:not(.in)").forEach((el) => { if (!seen.has(el)) { seen.add(el); io.observe(el); } });
+    watch();
+    const mo = new MutationObserver(() => watch());
+    mo.observe(document.body, { childList: true, subtree: true });
+    return () => { mo.disconnect(); io.disconnect(); if (lenis) { gsap.ticker.remove(tick); lenis.destroy(); } };
   }, []);
   return null;
 }
