@@ -12,6 +12,8 @@ import LaserSteps from "@/components/LaserSteps";
 import ServiceCard from "@/components/ServiceCard";
 import Faq, { faqJsonLd } from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
+import WorkGallery from "@/components/WorkGallery";
+import { work } from "@/content/work";
 
 type P = { params: Promise<{ locale: string }> };
 
@@ -93,6 +95,16 @@ export default async function Home({ params }: P) {
             <ServiceCard key={s.slug} s={s} text={t.servicesText[s.slug]} locale={svcLocale} priceLabel={priceLabel(s.rate, s.unit)} />
           ))}
         </div>
+      </section>
+
+      {/* OUR WORK — real site photos */}
+      <section id="work" className="section wrap" aria-labelledby="work-title" style={{ paddingTop: 0 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 18, marginBottom: 40, maxWidth: 820 }}>
+          <span className="eyebrow">{t.work.eyebrow}</span>
+          <h2 id="work-title" className="h2" data-reveal>{t.work.title}</h2>
+          <p className="lead muted" style={{ margin: 0 }}>{t.work.text}</p>
+        </div>
+        <WorkGallery items={work} labels={{ close: t.work.close, prev: t.work.prev, next: t.work.next }} />
       </section>
 
       {/* X-RAY */}
