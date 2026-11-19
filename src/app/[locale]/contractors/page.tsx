@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { notFound } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { serviceLocales } from "@/i18n/routing";
 import { getContent, hasFullPages } from "@/lib/content";
@@ -19,7 +19,8 @@ export async function generateMetadata({ params }: P) {
 
 export default async function Contractors({ params }: P) {
   const { locale } = await params;
-  if (!hasFullPages(locale)) notFound();
+  // Languages without a full contractors page get the English page instead of a 404.
+  if (!hasFullPages(locale)) permanentRedirect("/contractors");
   setRequestLocale(locale);
   const t = getContent(locale).contractors;
   const p = t.page;
