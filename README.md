@@ -35,3 +35,20 @@ Production-збірка: `npm run build` і `npm start`.
 - Форма «Отримати ціну» працює без сервера: відкриває WhatsApp або лист із заповненим текстом.
 - Створити Google Business Profile — найважливіше для локального пошуку.
 - Деплой: новий проєкт на Vercel або заміна поточного — лише коли скажете.
+
+## Перед запуском на frameondrylining.co.uk — ОБОВʼЯЗКОВО
+
+Поки сайт на прев'ю (*.vercel.app), він закритий від Google (noindex). Коли домен
+frameondrylining.co.uk буде підключено до цього проєкту на Vercel:
+
+1. Vercel → проєкт → Settings → Environment Variables → додати `SITE_LIVE` = `1` (Production).
+2. Зробити Redeploy.
+
+Без цього кроку Google не індексуватиме сайт.
+
+## Заявки та аналітика
+
+- Форма на сторінці «Отримати ціну» надсилає заявку на frameondrylining@gmail.com через FormSubmit.
+  Перша заявка приходить як лист активації — натисніть у ньому «Activate», далі заявки йдуть напряму.
+- Відвідування і натискання «Дзвінок», WhatsApp, email та відправку форми рахує Vercel Web Analytics
+  (без cookies). Увімкнути: Vercel → проєкт → Analytics → Enable.
