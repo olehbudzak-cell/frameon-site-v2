@@ -11,7 +11,7 @@ const it: SiteText = {
   nav: { services: "Servizi", contractors: "Per imprese", how: "Come lavoriamo", areas: "Zone", faq: "Domande", getPrice: "Chiedi un prezzo", menu: "Apri menu", close: "Chiudi menu", language: "Lingua" },
   hero: {
     eyebrow: "Cartongesso · Tutta Londra",
-    h1: "Posatori di cartongesso a Londra",
+    h1: "Cartongesso a Londra: pareti divisorie, controsoffitti MF e contropareti",
     slogan: ["Struttura.", "Lastra.", "Fatto."],
     lead: "Pareti divisorie, contropareti, controsoffitti MF, cassonetti e isolamento. Manodopera da £30/m², materiali a parte. Mandaci le foto: rispondiamo in giornata.",
     ctaWhatsapp: "Preventivo gratuito su WhatsApp",
@@ -28,7 +28,7 @@ const it: SiteText = {
       { tag: "02 / STRUTTURA", title: "Guide sulla linea, montanti ogni 600 mm", text: "Fissiamo le guide sulla linea e controlliamo ogni montante a piombo. I vani porta si fanno subito.", spec: "MONTANTE C 70 MM · 600 MM · PENDINI MF" },
       { tag: "03 / LASTRE", title: "Giunti sui montanti, viti ogni 300 mm", text: "Lastre su un lato: ogni giunto su un montante, teste delle viti leggermente incassate.", spec: "12.5 MM TYPE D · VITI @ 300 MM" },
       { tag: "04 / ISOLAMENTO", title: "Niente vuoti né suono sordo", text: "Lana minerale ben aderente, poi il secondo lato chiude la parete, con lastre ignifughe o acustiche dove serve.", spec: "50 MM LANA MINERALE · 15 MM TYPE F" },
-      { tag: "05 / CONSEGNA", title: "Lastre a filo, pronte per il prossimo mestiere", text: "Giunti stretti, viti incassate, spigoli protetti: pronto per il tuo stuccatore o imbianchino.", spec: "A FILO · PULITO · PRONTO" },
+      { tag: "05 / CONSEGNA", title: "Lastre a filo, consegnate", text: "Giunti stretti, viti incassate, spigoli protetti e tutto pulito.", spec: "A FILO · PULITO · CONSEGNATO" },
     ],
   },
   done: {
@@ -40,8 +40,8 @@ const it: SiteText = {
       { value: "£350", label: "ordine minimo di manodopera" },
     ],
   },
-  services: { eyebrow: "Servizi · 6", title: "Tutto tra il mattone nudo e la prima mano di pittura.", more: "Dettagli", all: "Tutti i servizi" },
-  work: { eyebrow: "I nostri lavori", title: "Cantieri reali a Londra, fotografati da noi.", text: "Orditure, lastre e controsoffitti dai nostri cantieri, prima delle finiture.", close: "Chiudi", prev: "Precedente", next: "Successiva", all: "Tutti", sitePhoto: "Foto dal nostro cantiere", illustration: "Illustrazione", real: "Foto reali dai nostri cantieri di Londra, non render." },
+  services: { eyebrow: "Servizi · 6", title: "Tutto, dal mattone nudo a pareti dritte e pronte.", more: "Dettagli", all: "Tutti i servizi" },
+  work: { eyebrow: "I nostri lavori", title: "Cantieri reali a Londra, fotografati da noi.", text: "Orditure, lastre e controsoffitti direttamente dai nostri cantieri.", close: "Chiudi", prev: "Precedente", next: "Successiva", all: "Tutti", sitePhoto: "Foto dal nostro cantiere", illustration: "Illustrazione", real: "Foto reali dai nostri cantieri di Londra, non render." },
   xray: { eyebrow: "Qualità che non si vede", title: "Guarda cosa c'è dentro la parete.", text: "Ogni giunto su un montante, viti ogni 300 mm, isolamento senza vuoti. Ciò che resta dietro la lastra è fatto con la stessa cura di ciò che vedi.", cta: "Mandaci una foto della tua parete", hint: "Trascina la linea per confrontare", before: "Prima · orditura", after: "Dopo · rivestito" },
   contractors: {
     ...en.contractors,
@@ -51,7 +51,7 @@ const it: SiteText = {
     points: [
       { title: "Prezzo dai disegni", text: "Invia disegni o capitolato e ti diamo il prezzo al m² o al metro lineare, solo manodopera." },
       { title: "Sistemi da capitolato", text: "Struttura metallica e in legno, controsoffitti MF, SFS, OSB e compensato, soluzioni REI e acustiche." },
-      { title: "Date concordate", text: "Iniziamo alla data concordata e consegniamo lastre pronte per stuccatura o rasatura." },
+      { title: "Date concordate", text: "Iniziamo nelle date concordate e consegniamo lastre a filo, zona per zona." },
     ],
     cta: "Invia i disegni via email",
     ctaSecondary: "Per imprese",
@@ -62,7 +62,7 @@ const it: SiteText = {
     steps: [
       { title: "Invia le foto", text: "Foto, misure indicative e CAP su WhatsApp. Rispondiamo in giornata." },
       { title: "Concordiamo il lavoro", text: "Struttura, lastre, strati, vani e chi fornisce i materiali, per iscritto prima di iniziare." },
-      { title: "Montiamo e chiudiamo", text: "Nelle date concordate. Lastre pronte per la stuccatura." },
+      { title: "Montiamo e chiudiamo", text: "Nelle date concordate. Lastre a filo; le finiture le concordiamo all'incontro." },
     ],
   },
   calc: {
@@ -86,7 +86,7 @@ const it: SiteText = {
     pageTitle: "Domande sul cartongesso — prezzi, materiali e tempi | Frameon",
     pageDescription: "Risposte su prezzi del cartongesso, materiali, strutture, tipi di lastra e cosa ci serve per un preventivo a Londra.",
     items: [
-      { q: "Fate rasatura o pittura?", a: "No. Siamo specialisti del cartongesso: orditure, lastre, controsoffitti MF, cassonetti e isolamento. Consegniamo lastre a filo, pronte per il tuo stuccatore o imbianchino." },
+      { q: "E le opere di finitura?", a: "Le finiture le concordiamo individualmente quando ci incontriamo in cantiere." },
       { q: "Chi paga i materiali?", a: "Il cliente. I nostri prezzi sono solo manodopera." },
       { q: "Struttura metallica o in legno?", a: "Entrambe, per pareti interne non portanti. Il metallo è dritto e veloce; il legno è utile per appendere oggetti pesanti. I controsoffitti MF sempre su metallo." },
       { q: "Il prezzo del calcolatore è definitivo?", a: "No, è indicativo, con minimo £350. Il prezzo fisso arriva dopo foto o sopralluogo." },
@@ -128,10 +128,6 @@ const it: SiteText = {
     "mf-ceilings": { title: "Controsoffitti MF", short: "Controsoffitti su orditura metallica alla quota concordata." },
     "boxing-bulkheads-reveals": { title: "Cassonetti, ribassi e spallette", short: "Nascondiamo i tubi, creiamo nicchie e ribassi, rivestiamo le spallette." },
     insulation: { title: "Isolamento", short: "Celotex, lana minerale, barriera al vapore e impermeabilizzazione." },
-    "taping-plastering-painting": { title: "Stuccatura, rasatura e pittura", short: "Giunti, rasatura e pittura." },
-    flooring: { title: "Pavimenti", short: "Parquet prefinito, laminato e LVT." },
-    tiling: { title: "Piastrelle", short: "Pareti e pavimenti di bagni e cucine." },
-    "turnkey-refurbishment": { title: "Ristrutturazione chiavi in mano", short: "Dalla struttura alla pittura, prezzo dopo sopralluogo." },
   },
 };
 

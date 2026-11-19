@@ -11,7 +11,7 @@ const pt: SiteText = {
   nav: { services: "Serviços", contractors: "Para empreiteiros", how: "Como trabalhamos", areas: "Zonas", faq: "Perguntas", getPrice: "Pedir preço", menu: "Abrir menu", close: "Fechar menu", language: "Idioma" },
   hero: {
     eyebrow: "Pladur · Toda Londres",
-    h1: "Instaladores de pladur em Londres",
+    h1: "Pladur em Londres: divisórias, tetos MF e revestimentos",
     slogan: ["Estrutura.", "Placa.", "Pronto."],
     lead: "Paredes divisórias, revestimentos, tetos MF, caixas e isolamento. Mão de obra desde £30/m², materiais à parte. Envie fotos e respondemos no mesmo dia.",
     ctaWhatsapp: "Orçamento grátis no WhatsApp",
@@ -28,7 +28,7 @@ const pt: SiteText = {
       { tag: "02 / ESTRUTURA", title: "Calhas na linha, montantes a cada 600 mm", text: "Fixamos as calhas na linha e verificamos cada montante a prumo. Os vãos de porta ficam logo feitos.", spec: "MONTANTE C 70 MM · 600 MM · SUSPENSÕES MF" },
       { tag: "03 / PLACA", title: "Juntas nos montantes, parafusos a cada 300 mm", text: "Placas numa face: cada junta sobre um montante, cabeças dos parafusos ligeiramente embutidas.", spec: "12.5 MM TYPE D · PARAFUSOS @ 300 MM" },
       { tag: "04 / ISOLAMENTO", title: "Sem folgas nem som oco", text: "Lã mineral bem ajustada e a segunda face fecha a parede, com placa corta-fogo ou acústica quando necessário.", spec: "50 MM LÃ MINERAL · 15 MM TYPE F" },
-      { tag: "05 / ENTREGA", title: "Placas planas, prontas para o próximo ofício", text: "Juntas apertadas, parafusos embutidos, cantos com perfil: pronto para o seu estucador ou pintor.", spec: "PLANO · LIMPO · PRONTO" },
+      { tag: "05 / ENTREGA", title: "Placas planas, entregues", text: "Juntas apertadas, parafusos embutidos, cantos com perfil e tudo limpo.", spec: "PLANO · LIMPO · ENTREGUE" },
     ],
   },
   done: {
@@ -40,8 +40,8 @@ const pt: SiteText = {
       { value: "£350", label: "encomenda mínima de mão de obra" },
     ],
   },
-  services: { eyebrow: "Serviços · 6", title: "Tudo entre o tijolo nu e a primeira demão de tinta.", more: "Detalhes", all: "Todos os serviços" },
-  work: { eyebrow: "O nosso trabalho", title: "Obras reais em Londres, fotografadas por nós.", text: "Estruturas, placas e tetos diretamente das nossas obras, antes dos acabamentos.", close: "Fechar", prev: "Anterior", next: "Seguinte", all: "Todos", sitePhoto: "Foto da nossa obra", illustration: "Ilustração", real: "Fotos reais das nossas obras em Londres, não renders." },
+  services: { eyebrow: "Serviços · 6", title: "Tudo, do tijolo nu a paredes direitas e prontas.", more: "Detalhes", all: "Todos os serviços" },
+  work: { eyebrow: "O nosso trabalho", title: "Obras reais em Londres, fotografadas por nós.", text: "Estruturas, placas e tetos diretamente das nossas obras.", close: "Fechar", prev: "Anterior", next: "Seguinte", all: "Todos", sitePhoto: "Foto da nossa obra", illustration: "Ilustração", real: "Fotos reais das nossas obras em Londres, não renders." },
   xray: { eyebrow: "Qualidade que não se vê", title: "Veja o que há dentro da parede.", text: "Cada junta num montante, parafusos a cada 300 mm, isolamento sem folgas. O que fica atrás da placa é feito com o mesmo cuidado do que se vê.", cta: "Envie uma foto da sua parede", hint: "Arraste a linha para comparar", before: "Antes · estrutura", after: "Depois · forrado" },
   contractors: {
     ...en.contractors,
@@ -51,7 +51,7 @@ const pt: SiteText = {
     points: [
       { title: "Preço a partir de desenhos", text: "Envie desenhos ou especificação e damos o preço por m² ou metro linear, só mão de obra." },
       { title: "Sistemas conforme especificação", text: "Estrutura metálica e de madeira, tetos MF, SFS, OSB e contraplacado, soluções corta-fogo e acústicas." },
-      { title: "Datas acordadas", text: "Começamos na data acordada e entregamos placas prontas para juntas ou estuque." },
+      { title: "Datas acordadas", text: "Começamos nas datas acordadas e entregamos placas planas por zonas." },
     ],
     cta: "Enviar desenhos por email",
     ctaSecondary: "Para empreiteiros",
@@ -62,7 +62,7 @@ const pt: SiteText = {
     steps: [
       { title: "Envie fotos", text: "Fotos, medidas aproximadas e código postal no WhatsApp. Respondemos no mesmo dia." },
       { title: "Acordamos o âmbito", text: "Estrutura, placas, camadas, vãos e quem fornece materiais, por escrito antes de começar." },
-      { title: "Montamos e forramos", text: "Nas datas acordadas. Placas prontas para juntas." },
+      { title: "Montamos e forramos", text: "Nas datas acordadas. Placas planas; os acabamentos combinamos na reunião." },
     ],
   },
   calc: {
@@ -86,7 +86,7 @@ const pt: SiteText = {
     pageTitle: "Perguntas sobre pladur — preços, materiais e prazos | Frameon",
     pageDescription: "Respostas sobre preços de pladur, materiais, estruturas, tipos de placa e o que precisamos para orçamentar em Londres.",
     items: [
-      { q: "Fazem estuque ou pintura?", a: "Não. Somos especialistas em pladur: estruturas, placas, tetos MF, caixas e isolamento. Entregamos placas planas, prontas para o seu estucador ou pintor." },
+      { q: "E os trabalhos de acabamento?", a: "Os acabamentos combinamos individualmente quando nos encontramos na obra." },
       { q: "Quem paga os materiais?", a: "O cliente. Os nossos preços são só de mão de obra." },
       { q: "Estrutura metálica ou de madeira?", a: "Ambas, para paredes interiores não estruturais. O metal é direito e rápido; a madeira é útil para pendurar objetos pesados. Tetos MF sempre em metal." },
       { q: "O preço da calculadora é final?", a: "Não, é indicativo, com mínimo de £350. O preço fixo é dado após fotos ou visita." },
@@ -128,10 +128,6 @@ const pt: SiteText = {
     "mf-ceilings": { title: "Tetos MF", short: "Tetos falsos em perfis metálicos ao nível acordado." },
     "boxing-bulkheads-reveals": { title: "Caixas, sancas e ombreiras", short: "Escondemos tubos, fazemos nichos e sancas, forramos ombreiras." },
     insulation: { title: "Isolamento", short: "Celotex, lã mineral, barreira de vapor e impermeabilização." },
-    "taping-plastering-painting": { title: "Juntas, estuque e pintura", short: "Juntas, estuque e tinta." },
-    flooring: { title: "Pavimentos", short: "Soalho de engenharia, flutuante e LVT." },
-    tiling: { title: "Azulejos", short: "Paredes e pavimentos de casas de banho e cozinhas." },
-    "turnkey-refurbishment": { title: "Remodelação chave na mão", short: "Da estrutura à pintura, preço após visita." },
   },
 };
 

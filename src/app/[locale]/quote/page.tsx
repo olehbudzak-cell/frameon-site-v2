@@ -2,6 +2,7 @@ import { setRequestLocale } from "next-intl/server";
 import { getContent } from "@/lib/content";
 import { pageMeta } from "@/lib/seo";
 import { services, CONTACT } from "@/content/services";
+import { mailHref } from "@/lib/mail";
 import QuoteForm from "@/components/QuoteForm";
 import Calculator from "@/components/Calculator";
 
@@ -26,9 +27,9 @@ export default async function Quote({ params }: P) {
           <h1 className="display" style={{ margin: 0, fontSize: "clamp(36px, 4.4vw, 60px)" }}>{t.quote.h1}</h1>
           <p className="lead muted" style={{ margin: 0 }}>{t.quote.lead}</p>
           <p className="tap-links" style={{ margin: 0 }}><span className="muted">{t.quote.or}</span><a href={CONTACT.phoneHref} className="lead">{CONTACT.phoneDisplay}</a></p>
-          <p className="tap-links" style={{ margin: 0 }}><a href={`mailto:${CONTACT.email}`} className="muted">{CONTACT.email}</a></p>
+          <p className="tap-links" style={{ margin: 0 }}><a href={mailHref(locale)} className="muted">{CONTACT.email}</a></p>
         </div>
-        <QuoteForm t={t.quote} services={list} />
+        <QuoteForm t={t.quote} services={list} locale={locale} />
       </div>
       <div style={{ marginTop: 96 }}>
         <h2 className="h3" style={{ marginBottom: 28 }}>{t.calc.title}</h2>

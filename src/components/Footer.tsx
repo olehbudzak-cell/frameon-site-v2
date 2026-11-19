@@ -3,6 +3,7 @@ import { CONTACT, services } from "@/content/services";
 import type { SiteText } from "@/content/types";
 import type { Locale } from "@/i18n/routing";
 import { locales } from "@/i18n/routing";
+import { mailHref } from "@/lib/mail";
 
 const names: Record<string, string> = { en: "English", ro: "Română", es: "Español", pl: "Polski", bn: "বাংলা", pt: "Português", gu: "ગુજરાતી", it: "Italiano", pa: "ਪੰਜਾਬੀ", ar: "العربية", uk: "Українська", ru: "Русский" };
 
@@ -20,12 +21,12 @@ export default function Footer({ t, svcLocale, locale }: { t: SiteText; svcLocal
             <Link href="/quote">{t.nav.getPrice}</Link>
             <Link href="/privacy">{t.footer.privacy}</Link>
           </div>
-          <div><span className="mono muted">{t.footer.contact}</span>
+          <address style={{ fontStyle: "normal" }}><span className="mono muted">{t.footer.contact}</span>
             <a href={CONTACT.phoneHref}>{CONTACT.phoneDisplay}</a>
             <a href={CONTACT.whatsapp} target="_blank" rel="noopener">WhatsApp</a>
-            <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
+            <a href={mailHref(locale)}>{CONTACT.email}</a>
             <a href={CONTACT.facebook} target="_blank" rel="noopener">Facebook</a>
-          </div>
+          </address>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2px 16px", alignContent: "start" }}><span className="mono muted" style={{ gridColumn: "1 / -1" }}>{t.footer.language}</span>
             {locales.map((l) => <Link key={l} href="/" locale={l} hrefLang={l} className="native" style={l === locale ? { color: "var(--color-brass)" } : undefined}>{names[l]}</Link>)}
           </div>

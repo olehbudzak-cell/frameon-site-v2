@@ -12,6 +12,8 @@ import SmoothScroll from "@/components/SmoothScroll";
 import { SITE_LIVE } from "@/lib/live";
 import { Analytics } from "@vercel/analytics/next";
 import LeadEvents from "@/components/LeadEvents";
+import JsonLd from "@/components/JsonLd";
+import { businessJsonLd, websiteJsonLd } from "@/lib/seo";
 import "../globals.css";
 
 const call: Record<string, string> = { en: "Call", ro: "Sună", es: "Llamar", pl: "Zadzwoń", bn: "কল", pt: "Ligar", gu: "કૉલ", it: "Chiama", pa: "ਕਾਲ", ar: "اتصل", uk: "Дзвінок", ru: "Звонок" };
@@ -39,9 +41,11 @@ export default async function LocaleLayout({ children, params }: { children: Rea
         <NextIntlClientProvider>
           <a className="skip-link" href="#main">Skip to content</a>
           <Header t={t.nav} contractorsLocale={svcLocale} />
+          <JsonLd data={businessJsonLd(locale)} />
+          <JsonLd data={websiteJsonLd(locale)} />
           <main id="main">{children}</main>
           <Footer t={t} svcLocale={svcLocale} locale={locale as Locale} />
-          <ActionBar price={t.nav.getPrice} call={call[locale]} />
+          <ActionBar price={t.nav.getPrice} call={call[locale]} locale={locale} />
           <SmoothScroll />
           <LeadEvents />
           <Analytics />

@@ -2,7 +2,7 @@ import Image from "next/image";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { getContent, serviceLocaleFor, gbp } from "@/lib/content";
-import { pageMeta, businessJsonLd } from "@/lib/seo";
+import { pageMeta } from "@/lib/seo";
 import { services, CONTACT } from "@/content/services";
 import type { Locale } from "@/i18n/routing";
 import HeroBuild from "@/components/HeroBuild";
@@ -13,6 +13,7 @@ import ServiceCard from "@/components/ServiceCard";
 import Faq, { faqJsonLd } from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
 import WorkGallery from "@/components/WorkGallery";
+import { mailHref, MAIL_LABEL } from "@/lib/mail";
 import { portfolio, caption } from "@/content/portfolio";
 
 type P = { params: Promise<{ locale: string }> };
@@ -33,7 +34,6 @@ export default async function Home({ params }: P) {
 
   return (
     <>
-      <JsonLd data={businessJsonLd(locale)} />
       <JsonLd data={faqJsonLd(t.faq.items)} />
 
       {/* HERO + BUILD — one pinned scroll-scrubbed video that starts building on the first scroll */}
@@ -48,15 +48,16 @@ export default async function Home({ params }: P) {
         <div className="wrap hero-inner">
           <div>
             <p className="eyebrow" style={{ margin: "0 0 18px" }}>{t.hero.eyebrow}</p>
-            <h1>{t.hero.h1}</h1>
-            <p className="slogan" aria-label={t.hero.slogan.join(" ")}>
-              {t.hero.slogan.map((w) => <span className="line" key={w} aria-hidden="true"><span>{w}</span></span>)}
-            </p>
+            <h1 className="hero-h1">
+              <span className="h1-kw">{t.hero.h1}</span>
+              <span className="slogan">{t.hero.slogan.map((w) => <span className="line" key={w}><span>{w} </span></span>)}</span>
+            </h1>
           </div>
           <div className="hero-side">
             <p className="lead" style={{ margin: 0 }}>{t.hero.lead}</p>
             <div className="hero-ctas">
               <a className="btn btn-primary" href={CONTACT.whatsapp} target="_blank" rel="noopener">{t.hero.ctaWhatsapp}</a>
+              <a className="btn btn-ghost" href={mailHref(locale)}>{MAIL_LABEL[locale] ?? MAIL_LABEL.en}</a>
               <a className="btn btn-ghost" href="#price">{t.hero.ctaPrice} →</a>
             </div>
           </div>

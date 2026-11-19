@@ -11,7 +11,7 @@ const es: SiteText = {
   nav: { services: "Servicios", contractors: "Para constructoras", how: "Cómo trabajamos", areas: "Zonas", faq: "Preguntas", getPrice: "Pedir precio", menu: "Abrir menú", close: "Cerrar menú", language: "Idioma" },
   hero: {
     eyebrow: "Pladur · Todo Londres",
-    h1: "Instaladores de pladur en Londres",
+    h1: "Pladur en Londres: tabiques, techos MF y trasdosados",
     slogan: ["Estructura.", "Placa.", "Listo."],
     lead: "Tabiques, trasdosados, techos MF, cajeados y aislamiento. Mano de obra desde £30/m², materiales aparte. Envíanos fotos y te respondemos el mismo día.",
     ctaWhatsapp: "Presupuesto gratis por WhatsApp",
@@ -28,7 +28,7 @@ const es: SiteText = {
       { tag: "02 / ESTRUCTURA", title: "Canales en la línea, montantes cada 600 mm", text: "Fijamos los canales sobre la línea y comprobamos cada montante a plomo. Los huecos de puerta se hacen al momento.", spec: "MONTANTE C 70 MM · 600 MM · CUELGUES MF" },
       { tag: "03 / PLACA", title: "Juntas sobre montantes, tornillos cada 300 mm", text: "Placas en una cara: cada junta sobre un montante, cabezas de tornillo ligeramente hundidas.", spec: "12.5 MM TYPE D · TORNILLOS @ 300 MM" },
       { tag: "04 / AISLAMIENTO", title: "Sin huecos ni sonido hueco", text: "Lana mineral bien ajustada y la segunda cara cierra la pared, con placa ignífuga o acústica donde se requiera.", spec: "50 MM LANA MINERAL · 15 MM TYPE F" },
-      { tag: "05 / ENTREGA", title: "Placas planas, listas para el siguiente oficio", text: "Juntas ajustadas, tornillos rehundidos, esquinas con perfil: listo para tu yesero o pintor.", spec: "PLANO · LIMPIO · LISTO" },
+      { tag: "05 / ENTREGA", title: "Placas planas, entregadas", text: "Juntas ajustadas, tornillos rehundidos, esquinas con perfil y todo limpio.", spec: "PLANO · LIMPIO · ENTREGADO" },
     ],
   },
   done: {
@@ -40,8 +40,8 @@ const es: SiteText = {
       { value: "£350", label: "pedido mínimo de mano de obra" },
     ],
   },
-  services: { eyebrow: "Servicios · 6", title: "Todo entre el ladrillo desnudo y la primera mano de pintura.", more: "Detalles", all: "Todos los servicios" },
-  work: { eyebrow: "Nuestro trabajo", title: "Obras reales en Londres, fotografiadas por nosotros.", text: "Estructuras, placas y techos directamente de nuestras obras, antes de los acabados.", close: "Cerrar", prev: "Anterior", next: "Siguiente", all: "Todos", sitePhoto: "Foto de nuestra obra", illustration: "Ilustración", real: "Fotos reales de nuestras obras en Londres, no renders." },
+  services: { eyebrow: "Servicios · 6", title: "Todo, del ladrillo desnudo a paredes rectas y listas.", more: "Detalles", all: "Todos los servicios" },
+  work: { eyebrow: "Nuestro trabajo", title: "Obras reales en Londres, fotografiadas por nosotros.", text: "Estructuras, placas y techos directamente de nuestras obras.", close: "Cerrar", prev: "Anterior", next: "Siguiente", all: "Todos", sitePhoto: "Foto de nuestra obra", illustration: "Ilustración", real: "Fotos reales de nuestras obras en Londres, no renders." },
   xray: { eyebrow: "Calidad que no se ve", title: "Mira lo que hay dentro de la pared.", text: "Cada junta sobre un montante, tornillos cada 300 mm, aislamiento sin huecos. Lo que queda detrás de la placa se hace con el mismo cuidado que lo que ves.", cta: "Envíanos una foto de tu pared", hint: "Arrastra la línea para comparar", before: "Antes · estructura", after: "Después · forrado" },
   contractors: {
     ...en.contractors,
@@ -51,7 +51,7 @@ const es: SiteText = {
     points: [
       { title: "Precio desde planos", text: "Envía planos o especificación y te damos tarifa por m² o metro lineal, solo mano de obra." },
       { title: "Sistemas según especificación", text: "Estructura metálica y de madera, techos MF, SFS, OSB y contrachapado, soluciones ignífugas y acústicas." },
-      { title: "Fechas acordadas", text: "Empezamos en la fecha acordada y entregamos las placas listas para juntas o enlucido." },
+      { title: "Fechas acordadas", text: "Empezamos en las fechas acordadas y entregamos placas planas por zonas." },
     ],
     cta: "Enviar planos por email",
     ctaSecondary: "Para constructoras",
@@ -62,7 +62,7 @@ const es: SiteText = {
     steps: [
       { title: "Envía fotos", text: "Fotos, medidas aproximadas y código postal por WhatsApp. Respondemos el mismo día." },
       { title: "Acordamos el alcance", text: "Estructura, placas, capas, huecos y quién aporta materiales, por escrito antes de empezar." },
-      { title: "Montamos y forramos", text: "En las fechas acordadas. Placas listas para juntas." },
+      { title: "Montamos y forramos", text: "En las fechas acordadas. Placas planas; los acabados los acordamos en la reunión." },
     ],
   },
   calc: {
@@ -86,7 +86,7 @@ const es: SiteText = {
     pageTitle: "Preguntas sobre pladur — precios, materiales y plazos | Frameon",
     pageDescription: "Respuestas sobre precios de pladur, materiales, estructuras, tipos de placa y qué necesitamos para presupuestar en Londres.",
     items: [
-      { q: "¿Hacéis enlucido o pintura?", a: "No. Somos especialistas en pladur: estructuras, placas, techos MF, cajeados y aislamiento. Entregamos placas planas, listas para tu yesero o pintor." },
+      { q: "¿Y los trabajos de acabado?", a: "Los acabados los acordamos de forma individual al reunirnos en la obra." },
       { q: "¿Quién paga los materiales?", a: "El cliente. Nuestros precios son solo de mano de obra." },
       { q: "¿Estructura metálica o de madera?", a: "Ambas, para paredes interiores no portantes. El metal es recto y rápido; la madera va bien para colgar cosas pesadas. Los techos MF siempre en metal." },
       { q: "¿El precio de la calculadora es definitivo?", a: "No, es orientativo, con un mínimo de £350. El precio fijo se da tras fotos o visita." },
@@ -128,10 +128,6 @@ const es: SiteText = {
     "mf-ceilings": { title: "Techos MF", short: "Falsos techos sobre perfilería metálica al nivel acordado." },
     "boxing-bulkheads-reveals": { title: "Cajeados, foseados y mochetas", short: "Ocultamos tuberías, hacemos nichos y foseados, forramos mochetas." },
     insulation: { title: "Aislamiento", short: "Celotex, lana mineral, barrera de vapor e impermeabilización." },
-    "taping-plastering-painting": { title: "Juntas, enlucido y pintura", short: "Juntas, enlucido fino y pintura." },
-    flooring: { title: "Suelos", short: "Tarima de ingeniería, laminado y LVT." },
-    tiling: { title: "Alicatado", short: "Paredes y suelos de baños y cocinas." },
-    "turnkey-refurbishment": { title: "Reforma llave en mano", short: "De la estructura a la pintura, precio tras visita." },
   },
 };
 

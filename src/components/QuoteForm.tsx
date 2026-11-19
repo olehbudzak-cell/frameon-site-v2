@@ -3,6 +3,7 @@ import { useState } from "react";
 import type { SiteText } from "@/content/types";
 import { CONTACT } from "@/content/services";
 import { trackLead } from "./LeadEvents";
+import { mailHref, MAIL_LABEL } from "@/lib/mail";
 
 /**
  * Sends the request straight to the business email through FormSubmit (no backend needed),
@@ -10,7 +11,7 @@ import { trackLead } from "./LeadEvents";
  */
 const ENDPOINT = `https://formsubmit.co/ajax/${CONTACT.email}`;
 
-export default function QuoteForm({ t, services }: { t: SiteText["quote"]; services: { slug: string; title: string }[] }) {
+export default function QuoteForm({ t, services, locale = "en" }: { t: SiteText["quote"]; services: { slug: string; title: string }[]; locale?: string }) {
   const [f, setF] = useState({ name: "", contact: "", postcode: "", service: services[0]?.title ?? "", message: "", website: "" });
   const [state, setState] = useState<"idle" | "sending" | "sent" | "fail">("idle");
   const set = (k: keyof typeof f) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => setF({ ...f, [k]: e.target.value });
@@ -51,6 +52,12 @@ export default function QuoteForm({ t, services }: { t: SiteText["quote"]; servi
     window.open(`${CONTACT.whatsapp}?text=${encodeURIComponent(body)}`, "_blank", "noopener");
   };
 
+  const viaEmail = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    trackLead("email_form");
+    window.location.href = mailHref(locale, { service: f.service, details: body });
+  };
+
   if (state === "sent") {
     return (
       <div className="form-done" role="status">
@@ -78,6 +85,7 @@ export default function QuoteForm({ t, services }: { t: SiteText["quote"]; servi
           {state === "sending" ? t.sending : t.sendForm}
         </button>
         <button type="button" className="btn btn-ghost" onClick={viaWhatsapp}>{t.sendWhatsapp}</button>
+        <button type="button" className="btn btn-ghost" onClick={viaEmail}>{MAIL_LABEL[locale] ?? MAIL_LABEL.en}</button>
       </div>
     </form>
   );

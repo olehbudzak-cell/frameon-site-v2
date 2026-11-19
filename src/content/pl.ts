@@ -11,7 +11,7 @@ const pl: SiteText = {
   nav: { services: "Usługi", contractors: "Dla wykonawców", how: "Jak pracujemy", areas: "Dzielnice", faq: "Pytania", getPrice: "Wycena", menu: "Otwórz menu", close: "Zamknij menu", language: "Język" },
   hero: {
     eyebrow: "Suche zabudowy · Cały Londyn",
-    h1: "Suche zabudowy z płyt g-k w Londynie",
+    h1: "Suche zabudowy w Londynie — ścianki działowe, sufity MF i okładziny ścian",
     slogan: ["Stelaż.", "Płyta.", "Gotowe."],
     lead: "Ścianki działowe, okładziny ścian, sufity MF, zabudowy rur i izolacje. Robocizna od £30/m², materiały wyceniane osobno. Wyślij zdjęcia — odpowiemy tego samego dnia.",
     ctaWhatsapp: "Darmowa wycena na WhatsApp",
@@ -28,7 +28,7 @@ const pl: SiteText = {
       { tag: "02 / STELAŻ", title: "Profile UW na linii, CW co 600 mm", text: "Profile mocujemy na linii, każdy słupek sprawdzamy w pionie, otwory drzwiowe od razu.", spec: "PROFIL C 70 MM · ROZSTAW 600 MM · WIESZAKI MF" },
       { tag: "03 / PŁYTA", title: "Styki na profilach, wkręty co 300 mm", text: "Płyty na jedną stronę: każdy styk na profilu, łby wkrętów lekko zagłębione.", spec: "12.5 MM TYPE D · WKRĘTY @ 300 MM" },
       { tag: "04 / IZOLACJA", title: "Bez szczelin i pustego dźwięku", text: "Wełnę mineralną docinamy ciasno, potem druga strona zamyka ścianę — płyta ogniochronna lub akustyczna.", spec: "50 MM WEŁNA · 15 MM TYPE F" },
-      { tag: "05 / ODBIÓR", title: "Równe płyty, gotowe dla kolejnej ekipy", text: "Ciasne spoiny, wkręty zagłębione, narożniki z profilem — gotowe dla tynkarza lub malarza.", spec: "RÓWNO · CZYSTO · GOTOWE" },
+      { tag: "05 / ODBIÓR", title: "Równe płyty, oddane", text: "Ciasne styki, wkręty zagłębione, narożniki z profilem, po nas czysto.", spec: "RÓWNO · CZYSTO · ODDANE" },
     ],
   },
   done: {
@@ -40,8 +40,8 @@ const pl: SiteText = {
       { value: "£350", label: "minimalne zlecenie (robocizna)" },
     ],
   },
-  services: { eyebrow: "Usługi · 6", title: "Wszystko między gołą cegłą a pierwszą warstwą farby.", more: "Szczegóły", all: "Wszystkie usługi" },
-  work: { eyebrow: "Nasze realizacje", title: "Prawdziwe budowy w Londynie, nasze zdjęcia.", text: "Stelaże, płyty i sufity prosto z naszych budów — zanim wejdą wykończeniowcy.", close: "Zamknij", prev: "Poprzednie", next: "Następne", all: "Wszystkie", sitePhoto: "Zdjęcie z naszej budowy", illustration: "Ilustracja", real: "Prawdziwe zdjęcia z naszych londyńskich budów — nie wizualizacje." },
+  services: { eyebrow: "Usługi · 6", title: "Wszystko od gołej cegły do równych, gotowych ścian.", more: "Szczegóły", all: "Wszystkie usługi" },
+  work: { eyebrow: "Nasze realizacje", title: "Prawdziwe budowy w Londynie, nasze zdjęcia.", text: "Stelaże, płyty i sufity prosto z naszych budów.", close: "Zamknij", prev: "Poprzednie", next: "Następne", all: "Wszystkie", sitePhoto: "Zdjęcie z naszej budowy", illustration: "Ilustracja", real: "Prawdziwe zdjęcia z naszych londyńskich budów — nie wizualizacje." },
   xray: { eyebrow: "Jakość, której nie widać", title: "Zobacz, co jest w środku ściany.", text: "Każdy styk na profilu, wkręty co 300 mm, izolacja bez szczelin. To, co zakryte płytą, robimy tak samo starannie jak powierzchnię.", cta: "Wyślij zdjęcie swojej ściany", hint: "Przeciągnij linię, aby porównać", before: "Przed · stelaż", after: "Po · zabudowane" },
   contractors: {
     ...en.contractors,
@@ -51,7 +51,7 @@ const pl: SiteText = {
     points: [
       { title: "Wycena z rysunków", text: "Wyślij rysunki lub specyfikację — podamy stawkę za m² lub metr bieżący, sama robocizna." },
       { title: "Systemy wg specyfikacji", text: "Stelaż metalowy i drewniany, sufity MF, SFS, OSB i sklejka, zabudowy ogniochronne i akustyczne." },
-      { title: "Uzgodnione terminy", text: "Startujemy w uzgodnionym terminie i oddajemy płyty gotowe do spoinowania." },
+      { title: "Uzgodnione terminy", text: "Zaczynamy w ustalonych terminach i oddajemy równe płyty strefa po strefie." },
     ],
     cta: "Wyślij rysunki e-mailem",
     ctaSecondary: "Dla wykonawców",
@@ -62,7 +62,7 @@ const pl: SiteText = {
     steps: [
       { title: "Wyślij zdjęcia", text: "Zdjęcia, wymiary i kod pocztowy na WhatsApp. Odpowiadamy tego samego dnia." },
       { title: "Uzgadniamy zakres", text: "Stelaż, płyty, warstwy, otwory i kto dostarcza materiały — na piśmie, przed startem." },
-      { title: "Budujemy", text: "W uzgodnionych terminach. Płyty gotowe do spoinowania." },
+      { title: "Budujemy", text: "W ustalonych terminach. Równe płyty — prace wykończeniowe ustalamy przy spotkaniu." },
     ],
   },
   calc: {
@@ -86,7 +86,7 @@ const pl: SiteText = {
     pageTitle: "Pytania o suche zabudowy — ceny, materiały, terminy | Frameon",
     pageDescription: "Odpowiedzi o cenach suchych zabudów, materiałach, stelażach, rodzajach płyt i o tym, czego potrzebujemy do wyceny w Londynie.",
     items: [
-      { q: "Czy robicie gładzie lub malowanie?", a: "Nie — specjalizujemy się w suchej zabudowie: stelaże, płyty, sufity MF, zabudowy rur i izolacje. Oddajemy równe płyty gotowe dla Twojego tynkarza lub malarza." },
+      { q: "A co z pracami wykończeniowymi?", a: "Prace wykończeniowe ustalamy indywidualnie przy spotkaniu na budowie." },
       { q: "Kto płaci za materiały?", a: "Klient. Nasze ceny to sama robocizna, materiały wyceniane osobno." },
       { q: "Stelaż metalowy czy drewniany?", a: "Oba — do wewnętrznych ścian nienośnych. Metal jest prosty i szybki, drewno wygodne pod ciężkie elementy. Sufity MF zawsze na metalu." },
       { q: "Czy cena z kalkulatora jest ostateczna?", a: "Nie, to orientacyjna kwota wg naszych stawek z minimum £350. Stałą cenę podajemy po zdjęciach lub oględzinach." },
@@ -128,10 +128,6 @@ const pl: SiteText = {
     "mf-ceilings": { title: "Sufity MF", short: "Sufity podwieszane na profilach metalowych." },
     "boxing-bulkheads-reveals": { title: "Zabudowy rur, obniżenia i ościeża", short: "Chowamy rury, robimy wnęki i obniżenia, wykańczamy ościeża." },
     insulation: { title: "Izolacje", short: "Celotex, wełna mineralna, paroizolacja i hydroizolacja." },
-    "taping-plastering-painting": { title: "Spoinowanie, gładź i malowanie", short: "Spoiny, gładź i farba." },
-    flooring: { title: "Podłogi", short: "Deska warstwowa, panele i LVT." },
-    tiling: { title: "Płytki", short: "Ściany i podłogi w łazienkach i kuchniach." },
-    "turnkey-refurbishment": { title: "Remont pod klucz", short: "Od stelaża do farby, wycena po oględzinach." },
   },
 };
 

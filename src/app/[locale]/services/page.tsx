@@ -1,9 +1,11 @@
 import { setRequestLocale } from "next-intl/server";
 import { getContent, serviceLocaleFor, gbp } from "@/lib/content";
-import { pageMeta } from "@/lib/seo";
 import { serviceBySlug } from "@/content/services";
 import type { Locale } from "@/i18n/routing";
 import ServiceCard from "@/components/ServiceCard";
+import JsonLd from "@/components/JsonLd";
+import { services } from "@/content/services";
+import { pageMeta, urlFor } from "@/lib/seo";
 
 type P = { params: Promise<{ locale: string }> };
 
@@ -18,8 +20,15 @@ export default async function ServicesHub({ params }: P) {
   setRequestLocale(locale);
   const t = getContent(locale);
   const svcLocale = serviceLocaleFor(locale) as Locale;
+  const listLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: t.servicesHub.h1,
+    itemListElement: services.map((s, i) => ({ "@type": "ListItem", position: i + 1, name: t.servicesText[s.slug].title, url: urlFor(svcLocale, `/services/${s.slug}`) })),
+  };
   return (
     <section className="wrap page-top section" style={{ paddingTop: 150 }}>
+      <JsonLd data={listLd} />
       <div style={{ display: "flex", flexDirection: "column", gap: 20, maxWidth: 900, marginBottom: 64 }}>
         <span className="eyebrow">{t.services.eyebrow}</span>
         <h1 className="display" style={{ margin: 0, fontSize: "clamp(36px, 5vw, 72px)" }}>{t.servicesHub.h1}</h1>

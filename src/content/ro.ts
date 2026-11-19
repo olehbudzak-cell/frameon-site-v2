@@ -11,7 +11,7 @@ const ro: SiteText = {
   nav: { services: "Servicii", contractors: "Pentru antreprenori", how: "Cum lucrăm", areas: "Zone", faq: "Întrebări", getPrice: "Cere preț", menu: "Deschide meniul", close: "Închide meniul", language: "Limbă" },
   hero: {
     eyebrow: "Rigips · Toată Londra",
-    h1: "Lucrări de rigips în Londra",
+    h1: "Lucrări de rigips în Londra — pereți despărțitori, tavane MF și placări",
     slogan: ["Structură.", "Placare.", "Gata."],
     lead: "Pereți despărțitori, placări, tavane MF, casetări și izolații. Manopera de la £30/m², materialele separat. Trimite poze — răspundem în aceeași zi.",
     ctaWhatsapp: "Ofertă gratuită pe WhatsApp",
@@ -28,7 +28,7 @@ const ro: SiteText = {
       { tag: "02 / STRUCTURĂ", title: "Profile pe linie, montanți la 600 mm", text: "Fixăm profilele pe linie, verificăm fiecare montant la verticală, golurile de uși le încadrăm imediat.", spec: "PROFIL C 70 MM · LA 600 MM · SUSPENSORI MF" },
       { tag: "03 / PLACARE", title: "Îmbinări pe montanți, șuruburi la 300 mm", text: "Plăci pe o față: fiecare îmbinare pe montant, capetele șuruburilor ușor îngropate.", spec: "12.5 MM TYPE D · ȘURUBURI @ 300 MM" },
       { tag: "04 / IZOLARE", title: "Fără goluri, fără sunet gol", text: "Vata minerală tăiată strâns, apoi a doua față închide peretele — placă antifoc sau fonică unde e nevoie.", spec: "50 MM VATĂ · 15 MM TYPE F" },
-      { tag: "05 / PREDARE", title: "Plăci drepte, gata pentru următoarea echipă", text: "Îmbinări strânse, șuruburi îngropate, colțuri cu profil — gata pentru tencuitor sau zugrav.", spec: "DREPT · CURAT · GATA" },
+      { tag: "05 / PREDARE", title: "Plăci drepte, predate", text: "Îmbinări strânse, șuruburi îngropate, colțuri cu profil, curățenie după noi.", spec: "DREPT · CURAT · PREDAT" },
     ],
   },
   done: {
@@ -40,8 +40,8 @@ const ro: SiteText = {
       { value: "£350", label: "comandă minimă (manoperă)" },
     ],
   },
-  services: { eyebrow: "Servicii · 6", title: "Tot ce e între cărămida goală și primul strat de vopsea.", more: "Detalii", all: "Toate serviciile" },
-  work: { eyebrow: "Lucrările noastre", title: "Șantiere reale din Londra, fotografiate de noi.", text: "Structuri, plăci și tavane direct de pe lucrările noastre — înainte de finisaje.", close: "Închide", prev: "Înapoi", next: "Înainte", all: "Toate", sitePhoto: "Foto de pe șantierul nostru", illustration: "Ilustrație", real: "Fotografii reale de pe șantierele noastre din Londra — nu randări." },
+  services: { eyebrow: "Servicii · 6", title: "Totul, de la cărămidă goală la pereți drepți, gata.", more: "Detalii", all: "Toate serviciile" },
+  work: { eyebrow: "Lucrările noastre", title: "Șantiere reale din Londra, fotografiate de noi.", text: "Structuri, plăci și tavane direct de pe lucrările noastre.", close: "Închide", prev: "Înapoi", next: "Înainte", all: "Toate", sitePhoto: "Foto de pe șantierul nostru", illustration: "Ilustrație", real: "Fotografii reale de pe șantierele noastre din Londra — nu randări." },
   xray: { eyebrow: "Calitate care nu se vede", title: "Vezi ce e în interiorul peretelui.", text: "Fiecare îmbinare pe montant, șuruburi la 300 mm, izolație fără goluri. Ce rămâne sub placă e făcut la fel de atent ca suprafața.", cta: "Trimite o poză cu peretele tău", hint: "Trage linia pentru a compara", before: "Înainte · structură", after: "După · placat" },
   contractors: {
     ...en.contractors,
@@ -51,7 +51,7 @@ const ro: SiteText = {
     points: [
       { title: "Preț din planuri", text: "Trimite planurile sau specificația — primești tariful pe m² sau metru liniar, doar manoperă." },
       { title: "Sisteme după specificație", text: "Structură metalică și din lemn, tavane MF, SFS, OSB și placaj, sisteme antifoc și fonice." },
-      { title: "Termene stabilite", text: "Începem la data stabilită și predăm plăcile gata pentru bandă sau glet." },
+      { title: "Termene stabilite", text: "Începem la datele stabilite și predăm plăci drepte, zonă cu zonă." },
     ],
     cta: "Trimite planurile pe email",
     ctaSecondary: "Pentru antreprenori",
@@ -62,7 +62,7 @@ const ro: SiteText = {
     steps: [
       { title: "Trimite poze", text: "Poze, dimensiuni și codul poștal pe WhatsApp. Răspundem în aceeași zi." },
       { title: "Stabilim lucrarea", text: "Structură, plăci, straturi, goluri și cine aduce materialele — în scris, înainte de start." },
-      { title: "Construim", text: "La datele stabilite. Plăci gata pentru glet." },
+      { title: "Construim", text: "La datele stabilite. Plăci drepte — finisajele le stabilim la întâlnire." },
     ],
   },
   calc: {
@@ -86,7 +86,7 @@ const ro: SiteText = {
     pageTitle: "Întrebări despre lucrări de rigips — prețuri, materiale, termene | Frameon",
     pageDescription: "Răspunsuri despre prețurile lucrărilor de rigips, materiale, structuri, tipuri de plăci și ce ne trebuie pentru ofertă în Londra.",
     items: [
-      { q: "Faceți glet sau zugrăveli?", a: "Nu — suntem specialiști în rigips: structuri, placări, tavane MF, casetări și izolații. Predăm plăci drepte, gata pentru tencuitorul sau zugravul dvs." },
+      { q: "Și lucrările de finisaj?", a: "Finisajele le stabilim individual la întâlnirea pe șantier." },
       { q: "Cine plătește materialele?", a: "Clientul. Prețurile noastre sunt doar manopera." },
       { q: "Structură metalică sau din lemn?", a: "Ambele, pentru pereți interiori neportanți. Metalul e drept și rapid, lemnul e util pentru obiecte grele. Tavanele MF — mereu pe metal." },
       { q: "Prețul din calculator e final?", a: "Nu, e orientativ, cu minimum £350. Prețul fix îl dăm după poze sau vizită." },
@@ -128,10 +128,6 @@ const ro: SiteText = {
     "mf-ceilings": { title: "Tavane MF", short: "Tavane suspendate pe profile metalice." },
     "boxing-bulkheads-reveals": { title: "Casetări, coborâri și glafuri", short: "Ascundem țevi, facem nișe și coborâri, placăm glafurile." },
     insulation: { title: "Izolații", short: "Celotex, vată minerală, barieră de vapori și hidroizolație." },
-    "taping-plastering-painting": { title: "Bandă, glet și vopsitorie", short: "Îmbinări, glet și vopsea." },
-    flooring: { title: "Pardoseli", short: "Parchet stratificat, laminat și LVT." },
-    tiling: { title: "Faianță și gresie", short: "Pereți și pardoseli în băi și bucătării." },
-    "turnkey-refurbishment": { title: "Renovare la cheie", short: "De la structură la vopsea, preț după vizită." },
   },
 };
 

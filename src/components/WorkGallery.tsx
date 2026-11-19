@@ -62,10 +62,12 @@ export default function WorkGallery({ items, labels, cats, initial }: { items: G
       <ul className="work-grid">
         {shown.map((it, i) => (
           <li key={it.src}>
-            <button type="button" className="work-tile" onClick={() => setOpen(i)} aria-label={it.caption}>
-              <Image src={it.src} alt={it.caption} fill sizes="(max-width: 700px) 50vw, (max-width: 1100px) 33vw, 20vw" />
-              <span className="work-cap">{it.caption}</span>
-            </button>
+            <figure className="work-fig">
+              <button type="button" className="work-tile" onClick={() => setOpen(i)} aria-label={it.caption}>
+                <Image src={it.src} alt={it.caption} fill sizes="(max-width: 700px) 50vw, (max-width: 1100px) 33vw, 20vw" />
+              </button>
+              <figcaption className="work-cap">{it.caption}</figcaption>
+            </figure>
           </li>
         ))}
       </ul>

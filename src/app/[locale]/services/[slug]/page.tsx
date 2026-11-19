@@ -11,7 +11,9 @@ import ServiceCard from "@/components/ServiceCard";
 import Faq, { faqJsonLd } from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
 import WorkGallery from "@/components/WorkGallery";
+import { mailHref, MAIL_LABEL } from "@/lib/mail";
 import { portfolio, caption } from "@/content/portfolio";
+import { BOROUGHS, AREAS_TEXT } from "@/content/areas";
 
 type P = { params: Promise<{ locale: string; slug: string }> };
 
@@ -53,21 +55,52 @@ export default async function ServicePage({ params }: P) {
       { "@type": "ListItem", position: 3, name: text.title, item: urlFor(locale, `/services/${slug}`) },
     ],
   };
+  const pageUrl = urlFor(locale, `/services/${slug}`);
+  const areas = AREAS_TEXT[locale] ?? AREAS_TEXT.en;
   const serviceLd = {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${pageUrl}#service`,
+    url: pageUrl,
     name: page.h1,
     description: page.metaDescription,
     serviceType: text.title,
-    areaServed: { "@type": "City", name: "London" },
+    category: "Drylining",
+    inLanguage: locale,
+    image: photos.map((p) => `${CONTACT.site}${p.src}`),
+    areaServed: [{ "@type": "City", name: "London" }, ...BOROUGHS.map((b) => ({ "@type": "AdministrativeArea", name: `London Borough of ${b}`.replace("London Borough of City of London", "City of London") }))],
     provider: { "@id": `${CONTACT.site}/#business` },
+    hasOfferCatalog: { "@type": "OfferCatalog", name: page.optionsTitle, itemListElement: page.options.map((o) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: `${text.title} — ${o.name}`, description: o.text } })) },
     ...(meta.rate ? { offers: { "@type": "Offer", priceCurrency: "GBP", priceSpecification: { "@type": "UnitPriceSpecification", price: meta.rate, priceCurrency: "GBP", unitText: meta.unit === "m" ? "linear metre" : "square metre", valueAddedTaxIncluded: false } } } : {}),
   };
 
+  const galleryLd = photos.length ? {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    name: `${text.title} — ${t.work.eyebrow}`,
+    url: `${pageUrl}#work`,
+    about: { "@id": `${pageUrl}#service` },
+    image: photos.map((p) => ({ "@type": "ImageObject", contentUrl: `${CONTACT.site}${p.src}`, caption: caption(p, locale), width: p.w, height: p.h, creator: { "@id": `${CONTACT.site}/#business` } })),
+  } : null;
+  const webPageLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${pageUrl}#webpage`,
+    url: pageUrl,
+    name: page.metaTitle,
+    description: page.metaDescription,
+    inLanguage: locale,
+    isPartOf: { "@id": `${CONTACT.site}/#website` },
+    about: { "@id": `${pageUrl}#service` },
+    primaryImageOfPage: { "@type": "ImageObject", contentUrl: `${CONTACT.site}${meta.image}` },
+  };
+
   return (
-    <>
+    <article>
+      <JsonLd data={webPageLd} />
       <JsonLd data={crumbs} />
       <JsonLd data={serviceLd} />
+      {galleryLd && <JsonLd data={galleryLd} />}
       <JsonLd data={faqJsonLd(page.faq)} />
 
       <section className="wrap page-top" style={{ paddingBottom: 96 }}>
@@ -85,6 +118,7 @@ export default async function ServicePage({ params }: P) {
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
               <a className="btn btn-primary" href="#estimate">{t.servicePage.calcTitle}</a>
               <a className="btn btn-ghost" href={CONTACT.whatsapp} target="_blank" rel="noopener">WhatsApp</a>
+              <a className="btn btn-ghost" href={mailHref(locale, { service: text.title })}>{MAIL_LABEL[locale] ?? MAIL_LABEL.en}</a>
             </div>
           </div>
           <div className="media">
@@ -131,6 +165,7 @@ export default async function ServicePage({ params }: P) {
           <ServiceCalc
             t={t.calc} title={t.servicePage.calcTitle} service={text.title} rate={meta.rate} unit={meta.unit} stripe={meta.board}
             options={page.options.map((o) => o.name)} optionsLabel={page.optionsTitle}
+            locale={locale}
           />
         ) : (
           <div className="calc-card">
@@ -139,10 +174,17 @@ export default async function ServicePage({ params }: P) {
               <h2 className="h3">{t.servicePage.priceOnSurvey}</h2>
               <p className="muted" style={{ margin: 0 }}>{t.servicePage.priceOnSurveyText}</p>
               <a className="btn btn-primary" href={`${CONTACT.whatsapp}?text=${encodeURIComponent(`${t.calc.whatsappIntro}\n${text.title}`)}`} target="_blank" rel="noopener">{t.calc.send}</a>
+              <a className="btn btn-ghost" href={mailHref(locale, { service: text.title })}>{MAIL_LABEL[locale] ?? MAIL_LABEL.en}</a>
               <Link className="btn btn-ghost" href="/quote">{t.nav.getPrice}</Link>
             </div>
           </div>
         )}
+      </section>
+
+      <section className="wrap section areas" aria-labelledby="areas-title">
+        <h2 id="areas-title" className="h3">{areas.title}</h2>
+        <p className="muted" style={{ margin: 0, maxWidth: 760 }}>{areas.lead(text.title)}</p>
+        <ul className="areas-list">{BOROUGHS.map((b) => <li key={b}>{b}</li>)}</ul>
       </section>
 
       <section className="light">
@@ -165,6 +207,6 @@ export default async function ServicePage({ params }: P) {
           <Link href={`/services/${next.slug}`} style={{ textAlign: "right" }}><span className="mono muted">{t.servicePage.next} →</span><strong>{t.servicesText[next.slug].title}</strong></Link>
         </nav>
       </section>
-    </>
+    </article>
   );
 }
