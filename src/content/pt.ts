@@ -42,7 +42,7 @@ const pt: SiteText = {
   },
   services: { eyebrow: "Serviços · 6", title: "Tudo entre o tijolo nu e a primeira demão de tinta.", more: "Detalhes", all: "Todos os serviços" },
   work: { eyebrow: "O nosso trabalho", title: "Obras reais em Londres, fotografadas por nós.", text: "Estruturas, placas e tetos diretamente das nossas obras, antes dos acabamentos.", close: "Fechar", prev: "Anterior", next: "Seguinte", all: "Todos", sitePhoto: "Foto da nossa obra", illustration: "Ilustração", real: "Fotos reais das nossas obras em Londres, não renders." },
-  xray: { eyebrow: "Qualidade que não se vê", title: "Veja o que há dentro da parede.", text: "Cada junta num montante, parafusos a cada 300 mm, isolamento sem folgas. O que fica atrás da placa é feito com o mesmo cuidado do que se vê.", cta: "Envie uma foto da sua parede", hint: "Passe o cursor pela parede", before: "Estrutura", after: "Pronto" },
+  xray: { eyebrow: "Qualidade que não se vê", title: "Veja o que há dentro da parede.", text: "Cada junta num montante, parafusos a cada 300 mm, isolamento sem folgas. O que fica atrás da placa é feito com o mesmo cuidado do que se vê.", cta: "Envie uma foto da sua parede", hint: "Arraste a linha para comparar", before: "Antes · estrutura", after: "Depois · forrado" },
   contractors: {
     ...en.contractors,
     eyebrow: "Para empreiteiros e promotores",

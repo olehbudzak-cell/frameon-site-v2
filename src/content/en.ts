@@ -53,9 +53,9 @@ const en: SiteText = {
     title: "See what’s inside the wall.",
     text: "Every joint on a stud, screws every 300 mm, insulation with no gaps. What ends up behind the board is built as carefully as the face you see.",
     cta: "Send us a photo of your wall",
-    hint: "Move your cursor over the wall",
-    before: "Frame",
-    after: "Finished",
+    hint: "Drag the line to compare",
+    before: "Before · frame",
+    after: "After · boarded",
   },
   contractors: {
     eyebrow: "For main contractors & developers",

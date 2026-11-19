@@ -42,7 +42,7 @@ const pl: SiteText = {
   },
   services: { eyebrow: "Usługi · 6", title: "Wszystko między gołą cegłą a pierwszą warstwą farby.", more: "Szczegóły", all: "Wszystkie usługi" },
   work: { eyebrow: "Nasze realizacje", title: "Prawdziwe budowy w Londynie, nasze zdjęcia.", text: "Stelaże, płyty i sufity prosto z naszych budów — zanim wejdą wykończeniowcy.", close: "Zamknij", prev: "Poprzednie", next: "Następne", all: "Wszystkie", sitePhoto: "Zdjęcie z naszej budowy", illustration: "Ilustracja", real: "Prawdziwe zdjęcia z naszych londyńskich budów — nie wizualizacje." },
-  xray: { eyebrow: "Jakość, której nie widać", title: "Zobacz, co jest w środku ściany.", text: "Każdy styk na profilu, wkręty co 300 mm, izolacja bez szczelin. To, co zakryte płytą, robimy tak samo starannie jak powierzchnię.", cta: "Wyślij zdjęcie swojej ściany", hint: "Przesuń kursor po ścianie", before: "Stelaż", after: "Gotowe" },
+  xray: { eyebrow: "Jakość, której nie widać", title: "Zobacz, co jest w środku ściany.", text: "Każdy styk na profilu, wkręty co 300 mm, izolacja bez szczelin. To, co zakryte płytą, robimy tak samo starannie jak powierzchnię.", cta: "Wyślij zdjęcie swojej ściany", hint: "Przeciągnij linię, aby porównać", before: "Przed · stelaż", after: "Po · zabudowane" },
   contractors: {
     ...en.contractors,
     eyebrow: "Dla generalnych wykonawców i deweloperów",
