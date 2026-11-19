@@ -10,6 +10,8 @@ import ServiceCalc from "@/components/ServiceCalc";
 import ServiceCard from "@/components/ServiceCard";
 import Faq, { faqJsonLd } from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
+import WorkGallery from "@/components/WorkGallery";
+import { portfolio, caption } from "@/content/portfolio";
 
 type P = { params: Promise<{ locale: string; slug: string }> };
 
@@ -40,6 +42,7 @@ export default async function ServicePage({ params }: P) {
   const prev = services[(idx + services.length - 1) % services.length];
   const next = services[(idx + 1) % services.length];
   const u = meta.unit === "m" ? t.calc.metres : t.calc.area;
+  const photos = portfolio[meta.slug] ?? [];
 
   const crumbs = {
     "@context": "https://schema.org",
@@ -86,8 +89,8 @@ export default async function ServicePage({ params }: P) {
           </div>
           <div className="media">
             <span style={{ position: "absolute", inset: "0 0 auto 0", height: 4, background: meta.board, zIndex: 1 }} />
-            <Image src={meta.image} alt={`${text.title} — ${t.servicePage.rotateHint}`} width={1200} height={1500} priority sizes="(max-width: 1000px) 100vw, 50vw" />
-            <span className="mono" style={{ position: "absolute", right: 16, bottom: 16, fontSize: 11, background: "rgba(13,12,11,.7)", padding: "8px 12px", color: "var(--color-brass-light)" }}>{t.servicePage.rotateHint}</span>
+            <Image src={meta.image} alt={meta.real && photos[0] ? caption(photos[0], locale) : text.title} width={1200} height={1500} priority sizes="(max-width: 1000px) 100vw, 50vw" />
+            <span className="mono photo-tag">{meta.real ? <><i aria-hidden="true" />{t.work.sitePhoto}</> : t.work.illustration}</span>
           </div>
         </div>
       </section>
@@ -105,6 +108,17 @@ export default async function ServicePage({ params }: P) {
           </div>
         </div>
       </section>
+
+      {photos.length > 0 && (
+        <section id="work" className="wrap section" aria-labelledby="work-title">
+          <div className="svc-work-head">
+            <span className="eyebrow">{t.work.eyebrow} · {photos.length}</span>
+            <h2 id="work-title" className="h2" style={{ fontSize: "clamp(28px, 3vw, 44px)" }}>{text.title}</h2>
+            <p className="lead muted" style={{ margin: 0 }}>{t.work.real}</p>
+          </div>
+          <WorkGallery items={photos.map((p) => ({ src: p.src, w: p.w, h: p.h, caption: caption(p, locale) }))} labels={{ close: t.work.close, prev: t.work.prev, next: t.work.next }} />
+        </section>
+      )}
 
       <section id="estimate" className="wrap section svc-calc">
         <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
