@@ -13,7 +13,7 @@ import ServiceCard from "@/components/ServiceCard";
 import Faq, { faqJsonLd } from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
 import WorkGallery from "@/components/WorkGallery";
-import { work } from "@/content/work";
+import { portfolio, caption } from "@/content/portfolio";
 
 type P = { params: Promise<{ locale: string }> };
 
@@ -104,7 +104,12 @@ export default async function Home({ params }: P) {
           <h2 id="work-title" className="h2" data-reveal>{t.work.title}</h2>
           <p className="lead muted" style={{ margin: 0 }}>{t.work.text}</p>
         </div>
-        <WorkGallery items={work} labels={{ close: t.work.close, prev: t.work.prev, next: t.work.next }} />
+        <WorkGallery
+          items={services.flatMap((s) => (portfolio[s.slug] ?? []).map((p) => ({ src: p.src, w: p.w, h: p.h, caption: caption(p, locale), cat: s.slug })))}
+          cats={services.filter((s) => portfolio[s.slug]).map((s) => ({ id: s.slug, label: t.servicesText[s.slug].title }))}
+          labels={{ close: t.work.close, prev: t.work.prev, next: t.work.next, all: t.work.all }}
+          initial={10}
+        />
       </section>
 
       {/* X-RAY */}
