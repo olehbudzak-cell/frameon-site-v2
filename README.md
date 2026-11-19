@@ -52,3 +52,5 @@ frameondrylining.co.uk буде підключено до цього проєк�
   Перша заявка приходить як лист активації — натисніть у ньому «Activate», далі заявки йдуть напряму.
 - Відвідування і натискання «Дзвінок», WhatsApp, email та відправку форми рахує Vercel Web Analytics
   (без cookies). Увімкнути: Vercel → проєкт → Analytics → Enable.
+
+<!-- Live: SITE_LIVE=1 enabled on 19.11.2026 -->
