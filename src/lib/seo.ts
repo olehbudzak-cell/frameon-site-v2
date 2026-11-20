@@ -52,7 +52,7 @@ export const businessJsonLd = (locale: string) => ({
   description: "Labour-only drylining contractors in London: stud partitions, SFS framing, wall linings, MF suspended ceilings, pipe boxing, bulkheads and insulation.",
   slogan: "Frame. Board. Done.",
   url: urlFor(locale, "/"),
-  logo: `${CONTACT.site}/favicon.svg`,
+  logo: `${CONTACT.site}/logo.png`,
   image: [`${CONTACT.site}/portfolio/mf-ceilings/01-b31.webp`, `${CONTACT.site}/portfolio/stud-partitions/01-b43.webp`, `${CONTACT.site}/portfolio/sfs-framing/01-b48.webp`],
   telephone: "+447771119552",
   email: CONTACT.email,
