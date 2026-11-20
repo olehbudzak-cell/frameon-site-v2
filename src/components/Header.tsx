@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import Logo from "./Logo";
 import LangSwitcher from "./LangSwitcher";
 import { CONTACT } from "@/content/services";
@@ -10,6 +10,8 @@ export default function Header({ t, contractorsLocale }: { t: SiteText["nav"]; c
   const [solid, setSolid] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const lightTop = pathname === "/faq";
   useEffect(() => {
     let last = window.scrollY;
     const onScroll = () => {
@@ -33,7 +35,7 @@ export default function Header({ t, contractorsLocale }: { t: SiteText["nav"]; c
   ];
   return (
     <>
-      <header className={`header${solid ? " is-solid" : ""}${hidden && !open ? " is-hidden" : ""}`}>
+      <header className={`header${solid || lightTop ? " is-solid" : ""}${hidden && !open ? " is-hidden" : ""}`}>
         <div className="wrap header-row">
           <Link href="/" className="logo" aria-label="Frameon Drylining — home"><Logo /><span>FRAMEON</span></Link>
           <nav className="nav" aria-label="Main">

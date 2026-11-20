@@ -47,10 +47,11 @@ export default async function Home({ params }: P) {
         <div className="badge" aria-hidden="true">{t.hero.badge}</div>
         <div className="wrap hero-inner">
           <div>
+            <span className="badge-pill" aria-hidden="true">{t.hero.badge}</span>
             <p className="eyebrow" style={{ margin: "0 0 18px" }}>{t.hero.eyebrow}</p>
             <h1 className="hero-h1">
               <span className="h1-kw">{t.hero.h1}</span>
-              <span className="slogan">{t.hero.slogan.map((w) => <span className="line" key={w}><span>{w} </span></span>)}</span>
+              <span className="slogan" style={{ ["--sl" as string]: Math.max(...t.hero.slogan.map((w) => w.length)) }}>{t.hero.slogan.map((w) => <span className="line" key={w}><span>{w} </span></span>)}</span>
             </h1>
           </div>
           <div className="hero-side">
