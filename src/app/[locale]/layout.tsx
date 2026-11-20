@@ -12,6 +12,8 @@ import SmoothScroll from "@/components/SmoothScroll";
 import { SITE_LIVE } from "@/lib/live";
 import { Analytics } from "@vercel/analytics/next";
 import LeadEvents from "@/components/LeadEvents";
+import CookieConsent from "@/components/CookieConsent";
+import { consentText } from "@/lib/consent";
 import JsonLd from "@/components/JsonLd";
 import { businessJsonLd, websiteJsonLd } from "@/lib/seo";
 import "../globals.css";
@@ -49,6 +51,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           <SmoothScroll />
           <LeadEvents />
           <Analytics />
+          <CookieConsent t={consentText(locale)} privacyLabel={t.footer.privacy} />
         </NextIntlClientProvider>
       </body>
     </html>

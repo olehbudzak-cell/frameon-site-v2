@@ -5,6 +5,8 @@ import type { Locale } from "@/i18n/routing";
 import { locales } from "@/i18n/routing";
 import { mailHref } from "@/lib/mail";
 import MailButton from "@/components/MailButton";
+import { CookieSettingsButton } from "@/components/CookieConsent";
+import { consentText } from "@/lib/consent";
 
 const names: Record<string, string> = { en: "English", ro: "Română", es: "Español", pl: "Polski", bn: "বাংলা", pt: "Português", gu: "ગુજરાતી", it: "Italiano", pa: "ਪੰਜਾਬੀ", ar: "العربية", uk: "Українська", ru: "Русский" };
 
@@ -33,7 +35,7 @@ export default function Footer({ t, svcLocale, locale }: { t: SiteText; svcLocal
           </div>
         </div>
         <div className="wordmark" aria-hidden="true">FRAMEON</div>
-        <div className="footer-bottom"><span>{t.footer.rights} · {t.footer.noCookies}</span><a href="#top">{t.footer.top} ↑</a></div>
+        <div className="footer-bottom"><span>{t.footer.rights} · <CookieSettingsButton label={consentText(locale).settings} /></span><a href="#top">{t.footer.top} ↑</a></div>
       </div>
     </footer>
   );

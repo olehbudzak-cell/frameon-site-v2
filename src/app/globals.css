@@ -449,3 +449,17 @@ h1, h2, .display, .h2 { hyphens: auto; }
 .mail-menu a:hover, .mail-menu button:hover, .mail-menu a:focus-visible, .mail-menu button:focus-visible { background: rgba(201,166,107,.14); color: var(--color-brass-light); outline: none; }
 [dir="rtl"] .mail-menu { left: auto; right: 0; }
 [dir="rtl"] .mail-menu a, [dir="rtl"] .mail-menu button { text-align: right; }
+
+/* Cookie consent banner (GA4 loads only after "Accept") */
+.cookie-bar { position: fixed; z-index: 45; left: 16px; bottom: 16px; max-width: 460px; padding: 18px 20px; background: #181715; border: 1px solid var(--color-smoke); border-radius: 6px; box-shadow: 0 12px 40px rgba(0,0,0,.45); font-size: 14px; line-height: 1.5; }
+[dir="rtl"] .cookie-bar { left: auto; right: 16px; }
+.cookie-bar p { margin: 0 0 14px; overflow-wrap: anywhere; }
+.cookie-bar p a { color: var(--color-brass); }
+.cookie-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.cookie-actions .btn { min-height: 46px; padding: 0 14px; font-size: 14px; white-space: normal; text-align: center; line-height: 1.2; }
+.cookie-link { background: none; border: 0; padding: 0; font: inherit; color: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.cookie-link:hover { color: var(--color-brass); }
+@media (max-width: 900px) {
+  .cookie-bar { left: 10px; right: 10px; max-width: none; bottom: calc(88px + env(safe-area-inset-bottom) * .5); padding: 14px 16px; font-size: 13px; }
+  [dir="rtl"] .cookie-bar { right: 10px; }
+}

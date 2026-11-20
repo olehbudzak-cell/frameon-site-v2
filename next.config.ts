@@ -8,10 +8,12 @@ const nextConfig: NextConfig = {
   // Finishing services (tiling, turnkey, taping/plastering/painting, flooring) were removed from the service list: send old links to /services.
   async redirects() {
     const gone = ["tiling", "turnkey-refurbishment", "taping-plastering-painting", "flooring"];
-    return gone.flatMap((g) => [
+    // The *.vercel.app address of this project sends visitors to the real domain.
+    const toDomain = { source: "/:path*", has: [{ type: "host" as const, value: "frameon-site-v2.vercel.app" }], destination: "https://www.frameondrylining.co.uk/:path*", permanent: true };
+    return [toDomain, ...gone.flatMap((g) => [
       { source: `/services/${g}`, destination: "/services", permanent: true },
       { source: `/:locale(uk|ru|pl|ro|es|pt|it|ar|bn|gu|pa)/services/${g}`, destination: "/:locale/services", permanent: true },
-    ]);
+    ])];
   },
   async headers() {
     return [

@@ -2,9 +2,10 @@
 import { useEffect } from "react";
 import { track } from "@vercel/analytics";
 
-/** Records a lead action (anonymous, cookie-free) in Vercel Web Analytics. */
+/** Records a lead action in Vercel Web Analytics (cookie-free) and, if the visitor accepted cookies, in Google Analytics. */
 export function trackLead(type: string) {
   try { track("lead", { type, path: location.pathname }); } catch { /* analytics off */ }
+  try { window.gtag?.("event", "generate_lead", { lead_type: type, page_path: location.pathname }); } catch { /* GA not loaded */ }
 }
 
 /** Counts clicks on phone, WhatsApp and email links anywhere on the site. */
