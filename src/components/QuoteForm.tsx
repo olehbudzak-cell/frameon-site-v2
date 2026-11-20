@@ -4,6 +4,7 @@ import type { SiteText } from "@/content/types";
 import { CONTACT } from "@/content/services";
 import { trackLead } from "./LeadEvents";
 import { mailHref, MAIL_LABEL } from "@/lib/mail";
+import MailButton from "@/components/MailButton";
 
 /**
  * Sends the request straight to the business email through FormSubmit (no backend needed),
@@ -52,11 +53,6 @@ export default function QuoteForm({ t, services, locale = "en" }: { t: SiteText[
     window.open(`${CONTACT.whatsapp}?text=${encodeURIComponent(body)}`, "_blank", "noopener");
   };
 
-  const viaEmail = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    trackLead("email_form");
-    window.location.href = mailHref(locale, { service: f.service, details: body });
-  };
 
   if (state === "sent") {
     return (
@@ -85,7 +81,7 @@ export default function QuoteForm({ t, services, locale = "en" }: { t: SiteText[
           {state === "sending" ? t.sending : t.sendForm}
         </button>
         <button type="button" className="btn btn-ghost" onClick={viaWhatsapp}>{t.sendWhatsapp}</button>
-        <button type="button" className="btn btn-ghost" onClick={viaEmail}>{MAIL_LABEL[locale] ?? MAIL_LABEL.en}</button>
+        <MailButton locale={locale} opts={{ service: f.service, details: body }} className="btn btn-ghost" onOpen={() => trackLead("email_form")}>{MAIL_LABEL[locale] ?? MAIL_LABEL.en}</MailButton>
       </div>
     </form>
   );

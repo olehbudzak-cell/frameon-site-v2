@@ -5,6 +5,7 @@ import { services, CONTACT } from "@/content/services";
 import { mailHref } from "@/lib/mail";
 import QuoteForm from "@/components/QuoteForm";
 import Calculator from "@/components/Calculator";
+import MailButton from "@/components/MailButton";
 
 type P = { params: Promise<{ locale: string }> };
 
@@ -27,7 +28,7 @@ export default async function Quote({ params }: P) {
           <h1 className="display" style={{ margin: 0, fontSize: "clamp(36px, 4.4vw, 60px)" }}>{t.quote.h1}</h1>
           <p className="lead muted" style={{ margin: 0 }}>{t.quote.lead}</p>
           <p className="tap-links" style={{ margin: 0 }}><span className="muted">{t.quote.or}</span><a href={CONTACT.phoneHref} className="lead">{CONTACT.phoneDisplay}</a></p>
-          <p className="tap-links" style={{ margin: 0 }}><a href={mailHref(locale)} className="muted">{CONTACT.email}</a></p>
+          <p className="tap-links" style={{ margin: 0 }}><MailButton locale={locale} className="muted">{CONTACT.email}</MailButton></p>
         </div>
         <QuoteForm t={t.quote} services={list} locale={locale} />
       </div>

@@ -14,6 +14,7 @@ import WorkGallery from "@/components/WorkGallery";
 import { mailHref, MAIL_LABEL } from "@/lib/mail";
 import { portfolio, caption } from "@/content/portfolio";
 import { BOROUGHS, AREAS_TEXT } from "@/content/areas";
+import MailButton from "@/components/MailButton";
 
 type P = { params: Promise<{ locale: string; slug: string }> };
 
@@ -118,7 +119,7 @@ export default async function ServicePage({ params }: P) {
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
               <a className="btn btn-primary" href="#estimate">{t.servicePage.calcTitle}</a>
               <a className="btn btn-ghost" href={CONTACT.whatsapp} target="_blank" rel="noopener">WhatsApp</a>
-              <a className="btn btn-ghost" href={mailHref(locale, { service: text.title })}>{MAIL_LABEL[locale] ?? MAIL_LABEL.en}</a>
+              <MailButton locale={locale} opts={{ service: text.title }} className="btn btn-ghost">{MAIL_LABEL[locale] ?? MAIL_LABEL.en}</MailButton>
             </div>
           </div>
           <div className="media">
@@ -174,7 +175,7 @@ export default async function ServicePage({ params }: P) {
               <h2 className="h3">{t.servicePage.priceOnSurvey}</h2>
               <p className="muted" style={{ margin: 0 }}>{t.servicePage.priceOnSurveyText}</p>
               <a className="btn btn-primary" href={`${CONTACT.whatsapp}?text=${encodeURIComponent(`${t.calc.whatsappIntro}\n${text.title}`)}`} target="_blank" rel="noopener">{t.calc.send}</a>
-              <a className="btn btn-ghost" href={mailHref(locale, { service: text.title })}>{MAIL_LABEL[locale] ?? MAIL_LABEL.en}</a>
+              <MailButton locale={locale} opts={{ service: text.title }} className="btn btn-ghost">{MAIL_LABEL[locale] ?? MAIL_LABEL.en}</MailButton>
               <Link className="btn btn-ghost" href="/quote">{t.nav.getPrice}</Link>
             </div>
           </div>

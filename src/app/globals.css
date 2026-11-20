@@ -441,3 +441,11 @@ h1, h2, .display, .h2 { hyphens: auto; }
   .ba-tag { font-size: 10px; padding: 6px 8px; letter-spacing: .04em; }
   .ba-after { top: auto; bottom: 14px; }
 }
+/* Email button menu (computers) */
+.mail-wrap { position: relative; display: inline-flex; }
+.mail-wrap > a { width: 100%; }
+.mail-menu { position: absolute; z-index: 60; top: calc(100% + 6px); left: 0; min-width: 260px; display: flex; flex-direction: column; padding: 6px; background: #181715; border: 1px solid var(--color-smoke); border-radius: 6px; box-shadow: 0 12px 32px rgba(0,0,0,.45); }
+.mail-menu a, .mail-menu button { display: block; width: 100%; text-align: left; padding: 10px 12px; font: inherit; font-size: 14px; line-height: 1.3; color: var(--color-bone); background: none; border: 0; border-radius: 4px; text-decoration: none; cursor: pointer; white-space: nowrap; }
+.mail-menu a:hover, .mail-menu button:hover, .mail-menu a:focus-visible, .mail-menu button:focus-visible { background: rgba(201,166,107,.14); color: var(--color-brass-light); outline: none; }
+[dir="rtl"] .mail-menu { left: auto; right: 0; }
+[dir="rtl"] .mail-menu a, [dir="rtl"] .mail-menu button { text-align: right; }

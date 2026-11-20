@@ -4,6 +4,7 @@ import type { SiteText } from "@/content/types";
 import { CONTACT } from "@/content/services";
 import Stepper from "./Stepper";
 import { mailHref, MAIL_ESTIMATE, MAIL_LABEL } from "@/lib/mail";
+import MailButton from "@/components/MailButton";
 
 const gbp = (n: number) => "\u2066£" + n.toLocaleString("en-GB") + "\u2069";
 
@@ -53,7 +54,7 @@ export default function ServiceCalc(props: {
           {price > 0 && Math.max(350, Math.round(price * 0.85)) < price && <span className="muted" style={{ fontSize: 14 }}>{t.discount} {gbp(Math.max(350, Math.round(price * 0.85)))}</span>}
         </div>
         <a className="btn btn-primary" href={`${CONTACT.whatsapp}?text=${encodeURIComponent(msg)}`} target="_blank" rel="noopener">{t.send}</a>
-        <a className="btn btn-ghost" href={mailHref(props.locale, { service: props.service + (chosen ? ` — ${chosen}` : ""), details: msg.split("\n").slice(2).join("\n") })}>{MAIL_ESTIMATE[props.locale] ?? MAIL_LABEL[props.locale] ?? MAIL_LABEL.en}</a>
+        <MailButton locale={props.locale} opts={{ service: props.service + (chosen ? ` — ${chosen}` : ""), details: msg.split("\n").slice(2).join("\n") }} className="btn btn-ghost">{MAIL_ESTIMATE[props.locale] ?? MAIL_LABEL[props.locale] ?? MAIL_LABEL.en}</MailButton>
         <p className="muted" style={{ margin: 0, fontSize: 13 }}>{t.note}</p>
       </div>
     </div>

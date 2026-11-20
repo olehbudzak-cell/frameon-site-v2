@@ -4,6 +4,7 @@ import type { SiteText } from "@/content/types";
 import type { Locale } from "@/i18n/routing";
 import { locales } from "@/i18n/routing";
 import { mailHref } from "@/lib/mail";
+import MailButton from "@/components/MailButton";
 
 const names: Record<string, string> = { en: "English", ro: "Română", es: "Español", pl: "Polski", bn: "বাংলা", pt: "Português", gu: "ગુજરાતી", it: "Italiano", pa: "ਪੰਜਾਬੀ", ar: "العربية", uk: "Українська", ru: "Русский" };
 
@@ -24,7 +25,7 @@ export default function Footer({ t, svcLocale, locale }: { t: SiteText; svcLocal
           <address style={{ fontStyle: "normal" }}><span className="mono muted">{t.footer.contact}</span>
             <a href={CONTACT.phoneHref}>{CONTACT.phoneDisplay}</a>
             <a href={CONTACT.whatsapp} target="_blank" rel="noopener">WhatsApp</a>
-            <a href={mailHref(locale)}>{CONTACT.email}</a>
+            <MailButton locale={locale}>{CONTACT.email}</MailButton>
             <a href={CONTACT.facebook} target="_blank" rel="noopener">Facebook</a>
           </address>
           <div className="footer-langs"><span className="mono muted" style={{ gridColumn: "1 / -1" }}>{t.footer.language}</span>

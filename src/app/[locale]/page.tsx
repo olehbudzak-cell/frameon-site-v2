@@ -15,6 +15,7 @@ import JsonLd from "@/components/JsonLd";
 import WorkGallery from "@/components/WorkGallery";
 import { mailHref, MAIL_LABEL } from "@/lib/mail";
 import { portfolio, caption } from "@/content/portfolio";
+import MailButton from "@/components/MailButton";
 
 type P = { params: Promise<{ locale: string }> };
 
@@ -58,7 +59,7 @@ export default async function Home({ params }: P) {
             <p className="lead" style={{ margin: 0 }}>{t.hero.lead}</p>
             <div className="hero-ctas">
               <a className="btn btn-primary" href={CONTACT.whatsapp} target="_blank" rel="noopener">{t.hero.ctaWhatsapp}</a>
-              <a className="btn btn-ghost" href={mailHref(locale)}>{MAIL_LABEL[locale] ?? MAIL_LABEL.en}</a>
+              <MailButton locale={locale} className="btn btn-ghost">{MAIL_LABEL[locale] ?? MAIL_LABEL.en}</MailButton>
               <a className="btn btn-ghost" href="#price">{t.hero.ctaPrice} →</a>
             </div>
           </div>
