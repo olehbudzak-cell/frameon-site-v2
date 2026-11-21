@@ -22,7 +22,16 @@ const call: Record<string, string> = { en: "Call", ro: "Sună", es: "Llamar", pl
 
 export const metadata: Metadata = {
   metadataBase: new URL(CONTACT.site),
-  icons: { icon: "/favicon.svg" },
+  // Google shows the site icon next to search results: it needs a crawlable favicon in a multiple of 48px.
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
+  },
+  manifest: "/site.webmanifest",
   robots: SITE_LIVE ? { index: true, follow: true } : { index: false, follow: false },
 };
 export const viewport: Viewport = { themeColor: "#0D0C0B", width: "device-width", initialScale: 1 };
